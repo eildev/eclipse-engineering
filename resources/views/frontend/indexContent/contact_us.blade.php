@@ -1,22 +1,69 @@
-<div class="contact-us-section">
-		<div class="container">
-			<div class="row contact-us align-items-center">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-7 col-md-6">
-					<div class="section-title wow animate__fadeInLeft">
-						<div class="section-main-title contact-us">
-							<h2>How We Create Solar Energy</h2>
-						</div>
-					</div>
-					<div class="contact-us-discription wow animate__fadeInUp">
-						<p>Building & Maintaining The Energy</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="solar-btn contact-us wow animate__fadeInRight">
-						<a href="{{route('contact.us')}}">Contact Now <i class="bi bi-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	 </div>
+ <!--=========== Contact Section Start =========-->
+ <div class="tj-contact-section">
+     <div class="container">
+         <div class="row align-items-end">
+             <div class="col-lg-6">
+                 <div class="contact-left-content">
+                     <div class="tj-sec-heading-two">
+                         <span class="sub-title">For A New World</span>
+                         <h2 class="title">
+                             Let’s Make
+                             <span>Some Change</span>
+                         </h2>
+                         <div class="desc">
+                             <p>
+                                 These cases are perfectly simple and easy to distinguish. In a free hour,
+                                 when and when avoided.
+                             </p>
+                         </div>
+                         <div class="contact-map">
+                             <iframe
+                                 src="https://maps.google.com/maps?q=manhatan&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                 style="border: 0" allowfullscreen=""></iframe>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6">
+                 <div class="tj-contact-form">
+                     <div class="row">
+                         <div class="col-lg-6">
+                             <div class="form-input">
+                                 <input type="text" id="name" name="name" placeholder="Your Name...."
+                                     required />
+                             </div>
+                         </div>
+                         <div class="col-lg-6">
+                             <div class="form-input">
+                                 <input type="text" id="phone" name="name" placeholder="Phone..." required />
+                             </div>
+                         </div>
+                         <div class="col-lg-6">
+                             <div class="form-input">
+                                 <input type="email" id="email" name="name" placeholder="Enter your Email"
+                                     required />
+                             </div>
+                         </div>
+                         <div class="col-lg-6">
+                             <div class="form-input">
+                                 <input type="text" id="site" name="name" placeholder="Enter your website"
+                                     required />
+                             </div>
+                         </div>
+                         <div class="col-lg-12">
+                             <div class="form-input">
+                                 <textarea id="message" name="message" placeholder="Write Here...."></textarea>
+                             </div>
+                         </div>
+                         <div class="tj-contact-button">
+                             <button class="tj-primary-btn2 btn" type="submit" value="submit">
+                                 Contact Us <i class="flaticon-right-arrow"></i>
+                             </button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!--=========== Contact Section End =========-->

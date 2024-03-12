@@ -1,4 +1,4 @@
-@php
+{{-- @php
     $aboutIntro = App\Models\AboutInroduction::all()->first();
     $about = App\Models\AboutSettings::all()->first();
     $testimonial = App\Models\Testimonial::all()->first();
@@ -117,4 +117,101 @@
         </div>
     </div>
 </div>
-</div>
+</div> --}}
+<!--=========== About Section Start =========-->
+<section class="tj-about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-7 col-lg-12">
+                <div class="about-content-one">
+                    <div class="tj-sec-heading">
+                        <span class="sub-title">About Us</span>
+                        <h2 class="sec-title">
+                            Our Mission Is To Make Solar <br />
+                            <span>Energy Accessible</span>
+                        </h2>
+                        <div class="desc">
+                            <p>
+                                It is a long established fact that a reader will be distracted by the
+                                readable content of a page when looking at its layout. The point of using
+                                Lorem Ipsum is that it has a more-or-less normal distribution of.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fun-fact-area">
+                        <div class="counter-item">
+                            <div class="about-icon">
+                                <i class="flaticon-solar-panel-1"></i>
+                            </div>
+                            <div class="counter-number">
+                                <div class="tj-count">
+                                    <span class="odometer" data-count="14000">0</span>+
+                                </div>
+                                <span class="sub-title">Installed Capacity</span>
+                            </div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="about-icon">
+                                <i class="flaticon-solar-cell"></i>
+                            </div>
+                            <div class="counter-number">
+                                <div class="tj-count"><span class="odometer" data-count="70">0</span>%</div>
+                                <span class="sub-title">Save World</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-about-button d-flex">
+                        <a class="tj-primary-btn btn" href="about-us.html">
+                            Read More <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-12">
+                <div class="about-image-group">
+                    <div class="about-lg-image">
+                        <img src="{{ asset('frontend') }}/assets/images/about/about-1.jpg" alt="Image" />
+                        <div class="about-circle">
+                            <div class="video-play">
+                                <a class="venobox popup-videos-button" data-autoplay="true" data-vbtype="video"
+                                    href="https://www.youtube.com/watch?v=ADmQTw4qqTY">
+                                    <i class="fa-solid fa-play"></i>
+                                    <svg class="shape-1" viewBox="0 0 100 100" width="150" height="100">
+                                        <defs>
+                                            <path id="circle" d="
+                                                  M 50, 50
+                                                  m -37, 0
+                                                  a 37,37 0 1,1 74,0
+                                                  a 37,37 0 1,1 -74,0" />
+                                        </defs>
+                                        <text font-size="16">
+                                            <textPath xlink:href="#circle" class="shape-1">
+                                                Solar Energy . Solar Energy .
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-experience">
+                        <div class="about-icon">
+                            <i class="flaticon-experience-1"></i>
+                        </div>
+                        <div class="counter-number">
+                            <div class="tj-count"><span class="odometer" data-count="25">0</span>+</div>
+                            <span class="sub-title">Years Experience</span>
+                        </div>
+                        <div class="about-shape">
+                            <img src="{{ asset('frontend') }}/assets/images/shape/service-1.svg" alt="Shape" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec-shape">
+        <img src="{{ asset('frontend') }}/assets/images/shape/service-1.svg" alt="Shape" />
+    </div>
+</section>
+<!--=========== About Section End =========-->

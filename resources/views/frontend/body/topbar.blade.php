@@ -1,4 +1,4 @@
-@php
+{{-- @php
     $footer = App\Models\FooterSetting::all()->first();
 @endphp
 <div class="solar-topbar-section">
@@ -32,4 +32,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
