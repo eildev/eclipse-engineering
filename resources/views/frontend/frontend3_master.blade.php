@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 
     <!-- Site Title -->
     <title>Eclipse Engineering Limited</title>
@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    {{-- <!-- Preloader start -->
+    <!-- Preloader start -->
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner">
@@ -54,23 +54,11 @@
                 <span data-text-preloader="P" class="letters-loading"> P </span>
                 <span data-text-preloader="S" class="letters-loading"> S </span>
                 <span data-text-preloader="E" class="letters-loading"> E </span>
-                <br>
-                <span data-text-preloader="E" class="letters-loading"> E </span>
-                <span data-text-preloader="N" class="letters-loading"> N </span>
-                <span data-text-preloader="G" class="letters-loading"> G </span>
-                <span data-text-preloader="I" class="letters-loading"> I </span>
-                <span data-text-preloader="N" class="letters-loading"> N </span>
-                <span data-text-preloader="E" class="letters-loading"> E </span>
-                <span data-text-preloader="E" class="letters-loading"> E </span>
-                <span data-text-preloader="R" class="letters-loading"> R </span>
-                <span data-text-preloader="I" class="letters-loading"> I </span>
-                <span data-text-preloader="N" class="letters-loading"> N </span>
-                <span data-text-preloader="G" class="letters-loading"> G </span>
             </div>
         </div>
         <button class="tj-header-btn btn">Cancel Preloader</button>
     </div>
-    <!-- Preloader end --> --}}
+    <!-- Preloader end -->
 
     <!-- start: Offcanvas Area -->
     <div id="tj-overlay-bg" class="tj-overlay-canvas"></div>
@@ -97,8 +85,8 @@
         <div class="canvas-content-area d-none d-lg-block">
             <div class="contact-info-list">
                 <p class="des">
-                    We take a bottom-line approach to each project. Our clients consistently, enhanced brand loyalty
-                    and new leads thanks to our work.
+                    We take a bottom-line approach to each project. Our clients consistently, enhanced brand loyalty and
+                    new leads thanks to our work.
                 </p>
                 <div class="canvas-title">
                     <h4 class="title">Contact info</h4>
@@ -124,7 +112,7 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -140,60 +128,8 @@
     </div>
     <!-- end: Offcanvas Area -->
 
-    <!-- start: Search Popup -->
-    <div class="search_popup">
-        <div class="container">
-            <div class="row">
-                <div class="col-xxl-12">
-                    <div class="search_wrapper">
-                        <div class="search_top d-flex justify-content-between align-items-center">
-                            <div class="search_logo">
-                                <a href="index.html">
-                                    <img src="{{ asset('frontend') }}/assets/images/logos/main-logo.png"
-                                        alt="Logo" />
-                                </a>
-                            </div>
-                            <div class="search_close">
-                                <button type="button" class="search_close_btn">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="search_form">
-                            <form action="#">
-                                <div class="search_input">
-                                    <input class="search-input-field" type="text" placeholder="" />
-                                    <span class="search-focus-border"></span>
-                                    <button type="submit">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="search-popup-overlay"></div>
-    <!-- end: Search Popup -->
-
     <!-- start: Header Area -->
-    @include('frontend.body.header')
+    @include('frontend.body3.header')
     <!-- end: Header Area -->
 
     <main class="site-main">
@@ -201,18 +137,14 @@
     </main>
 
     <!-- start: Footer Area -->
-    @include('frontend.body.footer')
+    @include('frontend.body3.footer')
     <!-- start: Footer Area -->
 
     <!-- start: Scroll Area -->
     <div class="solar-scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                style="
-                        transition: stroke-dashoffset 10ms linear 0s;
-                        stroke-dasharray: 307.919px, 307.919px;
-                        stroke-dashoffset: 71.1186px;
-                    ">
+                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 71.1186px">
             </path>
         </svg>
         <div class="solar-scroll-top-icon">

@@ -67,7 +67,8 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 col-6">
                             <div class="offer-items-box wow animate__slideInDown">
                                 <div class="offer-icon-thumb">
-                                    <img src="assets/images/resource/offer-icon1.png" alt="">
+                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon1.png"
+                                        alt="">
                                 </div>
                                 <div class="offer-content">
                                     <h4>Battery Storage</h4>
@@ -79,7 +80,8 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 col-6">
                             <div class="offer-items-box wow animate__slideInDown">
                                 <div class="offer-icon-thumb">
-                                    <img src="assets/images/resource/offer-icon2.png" alt="">
+                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon2.png"
+                                        alt="">
                                 </div>
                                 <div class="offer-content">
                                     <h4>Energy Around</h4>
@@ -91,7 +93,8 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 col-6">
                             <div class="offer-items-box wow animate__slideInDown">
                                 <div class="offer-icon-thumb">
-                                    <img src="assets/images/resource/offer-icon3.png" alt="">
+                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon3.png"
+                                        alt="">
                                 </div>
                                 <div class="offer-content">
                                     <h4>Solar PV Systems</h4>

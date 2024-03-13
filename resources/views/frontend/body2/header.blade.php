@@ -17,10 +17,10 @@
                                      <a href="index.html">Home</a>
                                      <ul class="sub-menu">
                                          <li>
-                                             <a href="index.html">Home One</a>
+                                             <a href="{{ route('/') }}">Home One</a>
                                          </li>
-                                         <li class="current-menu-item"><a href="index-2.html">Home Two</a></li>
-                                         <li><a href="index-3.html">Home Three</a></li>
+                                         <li class="current-menu-item"><a href="{{ route('home2') }}">Home Two</a></li>
+                                         <li><a href="{{ route('home3') }}">Home Three</a></li>
                                      </ul>
                                  </li>
                                  <li>

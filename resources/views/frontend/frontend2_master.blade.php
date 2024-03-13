@@ -6,14 +6,13 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Site Title -->
     <title>Eclipse Engineering Limited</title>
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="{{ asset('frontend') }}/assets/images/fav.svg" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend') }}/assets/images/fav.svg" />
+    <link rel="apple-touch-icon" href="assets/images/fav.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.svg" />
 
     <!-- CSS here -->
     {{-- bootstrap 5 --}}
@@ -37,7 +36,7 @@
 </head>
 
 <body>
-    {{-- <!-- Preloader start -->
+    <!-- Preloader start -->
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner">
@@ -54,23 +53,11 @@
                 <span data-text-preloader="P" class="letters-loading"> P </span>
                 <span data-text-preloader="S" class="letters-loading"> S </span>
                 <span data-text-preloader="E" class="letters-loading"> E </span>
-                <br>
-                <span data-text-preloader="E" class="letters-loading"> E </span>
-                <span data-text-preloader="N" class="letters-loading"> N </span>
-                <span data-text-preloader="G" class="letters-loading"> G </span>
-                <span data-text-preloader="I" class="letters-loading"> I </span>
-                <span data-text-preloader="N" class="letters-loading"> N </span>
-                <span data-text-preloader="E" class="letters-loading"> E </span>
-                <span data-text-preloader="E" class="letters-loading"> E </span>
-                <span data-text-preloader="R" class="letters-loading"> R </span>
-                <span data-text-preloader="I" class="letters-loading"> I </span>
-                <span data-text-preloader="N" class="letters-loading"> N </span>
-                <span data-text-preloader="G" class="letters-loading"> G </span>
             </div>
         </div>
         <button class="tj-header-btn btn">Cancel Preloader</button>
     </div>
-    <!-- Preloader end --> --}}
+    <!-- Preloader end -->
 
     <!-- start: Offcanvas Area -->
     <div id="tj-overlay-bg" class="tj-overlay-canvas"></div>
@@ -193,7 +180,7 @@
     <!-- end: Search Popup -->
 
     <!-- start: Header Area -->
-    @include('frontend.body.header')
+    @include('frontend.body2.header')
     <!-- end: Header Area -->
 
     <main class="site-main">
@@ -201,7 +188,7 @@
     </main>
 
     <!-- start: Footer Area -->
-    @include('frontend.body.footer')
+    @include('frontend.body2.footer')
     <!-- start: Footer Area -->
 
     <!-- start: Scroll Area -->

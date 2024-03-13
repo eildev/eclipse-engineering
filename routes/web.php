@@ -36,6 +36,12 @@ use App\Http\Middleware\RedirectIfAuthenticated;
 Route::get('/', function () {
     return view('frontend.frontend_dashboard');
 })->name('/');
+Route::get('/home2', function () {
+    return view('frontend.frontend2_dashboard');
+})->name('home2');
+Route::get('/home3', function () {
+    return view('frontend.frontend3_dashboard');
+})->name('home3');
 
 //Admin Dashboard
 Route::middleware(['auth', 'role:admin'])->group(function () {
@@ -49,7 +55,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 });
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
-    
+
     Route::fallback(function () {
         return view('backend.errors.404');
     });
@@ -202,26 +208,26 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::post('/our-partner-status/{id}', 'status')->name('our-partner.status');
     });
 
-  //About Intro Related Routes
-  Route::controller(AboutIntroduction::class)->group(function () {
-    Route::get('/about/intro/add', 'AboutIntroAdd')->name('about.intro.add');
-    Route::post('/about/intro/store', 'StoreAboutIntro')->name('store.about.intro');
-    Route::get('/about/intro/view', 'ViewAboutIntro')->name('about.intro.view');
-    Route::get('/about/intro/edit/{id}', 'EditAboutIntro')->name('edit.about.intro');
-    Route::post('/about/intro/update/{id}', 'UpdatAboutIntro')->name('update.about.intro');
-    Route::get('/about/intro/delete/{id}', 'DeleteAboutIntro')->name('delete.about.intro');
-});
- //  Slider  routes
- Route::controller(SlideController::class)->group(function () {
-    Route::get('/slider/add', 'SliderAdd')->name('add.slider');
-    Route::post('/slider/store', 'StoreSlider')->name('store.slider');
-    Route::get('/slider/view', 'ViewSlider')->name('slider.view');
-    Route::get('/slider/edit/{id}', 'EditSlider')->name('edit.slider');
-    Route::post('/slider/update/{id}', 'UpdateSlider')->name('update.slider');
-   Route::get('/slider/delete/{id}', 'DeleteSlider')->name('delete.slider');
-});
-     // Section related routes
-     Route::controller(SectionController::class)->group(function () {
+    //About Intro Related Routes
+    Route::controller(AboutIntroduction::class)->group(function () {
+        Route::get('/about/intro/add', 'AboutIntroAdd')->name('about.intro.add');
+        Route::post('/about/intro/store', 'StoreAboutIntro')->name('store.about.intro');
+        Route::get('/about/intro/view', 'ViewAboutIntro')->name('about.intro.view');
+        Route::get('/about/intro/edit/{id}', 'EditAboutIntro')->name('edit.about.intro');
+        Route::post('/about/intro/update/{id}', 'UpdatAboutIntro')->name('update.about.intro');
+        Route::get('/about/intro/delete/{id}', 'DeleteAboutIntro')->name('delete.about.intro');
+    });
+    //  Slider  routes
+    Route::controller(SlideController::class)->group(function () {
+        Route::get('/slider/add', 'SliderAdd')->name('add.slider');
+        Route::post('/slider/store', 'StoreSlider')->name('store.slider');
+        Route::get('/slider/view', 'ViewSlider')->name('slider.view');
+        Route::get('/slider/edit/{id}', 'EditSlider')->name('edit.slider');
+        Route::post('/slider/update/{id}', 'UpdateSlider')->name('update.slider');
+        Route::get('/slider/delete/{id}', 'DeleteSlider')->name('delete.slider');
+    });
+    // Section related routes
+    Route::controller(SectionController::class)->group(function () {
         Route::get('/section/add', 'SectionAdd')->name('add.section');
         Route::post('/section/store', 'StoreSection')->name('store.section');
         Route::get('/section/view', 'ViewSection')->name('view.section');
@@ -229,8 +235,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::post('/section/update/{id}', 'UpdateSection')->name('update.section');
         Route::get('/section/delete/{id}', 'DeleteSection')->name('delete.section');
     });
-     // Section related routes
-     Route::controller(SectionDetailsController::class)->group(function () {
+    // Section related routes
+    Route::controller(SectionDetailsController::class)->group(function () {
         Route::get('/section/details/add', 'SectionDetailsAdd')->name('add.section.details');
         Route::post('/section/details/store', 'StoreSectionDetails')->name('store.section.details');
         Route::get('/section/details/view', 'ViewSectionDetails')->name('view.section.details');
@@ -247,9 +253,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//////////////////////////////////// Frontend Code //////////////////////////////////
 
-
+// Start Frontend Code //////////////////////////////////
 Route::controller(IndexController::class)->group(function () {
     Route::get('/contuct-us', 'ContactUs')->name('contact.us');
     //Subscribe
@@ -267,7 +272,7 @@ Route::controller(IndexController::class)->group(function () {
     Route::get('/service-details/{id}', 'ServiceDetails')->name('service.details');
     //Team 
     Route::get('/all-team', 'AllTeam')->name('all.team');
-   // Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
+    // Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
     // All Project /Section
     Route::get('/all-project', 'AllProject')->name('all.project');
     Route::get('/project-details/{id}', 'ProjectDetails')->name('project.details');
@@ -276,10 +281,11 @@ Route::controller(IndexController::class)->group(function () {
     //achievements Details
     Route::get('/achievements-details/{id}', 'AchievementsDetails')->name('achiements.details');
 });
-//////////////////////////////////// End Frontend Code //////////////////////////////////
+// End Frontend Code 
 
 //Admin login forgot Pw Route
-Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login')->middleware(RedirectIfAuthenticated::class
+Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login')->middleware(
+    RedirectIfAuthenticated::class
 );
 Route::get('/admin/forgot/password', [AdminController::class, 'AdminForgotPassword'])->name('admin.forgot.password');
 require __DIR__ . '/auth.php';

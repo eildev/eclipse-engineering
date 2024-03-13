@@ -5,8 +5,9 @@
              <div class="swiper tj-gallery-slider">
                  <div class="swiper-wrapper">
                      <div class="swiper-slide">
-                         <a class="tj-gallery-item" href="assets/images/gallery/gallery-6.jpg">
-                             <div class="image-box" data-bg-image="assets/images/gallery/gallery-1.jpg">
+                         <a class="tj-gallery-item" href="{{ asset('frontend') }}/assets/images/gallery/gallery-6.jpg">
+                             <div class="image-box"
+                                 data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-1.jpg">
                                  <div class="gallery-icon">
                                      <i class="fa-regular fa-plus"></i>
                                  </div>
@@ -14,8 +15,9 @@
                          </a>
                      </div>
                      <div class="swiper-slide">
-                         <a class="tj-gallery-item" href="assets/images/gallery/gallery-7.jpg">
-                             <div class="image-box" data-bg-image="assets/images/gallery/gallery-2.jpg">
+                         <a class="tj-gallery-item" href="{{ asset('frontend') }}/assets/images/gallery/gallery-7.jpg">
+                             <div class="image-box"
+                                 data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-2.jpg">
                                  <div class="gallery-icon">
                                      <i class="fa-regular fa-plus"></i>
                                  </div>
@@ -23,8 +25,9 @@
                          </a>
                      </div>
                      <div class="swiper-slide">
-                         <a class="tj-gallery-item" href="assets/images/gallery/gallery-8.jpg">
-                             <div class="image-box" data-bg-image="assets/images/gallery/gallery-3.jpg">
+                         <a class="tj-gallery-item" href="{{ asset('frontend') }}/assets/images/gallery/gallery-8.jpg">
+                             <div class="image-box"
+                                 data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-3.jpg">
                                  <div class="gallery-icon">
                                      <i class="fa-regular fa-plus"></i>
                                  </div>
@@ -32,8 +35,9 @@
                          </a>
                      </div>
                      <div class="swiper-slide">
-                         <a class="tj-gallery-item" href="assets/images/gallery/gallery-9.jpg">
-                             <div class="image-box" data-bg-image="assets/images/gallery/gallery-4.jpg">
+                         <a class="tj-gallery-item" href="{{ asset('frontend') }}/assets/images/gallery/gallery-9.jpg">
+                             <div class="image-box"
+                                 data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-4.jpg">
                                  <div class="gallery-icon">
                                      <i class="fa-regular fa-plus"></i>
                                  </div>
@@ -41,8 +45,9 @@
                          </a>
                      </div>
                      <div class="swiper-slide">
-                         <a class="tj-gallery-item" href="assets/images/gallery/gallery-10.jpg">
-                             <div class="image-box" data-bg-image="assets/images/gallery/gallery-5.jpg">
+                         <a class="tj-gallery-item" href="{{ asset('frontend') }}/assets/images/gallery/gallery-10.jpg">
+                             <div class="image-box"
+                                 data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-5.jpg">
                                  <div class="gallery-icon">
                                      <i class="fa-regular fa-plus"></i>
                                  </div>

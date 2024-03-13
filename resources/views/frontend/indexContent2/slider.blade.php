@@ -1,5 +1,5 @@
  <!--=========== Slider Section Start =========-->
- <section class="tj-hero-section" data-bg-image="assets/images/banner/hero-bg.jpg">
+ <section class="tj-hero-section" data-bg-image="{{ asset('frontend') }}/assets/images/banner/hero-bg.jpg">
      <div class="container">
          <div class="row">
              <div class="col-lg-12 col-md-8">
