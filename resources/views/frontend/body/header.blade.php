@@ -80,10 +80,16 @@
                                                     <a href="{{ route('all.team') }}">Team</a>
                                                 </li>
                                                 <li>
-                                                    <a href="faq.html">Blog</a>
+                                                    <a href="{{ route('blog') }}">Blog</a>
                                                 </li>
                                                 <li>
-                                                    <a href="faq.html">Contact Us</a>
+                                                    <a href="{{ route('sister.concern') }}">Sister Concern</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('csr.activities') }}">CSR Activities</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('contact.us') }}">Contact Us</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -106,7 +112,7 @@
                                 </ul>
                             </div>
                             <div class="info-item d-none d-md-block">
-                                <a class="tj-header-btn btn" href="contact.html">Contact Us <i
+                                <a class="tj-header-btn btn" href="{{ route('contact.us') }}">Contact Us <i
                                         class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>
@@ -124,7 +130,7 @@
                     <div class="bottom-content-area">
                         <div class="menu-area">
                             <div class="logo-area">
-                                <a href="index.html"><img
+                                <a href="{{ route('/') }}"><img
                                         src="{{ asset('frontend') }}/assets/images/logos/main-logo.png"
                                         alt="Logo" /></a>
                             </div>
@@ -135,63 +141,41 @@
                                             <a href="index.html">Home</a>
                                             <ul class="sub-menu">
                                                 <li class="current-menu-item">
-                                                    <a href="index.html">Home One</a>
+                                                    <a href="{{ route('/') }}">Home One</a>
                                                 </li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                                <li><a href="index-3.html">Home Three</a></li>
+                                                <li><a href="{{ route('home2') }}">Home Two</a></li>
+                                                <li><a href="{{ route('home3') }}">Home Three</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="about-us.html">About Us</a>
+                                            <a href="{{ route('frontend.about') }}">About Us</a>
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="services.html">Services</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="services.html">Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="service-details.html">Service Details</a>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="{{ route('all.service') }}">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('all.project') }}">Projects</a>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="javascript:void(0)">Pages</a>
                                             <ul class="sub-menu">
-                                                <li class="has-dropdown">
-                                                    <a href="project.html">Projects</a>
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a href="project.html">Projects</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="project-details.html">Project Details</a>
-                                                        </li>
-                                                    </ul>
+                                                <li>
+                                                    <a href="{{ route('all.team') }}">Team</a>
                                                 </li>
                                                 <li>
-                                                    <a href="team.html">Team</a>
+                                                    <a href="{{ route('blog') }}">Blog</a>
                                                 </li>
                                                 <li>
-                                                    <a href="faq.html">Faq</a>
+                                                    <a href="{{ route('sister.concern') }}">Sister Concern</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('csr.activities') }}">CSR Activities</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('contact.us') }}">Contact Us</a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="blog.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="blog-grid.html">Blog Grid</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog.html">Blog Standard</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-details.html">Blog Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -211,7 +195,7 @@
                                 </ul>
                             </div>
                             <div class="info-item d-none d-md-block">
-                                <a class="tj-header-btn btn" href="contact.html">Contact Us <i
+                                <a class="tj-header-btn btn" href="{{ route('contact.us') }}">Contact Us <i
                                         class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>

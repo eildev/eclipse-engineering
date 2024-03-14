@@ -18,22 +18,34 @@
                     <hr>
                     <form action="{{ route('store.about') }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <!-- end row -->
+
                         <div class="row mb-3">
                             <label for="example-email-input" class="col-sm-2 col-form-label">Title</label>
                             <div class="col-sm-10">
                                 <input class="form-control @error('title') is-invalid  @enderror" name="title"
-                                    type="text" placeholder="Enter About Title"  id="example-email-input">
+                                    type="text" placeholder="Enter About Title" id="example-email-input">
                                 @error('title')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                         </div>
+                        <!-- end row -->
+                        <div class="row mb-3">
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Sub Title</label>
+                            <div class="col-sm-10">
+                                <input class="form-control @error('sub_title') is-invalid  @enderror" name="sub_title"
+                                    type="text" placeholder="Enter About Sub Title" id="example-email-input">
+                                @error('sub_title')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+                        <!-- end row -->
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">About Description</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control @error('description') is-invalid  @enderror" 
-                                    id="summernote" name="description" style="resize: none; height: 150px;"></textarea>
+                                <textarea class="form-control @error('description') is-invalid  @enderror" id="summernote" name="description"
+                                    style="resize: none; height: 150px;"></textarea>
 
                                 @error('description')
                                     <span class="text-danger">{{ $message }}</span>

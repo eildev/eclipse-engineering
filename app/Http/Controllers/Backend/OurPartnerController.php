@@ -19,7 +19,8 @@ class OurPartnerController extends Controller
         $request->validate([
             'title' => 'required|max:100',
             'subtitle' => 'required|max:250',
-            'description' => 'required|max:5000'
+            'description' => 'required|max:5000',
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
         ]);
         $partner = new OurPartner;
         $partner->title = $request->title;

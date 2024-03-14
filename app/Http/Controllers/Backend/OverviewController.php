@@ -17,7 +17,8 @@ class OverviewController extends Controller
         $request->validate([
             'title' => 'required|max:100',
             'experience' => 'required|max:10',
-            'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'icon_name' => 'required',
         ]);
         if ($request->icon) {
             $iconImage = rand() . '.' . $request->icon->extension();
@@ -26,6 +27,7 @@ class OverviewController extends Controller
             $overview->title = $request->title;
             $overview->experience = $request->experience;
             $overview->icon = $iconImage;
+            $overview->icon_name = $request->icon_name;
             $overview->save();
             return back()->with('message', 'Overview Successfully Saved');
         }
@@ -50,12 +52,14 @@ class OverviewController extends Controller
             $overview->title = $request->title;
             $overview->experience = $request->experience;
             $overview->icon = $iconImage;
+            $overview->icon_name = $request->icon_name;
             $overview->update();
             return redirect()->route('manage.overview')->with('message', 'Overview Successfully updated');
         } else {
             $overview = Overview::findOrFail($id);
             $overview->title = $request->title;
             $overview->experience = $request->experience;
+            $overview->icon_name = $request->icon_name;
             $overview->update();
             return redirect()->route('manage.overview')->with('message', 'Overview Successfully updated');
         }

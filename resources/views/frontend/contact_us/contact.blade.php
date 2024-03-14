@@ -3,31 +3,39 @@
     @php
         $footer = App\Models\FooterSetting::all()->first();
     @endphp
-    <div class="breatcome-section">
+    <!--=========== Breadcrumb Start =========-->
+    <section class="breadcrumb-wrapper"
+        data-bg-image="{{ asset('frontend') }}/assets/images/banner/breadcrumb-background.jpg">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="breatcome-content">
-                        <div class="breatcome-title">
-                            <h1>Contact Us</h1>
+                <div class="col-lg-12">
+                    <div class="breadcrumb-content-area">
+                        <div class="breadcrumb-heading">
+                            <h1 class="breadcrumb-title">Contact Us</h1>
                         </div>
-                        <div class="bratcome-text">
-                            <ul>
-                                <li><a href="{{ url('/') }}">Home</a></li>
-                                <li>Contact Us</li>
-                            </ul>
+                        <div class="breadcrumb-link">
+                            <span>
+                                <a href="{{ route('/') }}">
+                                    <span>Home</span>
+                                </a>
+                            </span>
+                            <i class="fa-light fa-angle-right"></i>
+                            <span>
+                                <span>Contact Us</span>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--=========== Breadcrumb End =========-->
 
     <!--==================================================-->
     <!-- Start Solar Panel  Contact Us Section -->
     <!--==================================================-->
 
-    <div class="contact-section">
+    {{-- <div class="contact-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
@@ -123,5 +131,82 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+
+    <!--=========== Contact Section Start =========-->
+    <div class="tj-contact-section tj-contact-page mb-5 ">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-lg-6">
+                    <div class="contact-left-content">
+                        <div class="tj-sec-heading-two">
+                            <span class="sub-title">For A New World</span>
+                            <h2 class="title">
+                                Let’s Make
+                                <span>Some Change</span>
+                            </h2>
+                            <div class="desc">
+                                <p>
+                                    These cases are perfectly simple and easy to distinguish. In a free hour,
+                                    when and when avoided.
+                                </p>
+                            </div>
+                            <div class="contact-map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d228.2273120048374!2d90.43589712215075!3d23.760320991417355!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7f588575549%3A0xd3c9ea7a0d43894d!2s5%20Banasree%20Main%20Rd!5e0!3m2!1sen!2sus!4v1710387400191!5m2!1sen!2sus"
+                                    style="border:0;" allowfullscreen=""></iframe>
+                                {{-- <iframe
+                                    src="https://maps.google.com/maps?q=manhatan&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                    style="border: 0" allowfullscreen=""></iframe> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tj-contact-form">
+                        <form action="{{ route('contact.store') }}" method="POST">
+                            @csrf
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-input">
+                                        <input type="text" id="nameOne" name="name" placeholder="Your Name...."
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-input">
+                                        <input type="text" id="phone" name="phone" placeholder="Phone..."
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-input">
+                                        <input type="email" id="emailTwo" name="email" placeholder="Enter your Email"
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-input">
+                                        <input type="text" id="site" name="company_name"
+                                            placeholder="Enter Company Name" required />
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-input">
+                                        <textarea id="message" name="message" placeholder="Write Here...."></textarea>
+                                    </div>
+                                </div>
+                                <div class="tj-contact-button">
+                                    <button class="tj-primary-btn2 btn" type="submit">
+                                        Contact Us <i class="flaticon-right-arrow"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!--=========== Contact Section End =========-->
 @endsection

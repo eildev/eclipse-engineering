@@ -80,6 +80,7 @@ class ServicesController extends Controller
             'services_title' => 'required',
             'services_details_description' => 'required',
             'services_details_icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'services_details_icon_name' => 'required',
             'services_details_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -91,6 +92,7 @@ class ServicesController extends Controller
             $servicesDetails = new ServicesDetails;
             $servicesDetails->services_details_title = $request->services_details_title;
             $servicesDetails->services_details_icon = $iconName;
+            $servicesDetails->services_details_icon_name = $request->services_details_icon_name;
             $servicesDetails->services_details_image = $imageName;
             $servicesDetails->services_id =  $request->services_title;
             $servicesDetails->services_details_description = $request->services_details_description;
@@ -120,6 +122,7 @@ class ServicesController extends Controller
                 'services_details_title' => 'required',
                 'services_title' => 'required',
                 'services_details_description' => 'required',
+                'services_details_icon_name' => 'required',
             ]);
             $iconName = rand() . '.' . $request->services_details_icon->extension();
             $request->services_details_icon->move(public_path('uploads/services_image/'), $iconName);
@@ -136,6 +139,7 @@ class ServicesController extends Controller
             }
             $servicesDetails->services_details_title = $request->services_details_title;
             $servicesDetails->services_details_icon = $iconName;
+            $servicesDetails->services_details_icon_name = $request->services_details_icon_name;
             $servicesDetails->services_details_image = $imageName;
             $servicesDetails->services_id =  $request->services_title;
             $servicesDetails->services_details_description = $request->services_details_description;
@@ -151,6 +155,7 @@ class ServicesController extends Controller
                 'services_details_title' => 'required',
                 'services_title' => 'required',
                 'services_details_description' => 'required',
+                'services_details_icon_name' => 'required',
             ]);
             $iconName = rand() . '.' . $request->services_details_icon->extension();
             $request->services_details_icon->move(public_path('uploads/services_image/'), $iconName);
@@ -168,6 +173,7 @@ class ServicesController extends Controller
             $servicesDetails->services_details_title = $request->services_details_title;
             $servicesDetails->services_details_icon = $iconName;
             //    $servicesDetails->services_details_image = $imageName;
+            $servicesDetails->services_details_icon_name = $request->services_details_icon_name;
             $servicesDetails->services_id =  $request->services_title;
             $servicesDetails->services_details_description = $request->services_details_description;
             $servicesDetails->update();
@@ -182,6 +188,7 @@ class ServicesController extends Controller
                 'services_details_title' => 'required',
                 'services_title' => 'required',
                 'services_details_description' => 'required',
+                'services_details_icon_name' => 'required',
             ]);
             // $iconName = rand() . '.' . $request->services_details_icon->extension();
             //  $request->services_details_icon->move(public_path('uploads/services_image/'), $iconName);
@@ -199,6 +206,7 @@ class ServicesController extends Controller
             $servicesDetails->services_details_title = $request->services_details_title;
             //  $servicesDetails->services_details_icon = $iconName;
             $servicesDetails->services_details_image = $imageName;
+            $servicesDetails->services_details_icon_name = $request->services_details_icon_name;
             $servicesDetails->services_id =  $request->services_title;
             $servicesDetails->services_details_description = $request->services_details_description;
             $servicesDetails->update();
@@ -213,11 +221,13 @@ class ServicesController extends Controller
                 'services_details_title' => 'required',
                 'services_title' => 'required',
                 'services_details_description' => 'required',
+                'services_details_icon_name' => 'required',
             ]);
             $servicesDetails = ServicesDetails::findOrFail($id);
             $servicesDetails->services_details_title = $request->services_details_title;
             $servicesDetails->services_id =  $request->services_title;
             $servicesDetails->services_details_description = $request->services_details_description;
+            $servicesDetails->services_details_icon_name = $request->services_details_icon_name;
             $servicesDetails->update();
             $notification = array(
                 'message' => 'Our Service Details Update Without image Sccessfully',

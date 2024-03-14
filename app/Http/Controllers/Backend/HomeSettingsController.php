@@ -19,8 +19,8 @@ class HomeSettingsController extends Controller
             'short_description' => 'required|max:250',
             'long_description' => 'required|max:2500',
             'keywords' => 'required|max:250',
-            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'fav' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'fav' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         if ($request->logo && $request->fav) {
@@ -57,8 +57,8 @@ class HomeSettingsController extends Controller
             'short_description' => 'required|max:250',
             'long_description' => 'required|max:2500',
             'keywords' => 'required|max:250',
-            'logo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'fav' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'fav' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         $homeData = HomeSettings::findOrFail($id);

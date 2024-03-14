@@ -136,6 +136,21 @@ class IndexController extends Controller
   {
     return view('frontend.errors.404');
   }
+  // blog page function 
+  public function blog()
+  {
+    return view('frontend.blog.blog-page');
+  }
+  // Sister Concern 
+  public function sisterConcern()
+  {
+    return view('frontend.sister-concern.sister-concern');
+  }
+  // CSR Activities
+  public function csrActivities()
+  {
+    return view('frontend.csr-activities.csr');
+  }
   ///Achievments
   public function AchievementsDetails($id)
   {

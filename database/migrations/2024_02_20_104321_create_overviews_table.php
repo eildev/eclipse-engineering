@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("title")->nullable();
             $table->integer("experience")->nullable();
             $table->string("icon")->nullable();
+            $table->string("icon_name")->nullable();
             $table->tinyInteger("status")->default(0);
             $table->timestamps();
         });

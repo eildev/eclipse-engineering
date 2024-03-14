@@ -256,6 +256,24 @@ Route::middleware('auth')->group(function () {
 
 // Start Frontend Code //////////////////////////////////
 Route::controller(IndexController::class)->group(function () {
+    ///About US pages
+    Route::get('/about-us', 'FrontendAbout')->name('frontend.about');
+    ///Service
+    Route::get('/all-service', 'AllService')->name('all.service');
+    Route::get('/service-details/{id}', 'ServiceDetails')->name('service.details');
+    // All Project /Section
+    Route::get('/all-project', 'AllProject')->name('all.project');
+    Route::get('/project-details/{id}', 'ProjectDetails')->name('project.details');
+    //Team 
+    Route::get('/all-team', 'AllTeam')->name('all.team');
+    // Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
+    // Blog 
+    Route::get('/blog', 'blog')->name('blog');
+    // sister concern 
+    Route::get('/sister-concern', 'sisterConcern')->name('sister.concern');
+    // CSR Activities 
+    Route::get('/csr-activities', 'csrActivities')->name('csr.activities');
+
     Route::get('/contuct-us', 'ContactUs')->name('contact.us');
     //Subscribe
     Route::post('/subscribe', 'Subscribe')->name('store.subscribe');
@@ -265,17 +283,12 @@ Route::controller(IndexController::class)->group(function () {
     Route::post('/contact/store', 'ContactStore')->name('contact.store');
     Route::get('/contact/list', 'ContactList')->name('contact.list');
     Route::get('/contact/delete/{id}', 'ContactDelete')->name('contact.delete');
-    ///About US
-    Route::get('/about-us', 'FrontendAbout')->name('frontend.about');
-    ///Service
-    Route::get('/all-service', 'AllService')->name('all.service');
-    Route::get('/service-details/{id}', 'ServiceDetails')->name('service.details');
+
+
     //Team 
     Route::get('/all-team', 'AllTeam')->name('all.team');
     // Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
-    // All Project /Section
-    Route::get('/all-project', 'AllProject')->name('all.project');
-    Route::get('/project-details/{id}', 'ProjectDetails')->name('project.details');
+
     //404 page
     Route::get('/404-page', 'Error404')->name('404.error');
     //achievements Details
