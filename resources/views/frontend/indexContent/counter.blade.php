@@ -17,7 +17,7 @@
                                      <div class="tj-count"><span class="odometer"
                                              data-count="{{ $data->experience ?? '48' }}">{{ $data->experience ?? '0' }}</span>+
                                      </div>
-                                     <span class="sub-title">{{ $data->title ?? 'Years Experience' }}</span>
+                                     <span class="sub-title">{{ $data->title ?? 'Years Experience' }} </span>
                                  </div>
                              </div>
                          @endforeach
