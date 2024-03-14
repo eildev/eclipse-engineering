@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sections', function (Blueprint $table) {
+        Schema::create('project_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('cat_id');
-            $table->foreign('cat_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->string('title');
-            $table->string('image')->nullable();
+            $table->foreignId('projects_id');
+            $table->foreign('projects_id')->references('id')->on('projects')->onDelete('cascade');
+            $table->string('title')->nullable();
             $table->text('description')->nullable();
+            $table->text('multi_image')->nullable();
+            $table->text('icon_name')->nullable();
             $table->string('status')->default(0);
             $table->timestamps();
         });
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sections');
+        Schema::dropIfExists('project_details');
     }
 };
