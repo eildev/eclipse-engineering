@@ -20,12 +20,13 @@
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Menu</li>
-@php 
-$message = App\Models\Contact::all();
-@endphp
+                @php
+                    $message = App\Models\Contact::all();
+                @endphp
                 <li>
                     <a href="{{ route('admin.dashboard') }}" class="waves-effect">
-                        <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">{{count($message)}}</span>
+                        <i class="ri-dashboard-line"></i><span
+                            class="badge rounded-pill bg-success float-end">{{ count($message) }}</span>
                         <span>Dashboard</span>
                     </a>
                 </li>
@@ -70,7 +71,7 @@ $message = App\Models\Contact::all();
                         <li><a href="{{ route('about.intro.view') }}">Manage About Intro</a></li>
                     </ul>
                 </li>
-               
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -81,7 +82,7 @@ $message = App\Models\Contact::all();
                         <li><a href="{{ route('manage.social.icon') }}">Manage Social Settings</a></li>
                     </ul>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
                         <span>Category Settings</span>
@@ -90,25 +91,25 @@ $message = App\Models\Contact::all();
                         <li><a href="{{ route('category.add') }}">Add Category</a></li>
                         <li><a href="{{ route('category.view') }}">Manage Category</a></li>
                     </ul>
-                </li>
+                </li> --}}
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Section Settings</span>
+                        <span>Projects Settings</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('add.section') }}">Add Section</a></li>
-                        <li><a href="{{ route('view.section') }}">Manage Section </a></li>
+                        <li><a href="{{ route('add.projects') }}">Add Projects</a></li>
+                        <li><a href="{{ route('view.projects') }}">Manage Projects </a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Section Details</span>
+                        <span>Project Details</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('add.section.details') }}">Add Section Details</a></li>
-                        <li><a href="{{ route('view.section.details') }}">Manage Section Details</a></li>
+                        <li><a href="{{ route('add.project.details') }}">Add Project Details</a></li>
+                        <li><a href="{{ route('view.project.details') }}">Manage Project Details</a></li>
                     </ul>
                 </li>
                 <li>
@@ -215,18 +216,18 @@ $message = App\Models\Contact::all();
                 </li>
 
                 <li>
-                    <a href="{{route('subscribe.list')}}" class="has-arrow waves-effect">
+                    <a href="{{ route('subscribe.list') }}" class="has-arrow waves-effect">
                         <i class="ri-layout-3-line"></i>
                         <span>All Subscribe</span>
                     </a>
-                    
+
                 </li>
                 <li>
-                    <a href="{{route('contact.list')}}" class="has-arrow waves-effect">
+                    <a href="{{ route('contact.list') }}" class="has-arrow waves-effect">
                         <i class="ri-layout-3-line"></i>
                         <span>All Contact Message</span>
                     </a>
-                    
+
                 </li>
                 <li class="menu-title">Footer</li>
                 <li>

@@ -17,9 +17,9 @@ use App\Http\Controllers\Backend\OurPartnerController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\WhyChooseUsController;
 use App\Http\Controllers\Backend\AboutIntroduction;
+use App\Http\Controllers\Backend\ProjectDetailsController;
+use App\Http\Controllers\Backend\ProjectsController;
 use App\Http\Controllers\Backend\SlideController;
-use App\Http\Controllers\Backend\SectionController;
-use App\Http\Controllers\Backend\SectionDetailsController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 /*
@@ -226,23 +226,23 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::post('/slider/update/{id}', 'UpdateSlider')->name('update.slider');
         Route::get('/slider/delete/{id}', 'DeleteSlider')->name('delete.slider');
     });
-    // Section related routes
-    Route::controller(SectionController::class)->group(function () {
-        Route::get('/section/add', 'SectionAdd')->name('add.section');
-        Route::post('/section/store', 'StoreSection')->name('store.section');
-        Route::get('/section/view', 'ViewSection')->name('view.section');
-        Route::get('/section/edit/{id}', 'EditSection')->name('edit.section');
-        Route::post('/section/update/{id}', 'UpdateSection')->name('update.section');
-        Route::get('/section/delete/{id}', 'DeleteSection')->name('delete.section');
+    // Projects related routes
+    Route::controller(ProjectsController::class)->group(function () {
+        Route::get('/projects/add', 'index')->name('add.projects');
+        Route::post('/projects/store', 'store')->name('store.projects');
+        Route::get('/projects/view', 'view')->name('view.projects');
+        Route::get('/projects/edit/{id}', 'edit')->name('edit.projects');
+        Route::post('/projects/update/{id}', 'update')->name('update.projects');
+        Route::get('/projects/delete/{id}', 'delete')->name('delete.projects');
     });
-    // Section related routes
-    Route::controller(SectionDetailsController::class)->group(function () {
-        Route::get('/section/details/add', 'SectionDetailsAdd')->name('add.section.details');
-        Route::post('/section/details/store', 'StoreSectionDetails')->name('store.section.details');
-        Route::get('/section/details/view', 'ViewSectionDetails')->name('view.section.details');
-        Route::get('/section/details/edit/{id}', 'EditSectionDetails')->name('edit.section.details');
-        Route::post('/section/details/update/{id}', 'UpdateSectionDetails')->name('update.section.details');
-        Route::get('/section/details/delete/{id}', 'DeleteSectionDetails')->name('delete.section.details');
+    // Project Details related routes
+    Route::controller(ProjectDetailsController::class)->group(function () {
+        Route::get('/project/details/add', 'index')->name('add.project.details');
+        Route::post('/project/details/store', 'store')->name('store.project.details');
+        Route::get('/project/details/view', 'view')->name('view.project.details');
+        Route::get('/project/details/edit/{id}', 'edit')->name('edit.project.details');
+        Route::post('/project/details/update/{id}', 'update')->name('update.project.details');
+        Route::get('/project/details/delete/{id}', 'delete')->name('delete.project.details');
     });
     // Log::warning("message");
 });
