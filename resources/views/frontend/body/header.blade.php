@@ -1,44 +1,8 @@
-{{-- <header class="solar-header-section" id="sticky-header">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-3 col-md-6">
-                <div class="logo">
-                    <a href="{{ url('/') }}"><img src="{{ asset('frontend') }}/assets/images/logo.png"
-                            alt="logo"></a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="solar-menu">
-                    <ul>
-                        <li><a href="{{ url('/') }}">Home </a>
-
-                        </li>
-                        <li><a href="{{ route('frontend.about') }}">About</a></li>
-                        <li><a href="{{ route('all.service') }}">Our Services</a>
-                        </li>
-                        <li><a href="{{ route('all.project') }}">Our Projects </a>
-
-                        </li>
-                        <li><a href="{{ route('all.team') }}">Team </a>
-
-                        </li>
-                        <li><a href="{{ route('contact.us') }}">Contacts</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="solar-search-button">
-
-                    <div class="solar-btn">
-                        <a href="{{ route('contact.us') }}">Contact Us <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header> --}}
-
 <!-- start: Header Area -->
+@php
+    $footer = App\Models\FooterSetting::all()->first();
+    $social = App\Models\SocialIcon::all()->take(4);
+@endphp
 <header class="tj-header-area header-absolute header-1">
     <div class="tj-header-topbar-area">
         <div class="container">
@@ -49,18 +13,25 @@
                             <ul>
                                 <li><i class="flaticon-back-in-time"></i>Mon - Sat - 9PM</li>
                                 <li>
-                                    <i class="flaticon-phone"></i><a href="tel:(+1)-12345678900">(+1)-123 456 789
-                                        00</a>
+                                    <i class="flaticon-phone"></i><a
+                                        href="{{ $footer->phone ?? '(1234)-567-8900' }}">{{ $footer->phone ?? '(1234)-567-8900' }}</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="header-share">
                             <ul>
                                 <li>
-                                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    @if ($social->count() > 0)
+                                        @foreach ($social as $data)
+                                            <a href="{{ $data->link }}"><i
+                                                    class="fa-brands fa-x-{{ $data->name }}"></i></a>
+                                        @endforeach
+                                    @else
+                                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    @endif
                                 </li>
                             </ul>
                         </div>
@@ -76,8 +47,8 @@
                     <div class="bottom-content-area">
                         <div class="menu-area">
                             <div class="logo-area">
-                                <a href="index.html"><img
-                                        src="{{ asset('frontend') }}/assets/images/logos/main-logo.png"
+                                <a href="{{ route('/') }}"><img
+                                        src="{{ asset('frontend') }}/assets/images/logos/eel-white-logo.png"
                                         alt="Logo" /></a>
                             </div>
                             <div class="tj-menu-area d-lg-block d-none">
@@ -87,63 +58,41 @@
                                             <a href="index.html">Home</a>
                                             <ul class="sub-menu">
                                                 <li class="current-menu-item">
-                                                    <a href="index.html">Home One</a>
+                                                    <a href="{{ route('/') }}">Home One</a>
                                                 </li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                                <li><a href="index-3.html">Home Three</a></li>
+                                                <li><a href="{{ route('home2') }}">Home Two</a></li>
+                                                <li><a href="{{ route('home3') }}">Home Three</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="about-us.html">About Us</a>
+                                            <a href="{{ route('frontend.about') }}">About Us</a>
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="services.html">Services</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="services.html">Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="service-details.html">Service Details</a>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="{{ route('all.service') }}">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('all.project') }}">Projects</a>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="javascript:void(0)">Pages</a>
                                             <ul class="sub-menu">
-                                                <li class="has-dropdown">
-                                                    <a href="project.html">Projects</a>
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a href="project.html">Projects</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="project-details.html">Project Details</a>
-                                                        </li>
-                                                    </ul>
+                                                <li>
+                                                    <a href="{{ route('all.team') }}">Team</a>
                                                 </li>
                                                 <li>
-                                                    <a href="team.html">Team</a>
+                                                    <a href="{{ route('blog') }}">Blog</a>
                                                 </li>
                                                 <li>
-                                                    <a href="faq.html">Faq</a>
+                                                    <a href="{{ route('sister.concern') }}">Sister Concern</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('csr.activities') }}">CSR Activities</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('contact.us') }}">Contact Us</a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="blog.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="blog-grid.html">Blog Grid</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog.html">Blog Standard</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-details.html">Blog Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -151,11 +100,11 @@
                         <div class="info-right-item">
                             <div class="info-navbar">
                                 <ul>
-                                    <li class="header_searce">
+                                    {{-- <li class="header_searce">
                                         <button class="search-btn">
                                             <i class="flaticon-search"></i>
                                         </button>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a class="canva_expander nav-menu-link menu-button" href="#"><i
                                                 class="flaticon-menu"></i></a>
@@ -163,7 +112,7 @@
                                 </ul>
                             </div>
                             <div class="info-item d-none d-md-block">
-                                <a class="tj-header-btn btn" href="contact.html">Contact Us <i
+                                <a class="tj-header-btn btn" href="{{ route('contact.us') }}">Contact Us <i
                                         class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>
@@ -181,8 +130,8 @@
                     <div class="bottom-content-area">
                         <div class="menu-area">
                             <div class="logo-area">
-                                <a href="index.html"><img
-                                        src="{{ asset('frontend') }}/assets/images/logos/main-logo.png"
+                                <a href="{{ route('/') }}"><img
+                                        src="{{ asset('frontend') }}/assets/images/logos/eel-white-logo.png"
                                         alt="Logo" /></a>
                             </div>
                             <div class="tj-menu-area d-lg-block d-none" id="main-menu">
@@ -192,63 +141,41 @@
                                             <a href="index.html">Home</a>
                                             <ul class="sub-menu">
                                                 <li class="current-menu-item">
-                                                    <a href="index.html">Home One</a>
+                                                    <a href="{{ route('/') }}">Home One</a>
                                                 </li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                                <li><a href="index-3.html">Home Three</a></li>
+                                                <li><a href="{{ route('home2') }}">Home Two</a></li>
+                                                <li><a href="{{ route('home3') }}">Home Three</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="about-us.html">About Us</a>
+                                            <a href="{{ route('frontend.about') }}">About Us</a>
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="services.html">Services</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="services.html">Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="service-details.html">Service Details</a>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="{{ route('all.service') }}">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('all.project') }}">Projects</a>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="javascript:void(0)">Pages</a>
                                             <ul class="sub-menu">
-                                                <li class="has-dropdown">
-                                                    <a href="project.html">Projects</a>
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a href="project.html">Projects</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="project-details.html">Project Details</a>
-                                                        </li>
-                                                    </ul>
+                                                <li>
+                                                    <a href="{{ route('all.team') }}">Team</a>
                                                 </li>
                                                 <li>
-                                                    <a href="team.html">Team</a>
+                                                    <a href="{{ route('blog') }}">Blog</a>
                                                 </li>
                                                 <li>
-                                                    <a href="faq.html">Faq</a>
+                                                    <a href="{{ route('sister.concern') }}">Sister Concern</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('csr.activities') }}">CSR Activities</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('contact.us') }}">Contact Us</a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="blog.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="blog-grid.html">Blog Grid</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog.html">Blog Standard</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-details.html">Blog Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -256,11 +183,11 @@
                         <div class="info-right-item">
                             <div class="info-navbar">
                                 <ul>
-                                    <li class="header_searce">
+                                    {{-- <li class="header_searce">
                                         <button class="search-btn">
                                             <i class="flaticon-search"></i>
                                         </button>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a class="canva_expander nav-menu-link menu-button" href="#"><i
                                                 class="flaticon-menu"></i></a>
@@ -268,7 +195,7 @@
                                 </ul>
                             </div>
                             <div class="info-item d-none d-md-block">
-                                <a class="tj-header-btn btn" href="contact.html">Contact Us <i
+                                <a class="tj-header-btn btn" href="{{ route('contact.us') }}">Contact Us <i
                                         class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>

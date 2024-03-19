@@ -44,6 +44,14 @@
                             </div>
                             <!-- end row -->
                             <div class="row mb-3">
+                                <label for="example-search-input" class="col-sm-2 col-form-label">Icon Name</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="text" placeholder="solar-panel-1"
+                                        id="example-search-input" name="icon_name" value="{{ $data->icon_name ?? '' }}">
+                                </div>
+                            </div>
+                            <!-- end row -->
+                            <div class="row mb-3">
                                 <label for="example-email-input" class="col-sm-2 col-form-label">Icon</label>
                                 <div class="col-sm-10">
                                     <input class="form-control" type="file" placeholder="Icon" id="example-email-input"

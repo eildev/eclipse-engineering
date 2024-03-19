@@ -18,14 +18,16 @@ class AboutController extends Controller
     {
         $request->validate([
             'title' => 'required|max:200',
+            'sub_title' => 'required|max:100',
             'description' => 'required',
-            'about_image' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'about_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp,svg',
         ]);
         if ($request->about_image) {
             $imageName = rand() . '.' . $request->about_image->extension();
             $request->about_image->move(public_path('uploads/about/'), $imageName);
             $about = new AboutSettings;
             $about->title = $request->title;
+            $about->sub_title = $request->sub_title;
             $about->description = $request->description;
             $about->image = $imageName;
             $about->save();
@@ -63,6 +65,7 @@ class AboutController extends Controller
                 @unlink($path);
             }
             $about->title = $request->title;
+            $about->sub_title = $request->sub_title;
             $about->description = $request->description;
             $about->image = $imageName;
             $about->update();
@@ -78,6 +81,7 @@ class AboutController extends Controller
             ]);
             $about = AboutSettings::findOrFail($id);
             $about->title = $request->title;
+            $about->sub_title = $request->sub_title;
             $about->description = $request->description;
             $about->update();
             $notification = array(

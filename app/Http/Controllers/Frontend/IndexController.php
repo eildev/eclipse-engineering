@@ -13,6 +13,7 @@ use App\Models\SectionDetails;
 use App\Models\ManagingTeams;
 use App\Models\Section;
 use Carbon\Carbon;
+use Validator;
 
 class IndexController extends Controller
 {
@@ -23,15 +24,31 @@ class IndexController extends Controller
 
   public function Subscribe(Request $request)
   {
-    Subscribe::insert([
-      'email' => $request->email,
-      'created_at' => Carbon::now(),
+    $validator = Validator::make($request->all(), [
+      'email' => 'required|string|lowercase|email|max:255'
     ]);
-    $notification = array(
-      'message' => 'Thank you for subscribing! Welcome to our community',
-      'alert-type' => 'info'
-    );
-    return redirect()->back()->with($notification);
+    if ($validator->passes()) {
+      $Subscribe = new Subscribe;
+      $Subscribe->email = $request->email;
+      $Subscribe->save();
+      return response()->json([
+        'status' => 200,
+        'message' => 'Subscribe Successfully'
+      ]);
+    }
+    return response()->json([
+      'status' => '500',
+      'error' => $validator->messages()
+    ]);
+    // Subscribe::insert([
+    //   'email' => $request->email,
+    //   'created_at' => Carbon::now(),
+    // ]);
+    // $notification = array(
+    //   'message' => 'Thank you for subscribing! Welcome to our community',
+    //   'alert-type' => 'info'
+    // );
+    // return redirect()->back()->with($notification);
   } //
   public function SubscribeList()
   {
@@ -118,6 +135,21 @@ class IndexController extends Controller
   public function Error404()
   {
     return view('frontend.errors.404');
+  }
+  // blog page function 
+  public function blog()
+  {
+    return view('frontend.blog.blog-page');
+  }
+  // Sister Concern 
+  public function sisterConcern()
+  {
+    return view('frontend.sister-concern.sister-concern');
+  }
+  // CSR Activities
+  public function csrActivities()
+  {
+    return view('frontend.csr-activities.csr');
   }
   ///Achievments
   public function AchievementsDetails($id)

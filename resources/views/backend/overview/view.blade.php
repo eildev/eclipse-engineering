@@ -32,6 +32,7 @@
                                         <th>Title</th>
                                         <th>Experience</th>
                                         <th>Icon</th>
+                                        <th>Icon Name</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -48,6 +49,7 @@
                                                         src="{{ asset('uploads/overview/' . $data->icon) }}"
                                                         alt="icon image">
                                                 </td>
+                                                <td>{{ $data->icon_name }}</td>
                                                 <td>
                                                     <form action="{{ route('overview.status', $data->id) }}" method="POST">
                                                         @csrf

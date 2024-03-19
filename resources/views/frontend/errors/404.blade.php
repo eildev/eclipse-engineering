@@ -1,38 +1,42 @@
 @extends('frontend.frontend_master')
 @section('content')
-<div class="breatcome-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12">
-					<div class="breatcome-content">
-						<div class="breatcome-title">
-							<h1>Error Page</h1>
-						</div>
-						<div class="bratcome-text">
-							<ul>
-								<li><a href="{{url('/')}}">Home</a></li>
-								<li> 404</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+    <section class="breadcrumb-wrapper"
+        data-bg-image="{{ asset('frontend') }}/assets/images/banner/breadcrumb-background.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-content-area">
+                        <div class="breadcrumb-heading">
+                            <h1 class="breadcrumb-title">404 Page</h1>
+                        </div>
+                        <div class="breadcrumb-link">
+                            <span>
+                                <a href="{{ route('/') }}">
+                                    <span>Home</span>
+                                </a>
+                            </span>
+                            <i class="fa-light fa-angle-right"></i>
+                            <span>
+                                <span>404 Page</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=========== Breadcrumb End =========-->
 
-	<div class="error-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<div class="error-thumb mb-60">
-						<img src="{{asset('frontend')}}/assets/images/resource/error-thumb.png" alt="">
-					</div>
-					<div class="solar-btn text-center">
-						<a href="{{url('/')}}">Go To Home <i class="bi bi-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
+    <!--=========== Contact Section Start =========-->
+    <div class="tj-contact-section tj-contact-page">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12">
+                    <img src="{{ asset('frontend') }}/assets/images/error/404.svg" alt="error image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========== Contact Section End =========-->
 @endsection

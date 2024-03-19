@@ -1,136 +1,129 @@
 @extends('frontend.frontend_master')
 @section('content')
-    <div class="breatcome-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="breatcome-content">
-                        <div class="breatcome-title">
-                            <h1>Projects List</h1>
-                        </div>
-                        <div class="bratcome-text">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li>Our Projects</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    @php
-        $projects = App\Models\Section::latest()->get();
-    @endphp
-    <!--==================================================-->
-    <!--End Solar Panel  slider Section  -->
-    <!--==================================================-->
-    <div class="project-grid-section">
+    <!--=========== Breadcrumb Start =========-->
+    <section class="breadcrumb-wrapper"
+        data-bg-image="{{ asset('frontend') }}/assets/images/banner/breadcrumb-background.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="protfolio-nav text-center">
-                        <div class="protfolio-menu">
-                            <ul class="menu-filtering">
-                                <li class="current_menu_item" data-filter="*"> All Projects </li>
-                                <li data-filter=".physics" class=""> Business </li>
-                                <li data-filter=".chemistry" class=""> Energy </li>
-                                <li data-filter=".math"> Finance </li>
-                                <li data-filter=".bangla"> Supply Chain </li>
-                            </ul>
+                    <div class="breadcrumb-content-area">
+                        <div class="breadcrumb-heading">
+                            <h1 class="breadcrumb-title">Our Project</h1>
+                        </div>
+                        <div class="breadcrumb-link">
+                            <span>
+                                <a href="{{ route('/') }}">
+                                    <span>Home</span>
+                                </a>
+                            </span>
+                            <i class="fa-light fa-angle-right"></i>
+                            <span>
+                                <span>Our Project</span>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row image_load">
-                @if (!empty($projects))
-                    @foreach ($projects as $project)
-                        <a href="{{ route('project.details', $project->id) }}"
-                            class="col-lg-4 col-md-6 grid-item physics math mb-30">
-                            <div class="project-grid-box">
-                                <div class="project-thumb">
-                                    <img src="{{ asset('uploads/section/' . $project->image) }}" height="280px"
-                                        width="280px" alt="Projects Image">
-                                </div>
-                                <div class="project-content">
-                                    <h4>{!! Str::limit(strip_tags($project->title), 35, '...') !!}</h4>
-                                    <span>{!! Str::limit(strip_tags($project->description), 40, '...') !!}</span>
-                                </div>
-                            </div>
-                        </a>
-                    @endforeach
-                @else
-                    <div class="col-lg-4 col-md-6 grid-item physics math mb-30">
-                        <div class="project-grid-box">
-                            <div class="project-thumb">
-                                <img src="assets/images/project/project1.png" alt="">
-                            </div>
+        </div>
+    </section>
+    <!--=========== Breadcrumb End =========-->
+    @php
+        $projects = App\Models\Section::latest()->get();
+    @endphp
+    <!--=========== Project Section Start =========-->
+    <section class="tj-project-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-sec-heading-two">
+                        <span class="sub-title">Latest Project</span>
+                        <h2 class="title">
+                            Solar Pushing Reanewable <br />
+                            <span>Prohect Development</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="tj-project-item">
+                        <div class="project-image">
+                            <img src="{{ asset('frontend') }}/assets/images/project/project-1.jpg" alt="Image" />
                             <div class="project-content">
-                                <h4>Chain Finance Program</h4>
-                                <span>ECO, Supply Chain</span>
+                                <h3 class="title"><a href="#">Project Development</a></h3>
+                                <span class="sub-title">Soaring Renewal</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 grid-item chemistry bangla mb-30">
-                        <div class="project-grid-box">
-                            <div class="project-thumb">
-                                <img src="assets/images/project/project2.png" alt="">
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tj-project-item">
+                        <div class="project-image">
+                            <img src="{{ asset('frontend') }}/assets/images/project/project-2.jpg" alt="Image" />
                             <div class="project-content">
-                                <h4>New Public Attitude Tracker</h4>
-                                <span>Digital Product</span>
+                                <h3 class="title"><a href="#">Project Development</a></h3>
+                                <span class="sub-title">Soaring Renewal</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 grid-item chemistry physics mb-30">
-                        <div class="project-grid-box">
-                            <div class="project-thumb">
-                                <img src="assets/images/project/project3.png" alt="">
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tj-project-item">
+                        <div class="project-image">
+                            <img src="{{ asset('frontend') }}/assets/images/project/project-8.jpg" alt="Image" />
                             <div class="project-content">
-                                <h4>Smarter Ways to Manage</h4>
-                                <span>ECO, Supply Chain</span>
+                                <h3 class="title"><a href="#">Project Development</a></h3>
+                                <span class="sub-title">Soaring Renewal</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 grid-item bangla physics mb-30">
-                        <div class="project-grid-box">
-                            <div class="project-thumb">
-                                <img src="assets/images/project/project4.png" alt="">
-                            </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tj-project-item">
+                        <div class="project-image">
+                            <img src="{{ asset('frontend') }}/assets/images/project/project-9.jpg" alt="Image" />
                             <div class="project-content">
-                                <h4>Task Managemen</h4>
-                                <span>Creative Work</span>
+                                <h3 class="title"><a href="#">Project Development</a></h3>
+                                <span class="sub-title">Soaring Renewal</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 grid-item chemistry math mb-30">
-                        <div class="project-grid-box">
-                            <div class="project-thumb">
-                                <img src="assets/images/project/project5.png" alt="">
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tj-project-item">
+                        <div class="project-image">
+                            <img src="{{ asset('frontend') }}/assets/images/project/project-10.jpg" alt="Image" />
                             <div class="project-content">
-                                <h4>Addressing Wind Energy</h4>
-                                <span>ECO, Supply Chain</span>
+                                <h3 class="title"><a href="#">Project Development</a></h3>
+                                <span class="sub-title">Soaring Renewal</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 grid-item math bangla mb-30">
-                        <div class="project-grid-box">
-                            <div class="project-thumb">
-                                <img src="assets/images/project/project6.png" alt="">
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tj-project-item">
+                        <div class="project-image">
+                            <img src="{{ asset('frontend') }}/assets/images/project/project-11.jpg" alt="Image" />
                             <div class="project-content">
-                                <h4>Historical Book Design</h4>
-                                <span>Finance, Supply</span>
+                                <h3 class="title"><a href="#">Project Development</a></h3>
+                                <span class="sub-title">Soaring Renewal</span>
                             </div>
                         </div>
                     </div>
-                @endif
+                </div>
+                <div class="col-lg-4">
+                    <div class="tj-project-item">
+                        <div class="project-image">
+                            <img src="{{ asset('frontend') }}/assets/images/project/project-12.jpg" alt="Image" />
+                            <div class="project-content">
+                                <h3 class="title"><a href="#">Project Development</a></h3>
+                                <span class="sub-title">Soaring Renewal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--==================================================-->
-    <!-- End Solar Panel  Project Grid  Section -->
-    <!--==================================================-->
+    </section>
+    <!--=========== Project Section End =========-->
 @endsection

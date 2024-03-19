@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('about_settings', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('sub_title')->nullable();
             $table->text('description')->nullable();
             $table->string('image')->nullable();
             $table->string('status')->default(0);

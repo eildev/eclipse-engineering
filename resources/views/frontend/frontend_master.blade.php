@@ -6,6 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Site Title -->
     <title>Eclipse Engineering Limited</title>
@@ -36,7 +37,7 @@
 </head>
 
 <body>
-    <!-- Preloader start -->
+    {{-- <!-- Preloader start -->
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner">
@@ -53,13 +54,23 @@
                 <span data-text-preloader="P" class="letters-loading"> P </span>
                 <span data-text-preloader="S" class="letters-loading"> S </span>
                 <span data-text-preloader="E" class="letters-loading"> E </span>
-                {{-- <span data-text-preloader="E" class="letters-loading"> U </span>
-                <span data-text-preloader="E" class="letters-loading"> S </span> --}}
+                <br>
+                <span data-text-preloader="E" class="letters-loading"> E </span>
+                <span data-text-preloader="N" class="letters-loading"> N </span>
+                <span data-text-preloader="G" class="letters-loading"> G </span>
+                <span data-text-preloader="I" class="letters-loading"> I </span>
+                <span data-text-preloader="N" class="letters-loading"> N </span>
+                <span data-text-preloader="E" class="letters-loading"> E </span>
+                <span data-text-preloader="E" class="letters-loading"> E </span>
+                <span data-text-preloader="R" class="letters-loading"> R </span>
+                <span data-text-preloader="I" class="letters-loading"> I </span>
+                <span data-text-preloader="N" class="letters-loading"> N </span>
+                <span data-text-preloader="G" class="letters-loading"> G </span>
             </div>
         </div>
         <button class="tj-header-btn btn">Cancel Preloader</button>
     </div>
-    <!-- Preloader end -->
+    <!-- Preloader end --> --}}
 
     <!-- start: Offcanvas Area -->
     <div id="tj-overlay-bg" class="tj-overlay-canvas"></div>
@@ -130,7 +141,7 @@
     <!-- end: Offcanvas Area -->
 
     <!-- start: Search Popup -->
-    <div class="search_popup">
+    {{-- <div class="search_popup">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -178,7 +189,7 @@
             </div>
         </div>
     </div>
-    <div class="search-popup-overlay"></div>
+    <div class="search-popup-overlay"></div> --}}
     <!-- end: Search Popup -->
 
     <!-- start: Header Area -->
