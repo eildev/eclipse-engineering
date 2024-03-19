@@ -63,7 +63,7 @@
              </div>
              <div class="col-lg-8 col-md-7">
                  <div class="counter-wrapper">
-                     <img src="{{ asset('frontend') }}/assets/images/project/counter-1.jpg" alt="Image" />
+                     <img src="{{ asset('frontend') }}/assets/images/project/counter-1.webp" alt="Image" />
                  </div>
              </div>
          </div>

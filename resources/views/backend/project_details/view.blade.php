@@ -44,7 +44,7 @@
                                 <td>{{ $item->icon_name }}</td>
                                 <td>{!! $item->description !!}</td>
                                 <td>
-                                    @foreach (explode(',', $item->multi_image) as $image)
+                                    @foreach (explode(',', $item->image) as $image)
                                         <img style="height: 60px; width:60px; margin-right: 5px;"
                                             src="{{ asset('uploads/projects/multi_img/' . $image) }}" alt="Image">
                                     @endforeach

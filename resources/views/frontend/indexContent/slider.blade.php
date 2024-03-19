@@ -16,13 +16,13 @@
                         <div class="container">
                             <div class="slider-content">
                                 <h1 class="slider-title">{{ $data->short_title ?? 'Harnessing The Wind' }}</h1>
-                                <h2 class="slider-sub-title">And Sun <span>For Future</span></h2>
+                                <h2 class="slider-sub-title">{{ $data->sub_title ?? 'And Sun For Future' }}</h2>
                                 <div class="slider-text">
                                     <div class="desc">
                                         <p>
                                             {!! $data->long_title
-                                                ? (strlen($data->long_title) > 250
-                                                    ? substr($data->long_title, 0, 250) . '...'
+                                                ? (strlen($data->long_title) > 200
+                                                    ? substr($data->long_title, 0, 200) . '...'
                                                     : $data->long_title)
                                                 : 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered form, passage.' !!}
                                         </p>
@@ -125,10 +125,10 @@
                     <li>
                         <div class="service-content">
                             <div class="service-icon">
-                                <i class="flaticon-solar-panel"></i>
+                                <i class="flaticon-{{ $data->icon_name }}"></i>
                             </div>
                             <div class="service-text">
-                                <h5 class="title">{{ $data->experience ?? '25+' }}</h5>
+                                <h5 class="title">{{ $data->experience ?? '25' }}+</h5>
                                 <span class="sub-title">{{ $data->title ?? 'Years Experience' }}</span>
                             </div>
                             <div class="item-shape">

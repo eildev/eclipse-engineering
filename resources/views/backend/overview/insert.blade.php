@@ -60,8 +60,8 @@
                             <div class="row mb-3">
                                 <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <img id="showImage" class="rounded avatar-lg "
-                                        src="{{ asset('uploads/about/no_images.jpg') }}" alt="image">
+                                    <img id="showImage" class="rounded avatar-lg " src="{{ asset('dummy-img/no-img.jpg') }}"
+                                        alt="image">
                                     @error('icon')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -79,7 +79,5 @@
                 </div>
             </div> <!-- end col -->
         </div>
-
-
     </div>
 @endsection

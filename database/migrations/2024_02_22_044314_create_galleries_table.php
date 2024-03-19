@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('title')->nullable();
             $table->string('gallery_image')->nullable();
             $table->string('status')->default(0);

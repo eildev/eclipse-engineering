@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreign('projects_id')->references('id')->on('projects')->onDelete('cascade');
             $table->string('title')->nullable();
             $table->text('description')->nullable();
-            $table->text('multi_image')->nullable();
+            $table->text('image')->nullable();
             $table->text('icon_name')->nullable();
             $table->string('status')->default(0);
             $table->timestamps();

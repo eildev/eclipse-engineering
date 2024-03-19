@@ -32,15 +32,14 @@ class ProjectDetailsController extends Controller
             $project->title = $request->title;
             $project->icon_name = $request->icon_name;
             $project->description = $request->description;
-            $project->multi_image = $imageName;
+            $project->image = $imageName;
             $project->save();
+            $notification = array(
+                'message' => 'Section Details Successfully Inserted',
+                'alert-type' => 'info'
+            );
+            return redirect()->route('view.project.details')->with($notification);
         }
-
-        $notification = array(
-            'message' => 'Section Details Successfully Inserted',
-            'alert-type' => 'info'
-        );
-        return redirect()->route('view.project.details')->with($notification);
     }
     public function view()
     {
@@ -56,37 +55,44 @@ class ProjectDetailsController extends Controller
     //Update Section Details
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'multi_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'icon_name' => 'required',
-        ]);
-        if ($request->multi_image) {
-            $imageName = rand() . '.' . $request->multi_image->extension();
-            $request->multi_image->move(public_path('uploads/projects/multi_img/'), $imageName);
-            $path = public_path('uploads/projects/multi_img/') . $request->multi_image;
+        // $request->validate([
+        //     'title' => 'required',
+        //     'description' => 'required',
+        //     'multi_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+        //     'icon_name' => 'required',
+        // ]);
+        $project = ProjectDetails::findOrFail($id);
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $imageName = rand() . '.' . $request->image->extension();
+            $request->image->move(public_path('uploads/projects/multi_img/'), $imageName);
+
+            $path = public_path('uploads/projects/multi_img/') . $project->image;
             if (file_exists($path)) {
                 @unlink($path);
             }
+            $project->image = $imageName;
         }
-        $project = ProjectDetails::findOrFail($id);
         $project->projects_id = $request->projects_id;
         $project->title = $request->title;
         $project->icon_name = $request->icon_name;
         $project->description = $request->description;
-        $project->update();
-        $notification = array(
+
+        $project->save();
+
+        $notification = [
             'message' => 'Section Details Successfully Updated',
             'alert-type' => 'info'
-        );
+        ];
+
         return redirect()->route('view.project.details')->with($notification);
-    } //End  Method
+    }
+    //End  Method
+
     //Delete Section Details
     public function delete($id)
     {
         $project = ProjectDetails::findOrFail($id);
-        $path = public_path('uploads/projects/multi_img/') . $project->multi_image;
+        $path = public_path('uploads/projects/multi_img/') . $project->image;
         if (file_exists($path)) {
             @unlink($path);
         }

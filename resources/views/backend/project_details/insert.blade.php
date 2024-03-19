@@ -1,6 +1,6 @@
 @extends('backend.admin_master')
 @section('admin')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> --}}
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -24,59 +24,57 @@
                         <div class="row mb-3">
                             <label for="example-email-input" class="col-sm-2 col-form-label">Add Project Name</label>
                             <div class="col-sm-10 form-group">
-                                <select class="form-select @error('projects_id') is-invalid  @enderror" name="projects_id"
-                                    aria-label="Default select example">
+                                <select class="form-select" name="projects_id" aria-label="Default select example">
                                     <option selected="" value=""> Select Projects Name</option>
                                     @foreach ($projects as $project)
                                         <option value="{{ $project->id }}">{{ $project->title }}</option>
                                     @endforeach
                                 </select>
-                                @error('projects_id')
+                                {{-- @error('projects_id')
                                     <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                @enderror --}}
                             </div>
 
                         </div>
                         <div class="row mb-3">
                             <label for="example-email-input" class="col-sm-2 col-form-label">Project Details Title</label>
                             <div class="col-sm-10 form-group">
-                                <input class="form-control @error('title') is-invalid  @enderror" name="title"
-                                    type="text" placeholder="Enter Project Details Title" id="example-email-input">
-                                @error('title')
+                                <input class="form-control " name="title" type="text"
+                                    placeholder="Enter Project Details Title" id="example-email-input">
+                                {{-- @error('title')
                                     <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="example-email-input" class="col-sm-2 col-form-label">Project Details
                                 Description</label>
                             <div class="col-sm-10 form-group">
-                                <textarea name="description" class="form-control @error('description') is-invalid  @enderror" id="summernote"></textarea>
-                                @error('description')
+                                <textarea name="description" class="form-control" id="summernote"></textarea>
+                                {{-- @error('description')
                                     <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="example-email-input" class="col-sm-2 col-form-label">Project Details Icon
                                 Name</label>
                             <div class="col-sm-10 form-group">
-                                <input class="form-control @error('icon_name') is-invalid  @enderror" name="icon_name"
-                                    type="text" placeholder="Enter Project Icon Name" id="example-email-input">
-                                @error('icon_name')
+                                <input class="form-control" name="icon_name" type="text"
+                                    placeholder="Enter Project Icon Name" id="example-email-input">
+                                {{-- @error('icon_name')
                                     <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
                         <!-- end row -->
                         <div class="row mb-3">
                             <label for="example-input" class="col-sm-2 col-form-label">Project Details Image</label>
                             <div class="col-sm-10 form-group">
-                                <input name="multi_image" id="image"
-                                    class="form-control  @error('multi_image') is-invalid  @enderror" type="file">
-                                @error('multi_image')
+                                <input name="multi_image" id="image" class="form-control" type="file">
+                                {{-- @error('multi_image')
                                     <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
                         <!-- end row -->

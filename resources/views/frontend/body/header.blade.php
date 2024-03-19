@@ -48,7 +48,7 @@
                         <div class="menu-area">
                             <div class="logo-area">
                                 <a href="{{ route('/') }}"><img
-                                        src="{{ asset('frontend') }}/assets/images/logos/main-logo.png"
+                                        src="{{ asset('frontend') }}/assets/images/logos/eel-white-logo.png"
                                         alt="Logo" /></a>
                             </div>
                             <div class="tj-menu-area d-lg-block d-none">
@@ -100,11 +100,11 @@
                         <div class="info-right-item">
                             <div class="info-navbar">
                                 <ul>
-                                    <li class="header_searce">
+                                    {{-- <li class="header_searce">
                                         <button class="search-btn">
                                             <i class="flaticon-search"></i>
                                         </button>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a class="canva_expander nav-menu-link menu-button" href="#"><i
                                                 class="flaticon-menu"></i></a>
@@ -131,7 +131,7 @@
                         <div class="menu-area">
                             <div class="logo-area">
                                 <a href="{{ route('/') }}"><img
-                                        src="{{ asset('frontend') }}/assets/images/logos/main-logo.png"
+                                        src="{{ asset('frontend') }}/assets/images/logos/eel-white-logo.png"
                                         alt="Logo" /></a>
                             </div>
                             <div class="tj-menu-area d-lg-block d-none" id="main-menu">
@@ -183,11 +183,11 @@
                         <div class="info-right-item">
                             <div class="info-navbar">
                                 <ul>
-                                    <li class="header_searce">
+                                    {{-- <li class="header_searce">
                                         <button class="search-btn">
                                             <i class="flaticon-search"></i>
                                         </button>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a class="canva_expander nav-menu-link menu-button" href="#"><i
                                                 class="flaticon-menu"></i></a>

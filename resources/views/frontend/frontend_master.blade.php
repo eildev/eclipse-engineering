@@ -141,7 +141,7 @@
     <!-- end: Offcanvas Area -->
 
     <!-- start: Search Popup -->
-    <div class="search_popup">
+    {{-- <div class="search_popup">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -189,7 +189,7 @@
             </div>
         </div>
     </div>
-    <div class="search-popup-overlay"></div>
+    <div class="search-popup-overlay"></div> --}}
     <!-- end: Search Popup -->
 
     <!-- start: Header Area -->

@@ -13,13 +13,14 @@
                     <div class="footer-widget footer1-col-1">
                         <div class="footer-info">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="{{ asset('frontend') }}/assets/images/logos/main-logo.png"
+                                <a href="index.html"><img
+                                        src="{{ asset('frontend') }}/assets/images/logos/eel-white-logo.png"
                                         alt="Logo" /></a>
                             </div>
                             <div class="desc">
                                 <p>
-                                    There are many variations of passages of Lorem Ipsum available, but the
-                                    majority have suffered.
+                                    Leading the charge towards sustainable energy solutions worldwide. Join us in
+                                    shaping a greener future!
                                 </p>
                             </div>
                             <div class="footer-share">
@@ -50,10 +51,11 @@
                         <div class="footer-menu">
                             <ul>
                                 <li><a href="{{ route('/') }}">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Our Blog</a></li>
-                                <li><a href="#">Our Team</a></li>
+                                <li><a href="{{ route('frontend.about') }}">About Us</a></li>
+                                <li><a href="{{ route('all.service') }}">Our Services</a></li>
+                                <li><a href="{{ route('all.project') }}">Our Projects</a></li>
+                                <li><a href="{{ route('blog') }}">Our Blog</a></li>
+                                <li><a href="{{ route('all.team') }}">Our Team</a></li>
                             </ul>
                         </div>
                     </div>
@@ -69,7 +71,7 @@
                                     <i class="flaticon-location"></i>
                                     {{ $footer->fullAddress ??
                                         "2972 Westheimer Rd. Santa Ana, Illinois
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                937949" }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            937949" }}
                                 </li>
                                 <li>
                                     <i class="flaticon-open"></i>

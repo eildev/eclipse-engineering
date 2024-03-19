@@ -6,6 +6,7 @@
         url("../fonts/flaticon_solar_plus.eot?960b0acfb79667dd4550ee39dd18f9fc#iefix") format("embedded-opentype"),
         url("../fonts/flaticon_solar_plus.svg?960b0acfb79667dd4550ee39dd18f9fc#flaticon_solar_plus") format("svg");
 }
+
 i[class^="flaticon-"]:before,
 i[class*=" flaticon-"]:before {
     font-family: flaticon_solar_plus !important;
@@ -320,4 +321,6 @@ i[class*=" flaticon-"]:before {
 
 .flaticon-smog-factory-building-contamination:before {
     content: "\f14c";
-} /*# sourceMappingURL=flaticon_solar_plus.css.map */
+}
+
+/*# sourceMappingURL=flaticon_solar_plus.css.map */

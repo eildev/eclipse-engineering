@@ -24,23 +24,27 @@
     @include('frontend.indexContent.team')
     <!-- End Solar Panel Team Section -->
 
-    <!-- Start Solar Panel  Testimonial  Section -->
+    {{-- <!-- Start Solar Panel  Testimonial  Section -->
     @include('frontend.indexContent.testimonial')
-    <!-- End Solar Panel  Testimonial  Section -->
+    <!-- End Solar Panel  Testimonial  Section --> --}}
 
-    <!-- Start Solar Panel  FAQ  Section -->
+    {{-- <!-- Start Solar Panel  FAQ  Section -->
     @include('frontend.indexContent.faq')
-    <!-- End Solar Panel  FAQ  Section -->
+    <!-- End Solar Panel  FAQ  Section --> --}}
+
+    <!-- Start Sister Concern  Section -->
+    {{-- @include('frontend.indexContent.sister-concern') --}}
+    <!-- End Sister Concern Section -->
 
     <!-- Start Solar Panel Blog Section -->
     @include('frontend.indexContent.blog')
     <!-- End Solar Panel Blog Section -->
 
-    <!-- Start Solar Panel Blog Section -->
+    {{-- <!-- Start Solar Panel Blog Section -->
     @include('frontend.indexContent.video')
-    <!-- End Solar Panel Blog Section -->
+    <!-- End Solar Panel Blog Section --> --}}
 
-    <!-- Start Solar Panel  Choose Us  Section -->
+    {{-- <!-- Start Solar Panel  Choose Us  Section -->
     @include('frontend.indexContent.gallery')
-    <!-- End Solar Panel  Choose Us  Section -->
+    <!-- End Solar Panel  Choose Us  Section --> --}}
 @endsection

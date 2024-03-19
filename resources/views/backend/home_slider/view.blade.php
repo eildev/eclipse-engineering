@@ -14,7 +14,7 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{route('add.slider')}}" class="btn btn-sm btn-primary text-light fs-4">+</a>
+                <a href="{{ route('add.slider') }}" class="btn btn-sm btn-primary text-light fs-4">+</a>
             </div>
         </div>
     </div>
@@ -26,6 +26,7 @@
                         <tr>
                             <th>Id</th>
                             <th>Short Title</th>
+                            <th>Sub Title</th>
                             <th>Long Title</th>
                             <th>Slider link</th>
                             <th>Slider Image</th>
@@ -35,18 +36,23 @@
                     <tbody>
 
                         @foreach ($sliders as $key => $item)
-                        <tr>
-                            <td>{{$key+1}}</td>
-                            <td>{{$item->short_title}}</td>
-                            <td>{!!$item->long_title!!}</td>
-                            <td>{{$item->slider_links}}</td>
-                            <td><img style="height: 60px; width:60px" src="{{asset('uploads/slider_image/'.$item->slider_image)}}" alt="Slider Image"></td>
+                            <tr>
+                                <td>{{ $key + 1 }}</td>
+                                <td>{{ $item->short_title }}</td>
+                                <td>{{ $item->sub_title }}</td>
+                                <td>{!! $item->long_title !!}</td>
+                                <td>{{ $item->slider_links }}</td>
+                                <td><img style="height: 60px; width:60px"
+                                        src="{{ asset('uploads/slider_image/' . $item->slider_image) }}" alt="Slider Image">
+                                </td>
 
-                            <td>
-                                <a class="btn btn-sm btn-warning" href="{{route('edit.slider',$item->id)}}">Edit</a>
+                                <td>
+                                    <a class="btn btn-sm btn-warning" href="{{ route('edit.slider', $item->id) }}">Edit</a>
 
-                            <a href="{{route('delete.slider',$item->id)}}" id="delete" class="btn btn-sm btn-danger">Delete</a></td>
-                        </tr>
+                                    <a href="{{ route('delete.slider', $item->id) }}" id="delete"
+                                        class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>

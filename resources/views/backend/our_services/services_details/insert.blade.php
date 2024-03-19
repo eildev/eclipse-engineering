@@ -20,7 +20,6 @@
                     <form action="{{ route('store.service.details') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <!-- end row -->
-
                         <div class="row mb-3">
                             <label for="example-email-input" class="col-sm-2 col-form-label">Select Service title</label>
                             <div class="col-sm-10">
@@ -35,7 +34,6 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-
                         </div>
                         <div class="row mb-3">
                             <label for="example-input" class="col-sm-2 col-form-label">Service Details Title</label>
@@ -48,7 +46,6 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">About Description</label>
                             <div class="col-sm-10">
@@ -65,7 +62,7 @@
                             <div class="col-sm-10">
                                 <input class="form-control @error('services_details_icon_name') is-invalid  @enderror"
                                     name="services_details_icon_name" type="text"
-                                    placeholder="Enter  Service Details Title" id="example-input">
+                                    placeholder="Enter Service Details Icon Name" id="example-input">
                                 @error('services_details_icon_name')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -75,41 +72,30 @@
                         <div class="row mb-3">
                             <label for="example-input" class="col-sm-2 col-form-label">Service Details Icon</label>
                             <div class="col-sm-10">
-                                <input name="services_details_icon"
-                                    class="form-control @error('services_details_icon') is-invalid  @enderror"
-                                    type="file" id="image">
+                                <input name="services_details_icon" class="form-control" type="file" id="image">
                             </div>
                         </div>
                         <!-- end row -->
                         <div class="row mb-3">
                             <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
-                                <img id="showImage" class="rounded avatar-lg "
-                                    src="{{ asset('uploads/about/no_images.jpg') }}" alt="Service Details Image">
-                                @error('services_details_icon')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                <img id="showImage" class="rounded avatar-lg " src="{{ asset('dummy-img/no-img.jpg') }}"
+                                    alt="Service Details Image">
                             </div>
-
                         </div>
                         {{-- //Image Details --}}
                         <div class="row mb-3">
                             <label for="example-input" class="col-sm-2 col-form-label">Service Details Image</label>
                             <div class="col-sm-10">
-                                <input name="services_details_image"
-                                    class="form-control @error('services_details_image') is-invalid  @enderror"
-                                    type="file" id="image2">
+                                <input name="services_details_image" class="form-control" type="file" id="image2">
                             </div>
                         </div>
                         <!-- end row -->
                         <div class="row mb-3">
                             <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
-                                <img id="showImage2" class="rounded avatar-lg "
-                                    src="{{ asset('uploads/about/no_images.jpg') }}" alt="Service Details Image">
-                                @error('services_details_image')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                <img id="showImage2" class="rounded avatar-lg " src="{{ asset('dummy-img/no-img.jpg') }}"
+                                    alt="Service Details Image">
                             </div>
 
                         </div>

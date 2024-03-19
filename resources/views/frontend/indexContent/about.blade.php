@@ -15,16 +15,15 @@
                         <span class="sub-title">About Us</span>
                         <h2 class="sec-title">
                             {{ $about->title ?? 'Our Mission Is To Make Solar' }}
-                            <br />
-                            <span>{{ $about->sub_title ?? 'Energy Accessible' }}</span>
+                            {{-- <br /> --}}
+                            {{-- <span>{{ $about->sub_title ?? 'Energy Accessible' }}</span> --}}
                         </h2>
                         <div class="desc">
                             <p>
-                                {!! $about->description
-                                    ? (strlen($about->description) > 250
-                                        ? substr($about->description, 0, 250) . '...'
-                                        : $about->description)
-                                    : 'It is a long established fact that a reader will be distracted by the looking at its layout. The point of using more-or-less normal distribution of.' !!}
+                                @php
+                                    $limitText = Str::limit(strip_tags($about->description), 250, ' ....');
+                                @endphp
+                                {!! $limitText !!}
                             </p>
                         </div>
                     </div>
@@ -33,7 +32,7 @@
                             @foreach ($overview as $data)
                                 <div class="counter-item">
                                     <div class="about-icon">
-                                        <i class="flaticon-solar-panel-1"></i>
+                                        <i class="flaticon-{{ $data->icon_name }}"></i>
                                     </div>
                                     <div class="counter-number">
                                         <div class="tj-count">
@@ -66,7 +65,6 @@
                                 </div>
                             </div>
                         @endif
-
                     </div>
                     <div class="tj-about-button d-flex">
                         <a class="tj-primary-btn btn" href="{{ route('frontend.about') }}">

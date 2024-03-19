@@ -1,7 +1,8 @@
 @php
     $services = App\Models\ServicesDetails::latest()->limit(4)->get();
     // dd($services);
-    $ourService = App\Models\ServicesDetails::latest()->first();
+    $ourService = App\Models\OurServices::latest()->first();
+    // dd($ourService);
 @endphp
 
 <!--=========== Service Section Start =========-->
@@ -45,12 +46,14 @@
                                 </h4>
                                 <div class="desc">
                                     <p>
-                                        {!! $service->services_details_description
-                                            ? (strlen($service->services_details_description) > 250
-                                                ? substr($service->services_details_description, 0, 250) . '...'
-                                                : $service->services_details_description)
-                                            : 'All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making words,' !!}
-
+                                        @php
+                                            $limitText = Str::limit(
+                                                strip_tags($service->services_details_description),
+                                                150,
+                                                ' ....',
+                                            );
+                                        @endphp
+                                        {!! $limitText !!}
                                     </p>
                                 </div>
                                 <div class="read-more">
