@@ -9,11 +9,15 @@
     <!-- End Solar Panel  About Section -->
 
     <!-- Start Solar Panel  Service Section -->
-    @include('frontend.indexContent.service')
+    @include('frontend.indexContent2.service')
     <!-- End Solar Panel  Service Section -->
 
+     <!-- Start Why chose Us Section -->
+    @include('frontend.indexContent2.choose_us')
+    <!-- End Why chose Us Section -->
+
     <!-- Start Solar Panel  Counter Section -->
-    @include('frontend.indexContent.counter')
+    @include('frontend.indexContent2.counter')
     <!-- End Solar Panel  Counter Section -->
 
     <!-- Start Solar Panel  Process Section -->

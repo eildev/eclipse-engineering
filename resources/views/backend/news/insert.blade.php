@@ -37,7 +37,7 @@
                             <div class="row mb-3">
                                 <label for="example-search-input" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" rows="5" placeholder="Description" name="description"></textarea>
+                                    <textarea class="form-control" rows="5" placeholder="Description" id="summernote" name="description"></textarea>
                                 </div>
                             </div>
                             <!-- end row -->

@@ -85,7 +85,7 @@ START: Theme Default CSS
   --tj-color-heading-primary: #323c45;
   --tj-color-text-body: #717171;
   /* --tj-color-theme-primary: #39ca6e; */
-  --tj-color-theme-primary: #2994f1;
+  --tj-color-theme-primary: #29b2fb;
   --tj-color-theme-secondary: #323c45;
   --tj-color-theme-bg: #fafafc;
   --tj-color-grey-1: #bdc5ca;
@@ -1746,7 +1746,7 @@ START: Theme Canvas CSS
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(57, 202, 110, 0.7);
+  background-color: rgba(41, 178, 251, 0.7);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -12037,7 +12037,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
   height: 653px;
   top: 0;
   left: 0;
-  background-image: url(../images/banner/value-bg.jpg);
+  background-image: url(../images/banner/value-bg.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
