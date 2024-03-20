@@ -24,8 +24,7 @@
                         <a href="">
                             <div class="tj-process-item">
                                 <img src="{{ $project->image ? asset('uploads/projects/multi_img/' . $project->image) : asset('frontend/assets/images/project/process-1.jpg') }}"
-                                    alt="Project Image" style="max-height: 280px; object-fit:cover;">
-                                {{-- <img src="{{ asset('frontend') }}/assets/images/project/process-1.jpg" alt="Image" /> --}}
+                                    alt="Project Image" style="max-height: 240px; object-fit:cover;">
                                 <div class="process-content">
                                     <div class="process-icon">
                                         <i class="flaticon-{{ $project->icon_name ?? 'renewable-energy' }}"></i>
