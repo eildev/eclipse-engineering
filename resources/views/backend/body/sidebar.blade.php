@@ -105,6 +105,16 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
+                        <span>Sister Concern</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('sister') }}">Add Sister Company</a></li>
+                        <li><a href="{{ route('view.sister') }}">Manage Sister Company</a></li>
+                    </ul>
+                </li> 
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
                         <span>Projects Settings</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">

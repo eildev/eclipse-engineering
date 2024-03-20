@@ -19,6 +19,7 @@ use App\Http\Controllers\Backend\WhyChooseUsController;
 use App\Http\Controllers\Backend\AboutIntroduction;
 use App\Http\Controllers\Backend\ProjectDetailsController;
 use App\Http\Controllers\Backend\ProjectsController;
+use App\Http\Controllers\Backend\SisterConcernController;
 use App\Http\Controllers\Backend\SlideController;
 use App\Http\Controllers\Backend\ValueController;
 use App\Http\Controllers\Frontend\IndexController;
@@ -253,6 +254,15 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/value/edit/{id}', 'edit')->name('edit.value');
         Route::post('/value/update/{id}', 'update')->name('update.value');
         Route::get('/value/delete/{id}', 'delete')->name('delete.value');
+    });
+    // Sister Concern related routes
+    Route::controller(SisterConcernController::class)->group(function () {
+        Route::get('/sister', 'index')->name('sister');
+        Route::post('/sister/store', 'store')->name('store.sister');
+        Route::get('/sister/view', 'view')->name('view.sister');
+        Route::get('/sister/edit/{id}', 'edit')->name('edit.sister');
+        Route::post('/sister/update/{id}', 'update')->name('update.sister');
+        Route::get('/sister/delete/{id}', 'delete')->name('delete.sister');
     });
     // Log::warning("message");
 });

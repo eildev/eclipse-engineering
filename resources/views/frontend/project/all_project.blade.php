@@ -2,7 +2,7 @@
 @section('content')
     <!--=========== Breadcrumb Start =========-->
     <section class="breadcrumb-wrapper"
-        data-bg-image="{{ asset('frontend') }}/assets/images/banner/breadcrumb-background.jpg">
+        data-bg-image="{{ asset('frontend') }}/assets/images/banner/project-banner.webp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -27,103 +27,96 @@
         </div>
     </section>
     <!--=========== Breadcrumb End =========-->
+    <!--=========== Process Section Start =========-->
     @php
-        $projects = App\Models\Projects::latest()->get();
+        $ourProjects = App\Models\Projects::latest()->first();
+        $projects = App\Models\ProjectDetails::latest()->get();
     @endphp
-    <!--=========== Project Section Start =========-->
-    <section class="tj-project-page">
+    <section class="tj-process-section mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="tj-sec-heading-two">
-                        <span class="sub-title">Latest Project</span>
-                        <h2 class="title">
-                            Solar Pushing Reanewable <br />
-                            <span>Prohect Development</span>
+                    <div class="tj-sec-heading text-center">
+                        <span class="sub-title">Our Working Process</span>
+                        <h2 class="sec-title">
+                            {{ $ourProjects->title ?? 'Inspiring Interiors Exceptional' }}
+                            <br />
+                            <span>{{ $ourProjects->sub_title ?? 'Of Experiences' }}</span>
                         </h2>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="tj-project-item">
-                        <div class="project-image">
-                            <img src="{{ asset('frontend') }}/assets/images/project/project-1.jpg" alt="Image" />
-                            <div class="project-content">
-                                <h3 class="title"><a href="#">Project Development</a></h3>
-                                <span class="sub-title">Soaring Renewal</span>
+                @if ($projects->count() > 0)
+                    @foreach ($projects as $project)
+                        <div class="col-lg-4 col-md-6">
+                            <a href="">
+                                <div class="tj-process-item">
+                                    <img src="{{ $project->image ? asset('uploads/projects/multi_img/' . $project->image) : asset('frontend/assets/images/project/process-1.jpg') }}"
+                                        alt="Project Image" style="max-height: 240px; object-fit:cover;">
+                                    <div class="process-content">
+                                        <div class="process-icon">
+                                            <i class="flaticon-{{ $project->icon_name ?? 'renewable-energy' }}"></i>
+                                        </div>
+                                        <div class="process-title">
+                                            <h5 class="title">{{ $project->title ?? 'Carbon Offsetting' }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tj-process-item">
+                            <img src="{{ asset('frontend') }}/assets/images/project/process-1.jpg" alt="Image" />
+                            <div class="process-content">
+                                <div class="process-icon">
+                                    <i class="flaticon-renewable-energy"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h5 class="title">Carbon Offsetting</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="tj-project-item">
-                        <div class="project-image">
-                            <img src="{{ asset('frontend') }}/assets/images/project/project-2.jpg" alt="Image" />
-                            <div class="project-content">
-                                <h3 class="title"><a href="#">Project Development</a></h3>
-                                <span class="sub-title">Soaring Renewal</span>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tj-process-item">
+                            <img src="{{ asset('frontend') }}/assets/images/project/process-2.jpg" alt="Image" />
+                            <div class="process-content">
+                                <div class="process-icon">
+                                    <i class="flaticon-quality"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h5 class="title">Research & Analysis</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="tj-project-item">
-                        <div class="project-image">
-                            <img src="{{ asset('frontend') }}/assets/images/project/project-8.jpg" alt="Image" />
-                            <div class="project-content">
-                                <h3 class="title"><a href="#">Project Development</a></h3>
-                                <span class="sub-title">Soaring Renewal</span>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tj-process-item">
+                            <img src="{{ asset('frontend') }}/assets/images/project/process-3.jpg" alt="Image" />
+                            <div class="process-content">
+                                <div class="process-icon">
+                                    <i class="flaticon-solar-energy-2"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h5 class="title">Renewable Energy</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="tj-project-item">
-                        <div class="project-image">
-                            <img src="{{ asset('frontend') }}/assets/images/project/project-9.jpg" alt="Image" />
-                            <div class="project-content">
-                                <h3 class="title"><a href="#">Project Development</a></h3>
-                                <span class="sub-title">Soaring Renewal</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="tj-project-item">
-                        <div class="project-image">
-                            <img src="{{ asset('frontend') }}/assets/images/project/project-10.jpg" alt="Image" />
-                            <div class="project-content">
-                                <h3 class="title"><a href="#">Project Development</a></h3>
-                                <span class="sub-title">Soaring Renewal</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="tj-project-item">
-                        <div class="project-image">
-                            <img src="{{ asset('frontend') }}/assets/images/project/project-11.jpg" alt="Image" />
-                            <div class="project-content">
-                                <h3 class="title"><a href="#">Project Development</a></h3>
-                                <span class="sub-title">Soaring Renewal</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="tj-project-item">
-                        <div class="project-image">
-                            <img src="{{ asset('frontend') }}/assets/images/project/project-12.jpg" alt="Image" />
-                            <div class="project-content">
-                                <h3 class="title"><a href="#">Project Development</a></h3>
-                                <span class="sub-title">Soaring Renewal</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endif
+
             </div>
         </div>
     </section>
-    <!--=========== Project Section End =========-->
+    <!--=========== Process Section End =========-->
+    
+    <!-- Start Solar Panel  Work  Section -->
+    @include('frontend.indexContent2.work')
+    <!-- End Solar Panel  Work  Section -->
+    <!-- Start Solar Panel  Choose Us  Section -->
+    @include('frontend.indexContent.gallery')
+    <!-- End Solar Panel  Choose Us  Section -->
 @endsection

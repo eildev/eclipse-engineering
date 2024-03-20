@@ -37,7 +37,7 @@
     <!-- End Solar Panel  FAQ  Section --> --}}
 
     <!-- Start Sister Concern  Section -->
-    {{-- @include('frontend.indexContent.sister-concern') --}}
+    @include('frontend.indexContent.sister-concern')
     <!-- End Sister Concern Section -->
 
     <!-- Start Solar Panel Blog Section -->
