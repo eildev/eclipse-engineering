@@ -28,7 +28,7 @@
     </section>
     <!--=========== Breadcrumb End =========-->
     @php
-        $projects = App\Models\Section::latest()->get();
+        $projects = App\Models\Projects::latest()->get();
     @endphp
     <!--=========== Project Section Start =========-->
     <section class="tj-project-page">
