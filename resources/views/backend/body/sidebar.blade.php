@@ -82,16 +82,26 @@
                         <li><a href="{{ route('manage.social.icon') }}">Manage Social Settings</a></li>
                     </ul>
                 </li>
-                {{-- <li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Category Settings</span>
+                        <span>News</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('category.add') }}">Add Category</a></li>
-                        <li><a href="{{ route('category.view') }}">Manage Category</a></li>
+                        <li><a href="{{ route('news') }}">Add News</a></li>
+                        <li><a href="{{ route('manage.news') }}">Manage News</a></li>
                     </ul>
-                </li> --}}
+                </li> 
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Value</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('value') }}">Add Value</a></li>
+                        <li><a href="{{ route('view.value') }}">Manage Value</a></li>
+                    </ul>
+                </li> 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>

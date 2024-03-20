@@ -53,9 +53,7 @@
 
                                                 <td>{!! substr(strip_tags($data->description), 0, 15) !!}...</td>
                                                 <td>
-                                                    <img style="height: 50px; object-fit:contain;"
-                                                        src="{{ asset('uploads/why-choose-us/' . $data->icon ?? '') }}"
-                                                        alt="testimonial user image">
+                                                    {{  $data->icon ?? ''}}
                                                 </td>
                                                 <td>
                                                     <img style="height: 50px; object-fit:contain;"

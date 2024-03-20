@@ -36,7 +36,7 @@
                                 <div class="col-sm-10">
                                     <select class="form-select @error('why_id') is-invalid  @enderror" name="why_id"
                                         aria-label="Default select example">
-                                        <option selected="" value=""> Select Service Title</option>
+                                        <option selected="" value=""> Select Why choose Us Title</option>
                                         @foreach ($why as $data)
                                             <option value="{{ $data->id }}">{{ $data->title }}</option>
                                         @endforeach
@@ -72,18 +72,7 @@
                                 <label for="example-input" class="col-sm-2 col-form-label">Icon</label>
                                 <div class="col-sm-10">
                                     <input name="icon" class="form-control @error('icon') is-invalid  @enderror"
-                                        type="file" id="image">
-                                </div>
-                            </div>
-                            <!-- end row -->
-                            <div class="row mb-3">
-                                <label for="example-url-input" class="col-sm-2 col-form-label"></label>
-                                <div class="col-sm-10">
-                                    <img id="showImage" class="rounded avatar-lg "
-                                        src="{{ asset('uploads/about/no_images.jpg') }}" alt="About Image" name="">
-                                    @error('icon')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                        type="text">
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -98,7 +87,7 @@
                                 <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
                                     <img id="showImage2" class="rounded avatar-lg "
-                                        src="{{ asset('uploads/about/no_images.jpg') }}" alt="About Image" name="">
+                                        src="{{ asset('dummy-img/no-img.jpg') }}" alt="About Image" name="">
                                     @error('image')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror

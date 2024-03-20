@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2024 at 10:44 AM
+-- Generation Time: Mar 19, 2024 at 09:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -59,7 +59,7 @@ CREATE TABLE `about_settings` (
 --
 
 INSERT INTO `about_settings` (`id`, `title`, `sub_title`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Eclipse Engineering LTD', 'Energy Accessible', '<p><font face=\"Poppins, sans-serif\"><span style=\"font-size: 18px;\"><font color=\"#ff0000\">Eclipse Engineering Ltd. </font><font color=\"#717171\">(EEL) is an independent Trading, engineering & consulting company operating across Bangladesh since 2017 with headquarters in Dhaka. We have maintained our independence by ensuring no financial ties with suppliers or installers. Our services are tailor-made to meet the requirements for every engineering, construction & built-in project we take on. Our focus on quality, reliability, and innovation has helped us to ensure that our client base has grown steadily since we started and is the reason why our existing customers have continued to use our knowledge and services since the very first time they tried us.</font></span></font></p><p><span style=\"font-size: 18px; color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">To maintain our organization\'s high-quality standards and knowledge, investments are often made in advanced skill-based courses and health & safety training for our employees. We also open up some of these sessions to our partners and trusted contractors to ensure our network remains highly skilled.</span><br></p><p><span style=\"font-size: 18px; color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">We keep a small team of core employees at EEL, however, we can expand in numbers and expertise at short notice to fit the needs of individual projects</span><br></p>', '1297488301.webp', '0', '2024-03-13 23:57:26', '2024-03-19 01:41:29');
+(1, 'Eclipse Engineering LTD', 'Energy Accessible', '<p><font face=\"Poppins, sans-serif\"><span style=\"font-size: 18px;\">Eclipse Engineering Ltd. (EEL) is an independent Trading, engineering &amp; consulting company operating across Bangladesh since 2017 with headquarters in Dhaka. We have maintained our independence by ensuring no financial ties with suppliers or installers. Our services are tailor-made to meet the requirements for every engineering, construction &amp; built-in project we take on. Our focus on quality, reliability, and innovation has helped us to ensure that our client base has grown steadily since we started and is the reason why our existing customers have continued to use our knowledge and services since the very first time they tried us.</span></font></p><p><font face=\"Poppins, sans-serif\"><span style=\"font-size: 18px;\"><br></span></font><span style=\"font-family: Poppins, sans-serif; font-size: 18px; font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">To maintain our organization\'s high-quality standards and knowledge, investments are often made in advanced skill-based courses and health &amp; safety training for our employees. We also open up some of these sessions to our partners and trusted contractors to ensure our network remains highly skilled.</span></p><p><span style=\"font-family: Poppins, sans-serif; font-size: 18px; font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\"><br></span></p><p><span style=\"font-family: Poppins, sans-serif; font-size: 18px; font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">We keep a small team of core employees at EEL, however, we can expand in numbers and expertise at short notice to fit the needs of individual projects</span><br></p>', '1297488301.webp', '0', '2024-03-13 23:57:26', '2024-03-19 13:36:10');
 
 -- --------------------------------------------------------
 
@@ -120,6 +120,13 @@ CREATE TABLE `footer_settings` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `footer_settings`
+--
+
+INSERT INTO `footer_settings` (`id`, `fullAddress`, `location`, `link`, `phone`, `email`, `website`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'House 41, 2nd Floor, Road 06, Block E, Banasree, Dhaka, Bangladesh', 'House 41, 2nd Floor, Road 06, Block E, Banasree, Dhaka, Bangladesh', 'http://127.0.0.1:8000/', '+88-01718319480', 'eclipseengineeringlimited@gmail.com', 'http://127.0.0.1:8000/', '0', '2024-03-19 08:50:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -206,7 +213,9 @@ CREATE TABLE `managing_teams` (
 --
 
 INSERT INTO `managing_teams` (`id`, `name`, `designation`, `image`, `facebook`, `instagram`, `linkedin`, `twitter`, `full_discription`, `created_at`, `updated_at`) VALUES
-(1, 'Cole Acevedo', 'Laboriosam facilis', '1710820338.jpg', 'https://www.ryvygomom.info', 'https://www.rysoxuditabi.tv', 'https://www.vilebi.mobi', 'https://www.goqyqu.us', NULL, NULL, NULL);
+(2, 'Sadi Al Hossain', 'Director', '1710846137.webp', 'https://www.facebook.com/sadi.sonal', 'https://www.instagram.com/', 'https://www.linkedin.com/in/sadi-al-hossain-34897b256', 'https://twitter.com/', '<p>asdasd</p>', NULL, NULL),
+(3, 'Sami Al Hossain', 'Managing Director', '1710848751.webp', 'https://www.facebook.com/dreamian', 'https://www.instagram.com/', 'https://www.linkedin.com/in/sami-al-hossain-a1263b61/', 'https://twitter.com/', NULL, NULL, NULL),
+(4, 'Md. Shahadat Hossain', 'Chairman', '1710848899.webp', 'https://www.facebook.com/md.tulin.hossain', 'https://www.instagram.com/', 'https://www.linkedin.com', 'https://twitter.com/', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -249,7 +258,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (27, '2024_02_22_071947_create_services_details_table', 2),
 (29, '2024_03_05_093542_create_projects_table', 3),
 (30, '2024_03_05_103757_create_project_details_table', 3),
-(31, '2024_02_22_044314_create_galleries_table', 4);
+(31, '2024_02_22_044314_create_galleries_table', 4),
+(32, '2024_03_19_195053_create_values_table', 5);
 
 -- --------------------------------------------------------
 
@@ -260,12 +270,21 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `news` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `description` text NOT NULL,
   `image` varchar(255) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `title`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'EEL Signs Contract With NNIL For 119.9KW Rooftop Solar Power Plant', '<p>Neel Nagar Industries Ltd.(NNIL), a prominent leading Polyester Staple Fiber (PSF) manufacturing companies in Bangladesh, has signed a contract with Eclipse Engineering Limited (EEL) to establish a 119.9KW rooftop solar power plant at its factory located at Mirzapur, Tegoria, South Keranigonj, Dhaka-1310, Bangladesh.</p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">The solar power plant will be ingeniously situated a top Neel Nagar Industries Ltd.’s factory premises located in . This initiative marks a significant stride towards curbing the company’s carbon footprint. By offsetting approximately 2,000 tons of CO2 emissions each year, the factory is poised to make a lasting impact on its sustainability journey.</span><br></p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Sadi Al Hossain, Director of EEL, reciprocated the enthusiasm. This venture not only signifies EEL’s foray into a pioneering project but also stands as the finest rooftop solar power plant endeavor in their portfolio. Sadi reaffirmed EEL’s dedication to furnishing NNIL’s with an impeccable solar solution that meets their energy requisites while substantiating their sustainability goals.</span><br></p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Aminul Haque, CEO of NNIL underscored the strategic significance of renewable energy, particularly in the context of Bangladesh’s energy landscape. The rooftop solar power plant initiative is positioned as a steadfast response to the prevailing energy vulnerabilities. Haque exuded confidence that this undertaking would bolster NNIL’ standing as an industry leader committed to responsible practices.</span><br></p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Kazi Rumiz Hossain, General Manager-Supply Chain at Neel Nagar Industries Ltd. (NNIL), alongside esteemed officials from Eclipse Engineering Limited (EEL) graced the signing ceremony with their presence. This collaborative stride towards a sustainable future resonates as a milestone not only for NNIL and EEL but also as a beacon illuminating the path towards a greener and more responsible industry landscape.</span><br></p>', '768375418.webp', 1, '2024-03-19 07:00:36', '2024-03-19 08:35:46'),
+(2, 'Why invest in renewable energy?', '<p>To answer your question, it is because renewable energy-based projects are green, clean, sustainable and natural. Today, renewable energy generates 26% of the world’s electricity. By 2024, it is expected to create 30%. This upper-lining trend is one that businesses should pay more attention to if they hope to remain competitive and successful, especially when it comes to investing in renewable energy-based supply chains. Now more than ever, it’s vital that countries put renewable energy and other low-carbon technologies at the fore to build back better after COVID-19, creating new jobs and rebooting their economies. The fossil fuel industry is among the hardest hit by the coronavirus crisis, with leading oil, gas and petrochemical companies losing an average of 45% of their total market value. Since the start of the year, we have seen the sharpest drop in oil demand in a quarter of a century. Green energy stocks were also less volatile across the board than traditional fossil fuels, with such portfolios holding up well during the turmoil caused by the pandemic, while oil and gas collapsed.&nbsp;</p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">The global movement of divestment from fossil fuels is gathering pace in Europe, with significant support from high-profile individuals, governments and businesses.&nbsp; It creates a positive environment for sustainable investment to thrive.&nbsp; Investing in renewable energy infrastructure has clear benefits: it can generate attractive returns for investors, whilst having a positive effect in the ongoing battle against the climate crisis. We want to see both sustainable energy production and secure energy supply at the heart of our communities, the energy sector and Government policy. Much more needs to be done by the international community, especially to drive investment in lower-income economies, where the private sector has been reluctant to venture.</span><br></p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Renewables are the force to a climate-safe world. Far from having to select between mitigating the foreseen climate crisis and economic upscale, it is visible than ever that a scope lives to ramp up investment in low-carbon technologies and shift the global development paradigm from one of scarcity, inequality and competition to one of shared prosperity – in our lifetimes. If we take clearer decisions now, a sustainable energy future is within our foremost reach.</span><br></p>', '817923553.webp', 1, '2024-03-19 08:35:37', '2024-03-19 08:35:49'),
+(3, 'Why does Bangladesh need wind power plants?', '<p>Bangladesh is encountering difficulties in supplying energy to maintain its economic growth. The Government of Bangladesh is looking for renewable energy sources to meet up the total power demand in this country. After the severe Covid-19 pandemic and due to ongoing war in Europe, the country is suffering from the unavailability of fossil fuels such as oil, LNG and coal to run the already commissioned traditional power plants.</p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Bangladesh must involve itself in the massive development of wind power stations in coastal areas such as Patuakhali, Khulna, Barishal, Bhola, Cox’s Bazar, Chittagong, Swandip, Saint Martin Island, and other areas nearby the sea. NREL has conducted a study and found that for wind speeds of 5.75-7.75 m/s, there are more than 20,000 square kilometers of land with a gross wind potential of more than 30,000MW and published the report entitled “Assessing the Wind Energy Potential in Bangladesh”. Wind will relax the dependency on fossil fuel overseas, it will create more jobs for the local people, wind turbines are not expensive these days and wind projects will be economically viable for the country. As Bangladesh Government and international investment companies are concentrating more on renewable energy-based projects in Bangladesh, sincere support must be addressed from the higher-ups to push the wind investment projects to be developed on fast track basis all over the country by following the policies of unsolicited IPP basis. The development of wind power will not only enrich our economy but also help to keep this planet clean and protect our future generations from pollution.</span><br></p>', '1124030296.webp', 0, '2024-03-19 08:45:12', '2024-03-19 08:45:12');
 
 -- --------------------------------------------------------
 
@@ -346,9 +365,10 @@ CREATE TABLE `overviews` (
 --
 
 INSERT INTO `overviews` (`id`, `title`, `experience`, `icon`, `icon_name`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'Years Of Experience', 7, NULL, 'experience', 1, '2024-03-19 00:37:41', '2024-03-19 00:46:17'),
+(2, 'Years Experience', 7, NULL, 'experience', 1, '2024-03-19 00:37:41', '2024-03-19 13:04:49'),
 (3, 'Completed Projects', 70, NULL, 'completed-task', 1, '2024-03-19 00:42:25', '2024-03-19 00:42:30'),
-(4, 'Employees', 50, NULL, 'leadership', 0, '2024-03-19 00:48:16', '2024-03-19 00:48:16');
+(4, 'Happy Clients', 50, NULL, 'customer-service', 1, '2024-03-19 00:48:16', '2024-03-19 13:06:19'),
+(5, 'Active Projects', 15, NULL, 'save-energy', 0, '2024-03-19 13:08:32', '2024-03-19 13:08:32');
 
 -- --------------------------------------------------------
 
@@ -456,10 +476,12 @@ CREATE TABLE `services_details` (
 --
 
 INSERT INTO `services_details` (`id`, `services_id`, `services_details_title`, `services_details_description`, `services_details_icon`, `services_details_icon_name`, `services_details_image`, `status`, `created_at`, `updated_at`) VALUES
-(1, 2, 'Renewable Energy', '<div>At Eclipse Engineering, we\'re passionate about helping you transition to a clean and sustainable future. We offer a comprehensive suite of renewable energy services designed to meet your unique needs. Whether you\'re a homeowner looking to install solar panels on your roof, a business seeking to reduce your carbon footprint, or a developer planning a large-scale renewable energy project, we have the expertise to guide you every step of the way.</div><div><br></div><div>Our Renewable Energy Services Include:</div><div><br></div><div>Solar Power Solutions: From initial feasibility studies and system design to installation, maintenance, and monitoring, we can help you harness the power of the sun for your home or business.</div><div>Wind Energy Development: Explore the potential of wind power with our expert wind resource assessment and project development services.</div><div>Battery Storage and Microgrids: Maximize the use of your renewable energy with battery storage solutions and explore the benefits of creating a self-sufficient microgrid.</div><div>Renewable Energy Consulting: Our team of experienced engineers can provide comprehensive consulting services to help you navigate the complexities of renewable energy projects.</div><div>Benefits of Choosing Eclipse Engineering:</div><div><br></div><div>Turnkey Solutions: We handle everything from project inception to completion, ensuring a smooth and efficient process.</div><div>Experienced Team: Our team of qualified professionals has a proven track record of success in the renewable energy industry.</div><div>Cutting-Edge Technology: We utilize the latest advancements in renewable energy technology to deliver optimal solutions.</div><div>Commitment to Sustainability: We are dedicated to helping you achieve your sustainability goals and creating a greener future for all.</div><div>Contact us today to discuss your renewable energy needs and learn how Eclipse Engineering can help you power a sustainable future.</div>', '2064298427.webp', 'renewable-energy', NULL, '0', '2024-03-19 02:16:01', '2024-03-19 02:16:01'),
-(2, 2, 'Energy Efficiency', '<div>Imagine a world where your energy bills shrink like a shadow on a sunny day, and your environmental impact is lighter than a feather. At Eclipse Engineering, we turn that vision into reality with our cutting-edge energy efficiency services.</div><div><br></div><div>We go beyond the typical audit and upgrade approach. We become energy detectives, uncovering hidden energy wasters lurking in your systems.</div><div><br></div><div>Our Secret Weapon?&nbsp; Data-Driven Optimization.</div><div><br></div><div>We don\'t just guess - we leverage advanced analytics to pinpoint inefficiencies and craft a personalized strategy to unleash your building\'s true energy potential.&nbsp; Think of it as a Jedi mind trick for your electricity!</div><div><br></div><div>The Benefits of Energy Enlightenment:</div><div><br></div><div>Slash Your Energy Bills: Prepare to be amazed at the dramatic reduction in your monthly costs.</div><div>Embrace the Green Force: Reduce your carbon footprint and become a champion for sustainability.</div><div>Supercharge Your Comfort: Enjoy a more temperature-controlled environment, perfect for peak productivity.</div><div>Unlock Hidden Value: Increase the long-term value of your property with energy-efficient upgrades.</div><div>Ready to unleash the power of energy efficiency? Contact Eclipse Engineering today and let\'s unlock your hidden energy savings!</div>', NULL, 'energy', NULL, '0', '2024-03-19 02:27:42', '2024-03-19 02:27:42'),
-(3, 2, 'Operation & Maintenance', '<div>Transitioning to renewable energy is a wise decision, but the journey doesn\'t stop there. Eclipse Engineering\'s Operation &amp; Maintenance (O&amp;M) services ensure your clean energy systems operate at peak performance for years to come.</div><div><br></div><div>Think of us as your renewable energy pit crew. We proactively manage your solar panels, wind turbines, or other green systems, preventing downtime and maximizing your return on investment.</div><div><br></div><div>Our O&amp;M Services are More Than Just Wrench Work:</div><div><br></div><div>Predictive Maintenance: We utilize advanced monitoring and diagnostics to identify potential issues before they become problems, minimizing downtime and costly repairs.</div><div>Performance Optimization: Our team ensures your system is operating at its optimal efficiency, delivering the maximum energy output.</div><div>Expert Troubleshooting: In the event of an issue, our experienced technicians are on standby to diagnose and resolve problems quickly and efficiently.</div><div>24/7 Support: We provide you with peace of mind with 24/7 access to our dedicated O&amp;M team.</div><div>The Benefits of a Well-Maintained Green Machine:</div><div><br></div><div>Maximize Energy Production: Ensure your renewable energy system is capturing the most sunshine, wind, or other resources possible.</div><div>Extend System Lifespan: Proper maintenance keeps your system running smoothly for years to come, reducing the need for costly replacements.</div><div>Reduce Unexpected Costs: Preventative maintenance is far more cost-effective than reactive repairs.</div><div>Peace of Mind: Relax and enjoy the benefits of clean energy knowing your system is in expert hands.</div><div>Let Eclipse Engineering be your trusted partner for O&amp;M. Contact us today and keep your green machine running smoothly!</div>', NULL, 'customize', NULL, '0', '2024-03-19 02:31:58', '2024-03-19 02:31:58'),
-(4, 2, 'Logistics Services', '<div>At Eclipse Engineering, we understand that a sustainable future requires a seamless present.&nbsp; That\'s why we offer comprehensive logistics services designed to minimize environmental impact while maximizing efficiency for your renewable energy projects.</div><div><br></div><div>Think of us as your eco-conscious supply chain orchestrators.</div><div><br></div><div>Green Route Optimization: We meticulously plan transport routes to minimize fuel consumption and emissions, ensuring your equipment arrives efficiently and responsibly.</div><div>Sustainable Packaging Solutions: We prioritize eco-friendly packaging materials and responsible waste disposal practices to minimize your environmental footprint.</div><div>Real-Time Tracking and Visibility: Maintain complete transparency throughout the logistics process, allowing you to track your equipment in real-time and ensure a smooth delivery.</div><div>Global Reach, Local Expertise: Our network of partners allows us to navigate customs regulations and logistics complexities worldwide, ensuring smooth delivery across borders.</div><div>The Benefits of Our Eco-Logistics Expertise:</div><div><br></div><div>Reduced Carbon Footprint: Minimize the environmental impact of your supply chain.</div><div>Cost Optimization: We streamline logistics for maximum efficiency, saving you time and money.</div><div>Project Acceleration: Faster delivery means faster project completion and a quicker return on investment for your renewable energy initiatives.</div><div>Peace of Mind: Experience stress-free logistics with our expert guidance and real-time tracking.</div><div>Let Eclipse Engineering orchestrate your sustainable supply chain. Contact us today and experience the green difference in logistics!</div>', NULL, 'reliability', NULL, '0', '2024-03-19 02:36:31', '2024-03-19 02:36:31');
+(7, 2, 'Engineering Consulting Services', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. offers a wide range of engineering consulting services to support your projects from conception to completion.&nbsp; Our team of experienced engineers provides expertise in various disciplines, including:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Civil Engineering:</b> We provide design and engineering services for infrastructure projects like roads, bridges, and buildings.</span></div><div><span style=\"font-size: 14.4px;\"><b>Mechanical Engineering:</b> Our team helps design and implement mechanical systems for buildings, industrial facilities, and power plants.</span></div><div><span style=\"font-size: 14.4px;\"><b>Electrical Engineering:</b> We offer expertise in electrical system design, power distribution, and control systems.</span></div><div><span style=\"font-size: 14.4px;\"><b>Project Management:</b> We manage your engineering projects efficiently, ensuring they are completed on time, within budget, and to your specifications.</span></div><div><span style=\"font-size: 14.4px;\">We hope this detailed explanation of our services helps you understand how Eclipse Engineering Ltd. can be a valuable partner for your next project.</span></div>', NULL, 'continuous-improvement', '980866457.webp', '0', '2024-03-19 11:35:32', '2024-03-19 11:35:32'),
+(8, 2, 'Supply/Trading', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. is your one-stop shop for procuring the equipment and materials needed for your engineering projects.&nbsp; We leverage our extensive network of suppliers to source high-quality products at competitive prices.&nbsp; Our services include:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Sourcing and Procurement:</b> We identify and source the specific equipment and materials required for your project, ensuring timely delivery.</span></div><div><span style=\"font-size: 14.4px;\"><b>Quality Control:</b> We maintain strict quality control procedures to guarantee the reliability and performance of the products you receive.</span></div><div><span style=\"font-size: 14.4px;\"><b>Inventory Management:</b> We manage your project inventory efficiently, ensuring you have the right materials on hand when needed.</span></div><div><span style=\"font-size: 14.4px;\"><b>Supply Chain Management:</b> We optimize your supply chain to minimize costs and ensure smooth project execution.</span></div>', NULL, 'targeting', '1085984157.webp', '0', '2024-03-19 11:43:19', '2024-03-19 11:43:19'),
+(9, 2, 'Logistics Services', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. offers comprehensive logistics solutions to support your engineering projects.&nbsp; We handle the critical task of moving equipment, materials, and supplies efficiently and securely.&nbsp; Our services include:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Transportation Management:</b> We plan and execute the transportation of your project cargo, utilizing various modes like sea freight, airfreight, and overland trucking.</span></div><div><span style=\"font-size: 14.4px;\"><b>Customs Clearance:</b> Our team facilitates seamless customs clearance for your imported and exported goods, ensuring timely project delivery.</span></div><div><span style=\"font-size: 14.4px;\"><b>Warehousing and Inventory Management:</b> We provide secure warehousing solutions and manage your inventory efficiently, ensuring materials are readily available at project sites.</span></div><div><span style=\"font-size: 14.4px;\"><b>Project Cargo Handling:</b> We have the expertise to handle oversized, overweight, or specialized cargo, ensuring safe and secure transportation.</span></div>', NULL, 'mission', '1051136299.webp', '0', '2024-03-19 11:48:27', '2024-03-19 11:48:27'),
+(10, 2, 'Energy Efficiency', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. is committed to helping clients achieve their sustainability goals.&nbsp; Our energy efficiency services identify and implement solutions to reduce energy consumption and operating costs.&nbsp; We provide:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Energy Audits: </b>Our comprehensive energy audits analyze your energy usage patterns and identify areas for improvement.</span></div><div><span style=\"font-size: 14.4px;\"><b>Energy-Saving Upgrades:</b> We recommend and implement cost-effective upgrades like LED lighting, efficient HVAC systems, and building envelope improvements.</span></div><div><span style=\"font-size: 14.4px;\"><b>Renewable Energy Integration:</b> We help integrate renewable energy sources like solar panels or wind turbines into your existing infrastructure.</span></div><div><span style=\"font-size: 14.4px;\"><b>Energy Management Strategies:</b> We develop customized strategies to optimize your energy consumption and reduce your carbon footprint.</span></div>', NULL, 'energy', '1120074312.webp', '0', '2024-03-19 11:54:28', '2024-03-19 11:54:28'),
+(11, 2, 'Operation & Maintenance (O&M)', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. understands the importance of keeping your facilities and equipment running smoothly.&nbsp; Our O&amp;M services ensure optimal performance and extend the lifespan of your assets.&nbsp; We offer:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Planned Maintenance:</b> We develop and execute preventive maintenance schedules to identify and address potential issues before they cause downtime.</span></div><div><span style=\"font-size: 14.4px;\"><b>Emergency Repairs:</b> Our team is available 24/7 to respond to unexpected equipment failures and get your operations back online quickly.</span></div><div><span style=\"font-size: 14.4px;\"><b>Performance Monitoring:</b> We utilize advanced monitoring systems to track equipment health and identify areas for improvement.</span></div><div><span style=\"font-size: 14.4px;\"><b>Operator Training:</b> We provide training programs to equip your personnel with the knowledge and skills to operate and maintain your facilities effectively.</span></div>', NULL, 'technician', '874546459.webp', '0', '2024-03-19 12:00:05', '2024-03-19 12:00:05'),
+(12, 2, 'Renewable Energy:', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. is a leader in providing renewable energy solutions.&nbsp; We help clients harness clean, sustainable energy sources to power their operations and reduce their reliance on fossil fuels.&nbsp; Our services include:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Feasibility Studies:</b> We conduct comprehensive feasibility studies to assess the viability of renewable energy projects for your specific needs.</span></div><div><span style=\"font-size: 14.4px;\"><b>System Design and Engineering:</b> Our team designs and engineers efficient renewable energy systems like solar farms or wind turbines.</span></div><div><span style=\"font-size: 14.4px;\"><b>Project Management:</b> We manage all aspects of your renewable energy project, from procurement and permitting to construction and commissioning.</span></div><div><span style=\"font-size: 14.4px;\"><b>Operations and Maintenance:</b> We provide ongoing operation and maintenance services to ensure your renewable energy system operates at peak performance.</span></div>', NULL, 'renewable-energy', '1292110695.webp', '0', '2024-03-19 12:05:04', '2024-03-19 12:05:04');
 
 -- --------------------------------------------------------
 
@@ -548,6 +570,30 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `phone`, `photo`, `addre
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `values`
+--
+
+CREATE TABLE `values` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `icon` varchar(50) DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `values`
+--
+
+INSERT INTO `values` (`id`, `title`, `description`, `icon`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Our Vision', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.', 'targeting', 0, '2024-03-19 14:18:18', '2024-03-19 14:30:30'),
+(2, 'Our Mission', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.', 'leadership', 0, '2024-03-19 14:31:45', '2024-03-19 14:31:45');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `why_choose_us`
 --
 
@@ -560,6 +606,13 @@ CREATE TABLE `why_choose_us` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `why_choose_us`
+--
+
+INSERT INTO `why_choose_us` (`id`, `title`, `sub_title`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Productivity Boosts from', 'Efficiency', 'Choose us for expertise, innovation, sustainability, client focus, and proven results. Your success is our priority.', 1, '2024-03-19 12:27:19', '2024-03-19 12:27:26');
 
 -- --------------------------------------------------------
 
@@ -578,6 +631,16 @@ CREATE TABLE `why_choose_us_details` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `why_choose_us_details`
+--
+
+INSERT INTO `why_choose_us_details` (`id`, `why_id`, `title`, `description`, `icon`, `image`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Expertise', '<p><span style=\"font-size: 14.4px;\">With a team of highly skilled engineers and consultants, we bring decades of collective experience to the table. Our expertise spans a wide range of industries and disciplines, ensuring that we have the knowledge and capability to tackle even the most complex challenges.</span><br></p>', 'experience-1', NULL, 1, '2024-03-19 12:44:19', '2024-03-19 12:44:25'),
+(2, 1, 'Innovation', '<p><span style=\"font-size: 14.4px;\">We pride ourselves on our commitment to innovation. Constantly seeking out the latest technologies and methodologies, we strive to push the boundaries of what\'s possible, delivering cutting-edge solutions that drive efficiency, sustainability, and success.</span><br></p>', 'product-lauch', NULL, 1, '2024-03-19 12:47:43', '2024-03-19 12:47:51'),
+(3, 1, 'Sustainability', '<p><span style=\"font-size: 14.4px;\">Environmental responsibility is at the core of everything we do. From promoting energy efficiency to championing renewable energy initiatives, we are dedicated to minimizing our ecological footprint and creating a greener, more sustainable future for generations to come.</span><br></p>', 'solar-cell', NULL, 1, '2024-03-19 12:49:37', '2024-03-19 12:51:32'),
+(4, 1, 'Client-Centric Approach', '<p><span style=\"font-size: 14.4px;\">At Eclipse Engineering Ltd., our clients always come first. We believe in the power of collaboration and open communication, working closely with you every step of the way to ensure that our solutions are tailored to meet your unique needs and objectives.</span><br></p>', 'green-power', NULL, 1, '2024-03-19 12:51:20', '2024-03-19 12:51:29');
 
 --
 -- Indexes for dumped tables
@@ -735,6 +798,12 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Indexes for table `values`
+--
+ALTER TABLE `values`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `why_choose_us`
 --
 ALTER TABLE `why_choose_us`
@@ -779,7 +848,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `footer_settings`
 --
 ALTER TABLE `footer_settings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `galleries`
@@ -803,19 +872,19 @@ ALTER TABLE `home_sliders`
 -- AUTO_INCREMENT for table `managing_teams`
 --
 ALTER TABLE `managing_teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `our_partners`
@@ -839,7 +908,7 @@ ALTER TABLE `our_services`
 -- AUTO_INCREMENT for table `overviews`
 --
 ALTER TABLE `overviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -863,7 +932,7 @@ ALTER TABLE `project_details`
 -- AUTO_INCREMENT for table `services_details`
 --
 ALTER TABLE `services_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `social_icons`
@@ -890,16 +959,22 @@ ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `values`
+--
+ALTER TABLE `values`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `why_choose_us`
 --
 ALTER TABLE `why_choose_us`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `why_choose_us_details`
 --
 ALTER TABLE `why_choose_us_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

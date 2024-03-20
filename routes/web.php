@@ -20,6 +20,7 @@ use App\Http\Controllers\Backend\AboutIntroduction;
 use App\Http\Controllers\Backend\ProjectDetailsController;
 use App\Http\Controllers\Backend\ProjectsController;
 use App\Http\Controllers\Backend\SlideController;
+use App\Http\Controllers\Backend\ValueController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 /*
@@ -243,6 +244,15 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/project/details/edit/{id}', 'edit')->name('edit.project.details');
         Route::post('/project/details/update/{id}', 'update')->name('update.project.details');
         Route::get('/project/details/delete/{id}', 'delete')->name('delete.project.details');
+    });
+    // Value related routes
+    Route::controller(ValueController::class)->group(function () {
+        Route::get('/value', 'index')->name('value');
+        Route::post('/value/store', 'store')->name('store.value');
+        Route::get('/value/view', 'view')->name('view.value');
+        Route::get('/value/edit/{id}', 'edit')->name('edit.value');
+        Route::post('/value/update/{id}', 'update')->name('update.value');
+        Route::get('/value/delete/{id}', 'delete')->name('delete.value');
     });
     // Log::warning("message");
 });

@@ -75,15 +75,13 @@
                                 </li>
                                 <li>
                                     <i class="flaticon-open"></i>
-                                    <a href="mailto:solarplus@gmail.com">
+                                    <a href="{{ $footer->email ?? 'Solarplus@gmail.com' }}">
                                         {{ $footer->email ?? 'Solarplus@gmail.com' }}</a>
-                                    <a href="mailto:infosolarplus@gmail.com">infosolarplus@gmail.com</a>
                                 </li>
                                 <li>
-                                    <i class="flaticon-phone"></i><a href="tel:(1234)5678900">
+                                    <i class="flaticon-phone"></i><a href="tel:{{ $footer->phone ?? '(1234)-567-8900' }}">
                                         {{ $footer->phone ?? '(1234)-567-8900' }}
                                     </a>
-                                    <a class="d-block" href="tel:1234567890000">123-456-7890000</a>
                                 </li>
                             </ul>
                         </div>
@@ -97,8 +95,7 @@
                         <div class="footer-newsletter">
                             <div class="desc">
                                 <p>
-                                    There are many variations of passages of Lorem Ipsum available, but the
-                                    majority have suffered.
+                                Quantum computing, the cutting-edge field that promises unprecedented computational power, has taken a significant leap forward.
                                 </p>
                             </div>
                             <form class="footer-form">

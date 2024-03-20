@@ -1,5 +1,5 @@
 @php
-    $teams = App\Models\ManagingTeams::latest()->limit(4)->get();
+$teams = App\Models\ManagingTeams::orderBy('id', 'DESC')->limit(3)->get();
 @endphp
 <!--=========== Team Section Start =========-->
 <section class="tj-team-section">
@@ -16,8 +16,7 @@
                     </div>
                     <div class="right-content">
                         <p>
-                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse fugiat quo
-                            voluptas nulla pariatur?"
+                        A Cohesive Force of Innovation, Passion, and Expertise, Pioneering Solutions for Tomorrow's Challenges.
                         </p>
                     </div>
                 </div>
@@ -26,7 +25,7 @@
         <div class="row">
             @if ($teams->count() > 0)
                 @foreach ($teams as $team)
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
                         <a href="">
                             <div class="tj-team-item">
                                 <div class="team-image">

@@ -89,6 +89,7 @@ class ServicesController extends Controller
             $iconName = rand() . '.' . $request->services_details_icon->extension();
             $request->services_details_icon->move(public_path('uploads/services_image/'), $iconName);
 
+            $servicesDetails->services_details_image = $imageName;
             $servicesDetails->services_details_icon = $iconName;
         } elseif ($request->services_details_image) {
             $imageName = rand() . '.' . $request->services_details_image->extension();

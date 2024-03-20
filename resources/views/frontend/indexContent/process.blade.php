@@ -3,7 +3,7 @@
     $ourProjects = App\Models\Projects::latest()->first();
     $projects = App\Models\ProjectDetails::latest()->take(4)->get();
 @endphp
-<section class="tj-process-section">
+<section class="tj-process-section mt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -24,7 +24,7 @@
                         <a href="">
                             <div class="tj-process-item">
                                 <img src="{{ $project->image ? asset('uploads/projects/multi_img/' . $project->image) : asset('frontend/assets/images/project/process-1.jpg') }}"
-                                    alt="Project Image">
+                                    alt="Project Image" style="max-height: 280px; object-fit:cover;">
                                 {{-- <img src="{{ asset('frontend') }}/assets/images/project/process-1.jpg" alt="Image" /> --}}
                                 <div class="process-content">
                                     <div class="process-icon">

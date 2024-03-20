@@ -78,22 +78,20 @@ class WhyChooseUsController extends Controller
         $request->validate([
             'title' => 'required|max:100',
             'description' => 'required',
-            'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'icon' => 'required',
         ]);
-        if ($request->icon) {
-            $iconName = rand() . '.' . $request->icon->extension();
-            $request->icon->move(public_path('uploads/why-choose-us/'), $iconName);
+        $details = new WhyChooseUsDetails;
+        if ($request->image) {
             $imageName = rand() . '.' . $request->image->extension();
             $request->image->move(public_path('uploads/why-choose-us/details/'), $imageName);
-            $details = new WhyChooseUsDetails;
-            $details->why_id = $request->why_id;
-            $details->title = $request->title;
-            $details->description = $request->description;
-            $details->icon = $iconName;
             $details->image = $imageName;
-            $details->save();
-            return back()->with('message', 'Why Choose Us Successfully Saved');
         }
+        $details->why_id = $request->why_id;
+        $details->title = $request->title;
+        $details->description = $request->description;
+        $details->icon = $request->icon;
+        $details->save();
+        return back()->with('message', 'Why Choose Us Successfully Saved');
     }
     public function detailsView()
     {
