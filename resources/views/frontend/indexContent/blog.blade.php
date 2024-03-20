@@ -30,7 +30,7 @@
                                  <a href="blog-details.html">
                                      {{-- <img src="{{ asset('frontend') }}/assets/images/blog/blog-1.jpg" alt="Image" /> --}}
                                      <img src="{{ $blog->image ? asset('uploads/news/' . $blog->image) : asset('frontend/assets/images/blog/blog-1.jpg') }}"
-                                         alt="Blog Image" style="max-height: 280px; object-fit:cover;">
+                                         alt="Blog Image" style="max-height: 230px; object-fit:cover;">
                                  </a>
                              </div>
                              <div class="blog-meta">
@@ -43,13 +43,8 @@
                              <div class="blog-text-area">
                                  <div class="blog-content">
                                      <h5 class="title">
-                                         {{-- <a
-                                             href="blog-details.html">{{ $blog->title ??
-                                                 'Winds of Change in the Tubine Service
-                                                                                                                                                                                   Industry' }}</a> --}}
                                          <a
                                              href="blog-details.html">{{ $blog->title ? (strlen($blog->title) > 50 ? substr($blog->title, 0, 50) . '...' : $blog->title) : 'Winds of Change in the Turbine Service Industry' }}</a>
-
                                      </h5>
                                      <div class="tj-blog-button d-flex">
                                          <a class="tj-secondary-btn btn" href="blog-details.html">Read More <i

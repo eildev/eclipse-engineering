@@ -1,5 +1,5 @@
 @php
-$teams = App\Models\ManagingTeams::orderBy('id', 'DESC')->limit(3)->get();
+    $teams = App\Models\ManagingTeams::orderBy('id', 'DESC')->limit(3)->get();
 @endphp
 <!--=========== Team Section Start =========-->
 <section class="tj-team-section">
@@ -16,7 +16,8 @@ $teams = App\Models\ManagingTeams::orderBy('id', 'DESC')->limit(3)->get();
                     </div>
                     <div class="right-content">
                         <p>
-                        A Cohesive Force of Innovation, Passion, and Expertise, Pioneering Solutions for Tomorrow's Challenges.
+                            A Cohesive Force of Innovation, Passion, and Expertise, Pioneering Solutions for Tomorrow's
+                            Challenges.
                         </p>
                     </div>
                 </div>
@@ -30,7 +31,7 @@ $teams = App\Models\ManagingTeams::orderBy('id', 'DESC')->limit(3)->get();
                             <div class="tj-team-item">
                                 <div class="team-image">
                                     <img src="{{ $team->image ? asset('uploads/managing_team/' . $team->image) : asset('frontend/assets/images/team/team-1.jpg') }}"
-                                        alt="Team Image">
+                                        alt="Team Image" style="max-height: 420px; object-fit:cover;">
                                     {{-- <img src="{{ asset('frontend') }}/assets/images/team/team-1.jpg" alt="Image" /> --}}
                                 </div>
                                 <div class="team-content">
