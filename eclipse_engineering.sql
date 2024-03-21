@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2024 at 09:45 PM
+-- Generation Time: Mar 21, 2024 at 05:50 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -84,7 +84,8 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `number`, `service_name`, `company_name`, `message`, `created_at`, `updated_at`) VALUES
-(1, 'Diana Pollard', 'kenyhub@mailinator.com', '+1 (527) 793-3398', NULL, 'Bolton Willis Plc', 'Tenetur molestias ea', '2024-03-13 21:44:35', NULL);
+(1, 'Diana Pollard', 'kenyhub@mailinator.com', '+1 (527) 793-3398', NULL, 'Bolton Willis Plc', 'Tenetur molestias ea', '2024-03-13 21:44:35', NULL),
+(2, 'Jhon Wick', 'sobrokom.store@gmail.com', '01723343865', NULL, 'wurozuguwo@mailinator.com', 'wadadas', '2024-03-20 22:42:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -259,7 +260,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (29, '2024_03_05_093542_create_projects_table', 3),
 (30, '2024_03_05_103757_create_project_details_table', 3),
 (31, '2024_02_22_044314_create_galleries_table', 4),
-(32, '2024_03_19_195053_create_values_table', 5);
+(32, '2024_03_19_195053_create_values_table', 5),
+(33, '2024_03_20_155703_create_sister_concerns_table', 6);
 
 -- --------------------------------------------------------
 
@@ -482,6 +484,31 @@ INSERT INTO `services_details` (`id`, `services_id`, `services_details_title`, `
 (10, 2, 'Energy Efficiency', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. is committed to helping clients achieve their sustainability goals.&nbsp; Our energy efficiency services identify and implement solutions to reduce energy consumption and operating costs.&nbsp; We provide:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Energy Audits: </b>Our comprehensive energy audits analyze your energy usage patterns and identify areas for improvement.</span></div><div><span style=\"font-size: 14.4px;\"><b>Energy-Saving Upgrades:</b> We recommend and implement cost-effective upgrades like LED lighting, efficient HVAC systems, and building envelope improvements.</span></div><div><span style=\"font-size: 14.4px;\"><b>Renewable Energy Integration:</b> We help integrate renewable energy sources like solar panels or wind turbines into your existing infrastructure.</span></div><div><span style=\"font-size: 14.4px;\"><b>Energy Management Strategies:</b> We develop customized strategies to optimize your energy consumption and reduce your carbon footprint.</span></div>', NULL, 'energy', '1120074312.webp', '0', '2024-03-19 11:54:28', '2024-03-19 11:54:28'),
 (11, 2, 'Operation & Maintenance (O&M)', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. understands the importance of keeping your facilities and equipment running smoothly.&nbsp; Our O&amp;M services ensure optimal performance and extend the lifespan of your assets.&nbsp; We offer:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Planned Maintenance:</b> We develop and execute preventive maintenance schedules to identify and address potential issues before they cause downtime.</span></div><div><span style=\"font-size: 14.4px;\"><b>Emergency Repairs:</b> Our team is available 24/7 to respond to unexpected equipment failures and get your operations back online quickly.</span></div><div><span style=\"font-size: 14.4px;\"><b>Performance Monitoring:</b> We utilize advanced monitoring systems to track equipment health and identify areas for improvement.</span></div><div><span style=\"font-size: 14.4px;\"><b>Operator Training:</b> We provide training programs to equip your personnel with the knowledge and skills to operate and maintain your facilities effectively.</span></div>', NULL, 'technician', '874546459.webp', '0', '2024-03-19 12:00:05', '2024-03-19 12:00:05'),
 (12, 2, 'Renewable Energy:', '<div><span style=\"font-size: 14.4px;\">Eclipse Engineering Ltd. is a leader in providing renewable energy solutions.&nbsp; We help clients harness clean, sustainable energy sources to power their operations and reduce their reliance on fossil fuels.&nbsp; Our services include:</span></div><div><span style=\"font-size: 14.4px;\"><br></span></div><div><span style=\"font-size: 14.4px;\"><b>Feasibility Studies:</b> We conduct comprehensive feasibility studies to assess the viability of renewable energy projects for your specific needs.</span></div><div><span style=\"font-size: 14.4px;\"><b>System Design and Engineering:</b> Our team designs and engineers efficient renewable energy systems like solar farms or wind turbines.</span></div><div><span style=\"font-size: 14.4px;\"><b>Project Management:</b> We manage all aspects of your renewable energy project, from procurement and permitting to construction and commissioning.</span></div><div><span style=\"font-size: 14.4px;\"><b>Operations and Maintenance:</b> We provide ongoing operation and maintenance services to ensure your renewable energy system operates at peak performance.</span></div>', NULL, 'renewable-energy', '1292110695.webp', '0', '2024-03-19 12:05:04', '2024-03-19 12:05:04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sister_concerns`
+--
+
+CREATE TABLE `sister_concerns` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `logo` varchar(255) DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sister_concerns`
+--
+
+INSERT INTO `sister_concerns` (`id`, `name`, `description`, `logo`, `status`, `created_at`, `updated_at`) VALUES
+(3, 'Eclipse Blend & Blossom', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p><p><br></p><p>New Solar Installation</p><p>Battery &amp; Pannels</p><p>Wind Customize</p>', '1905891595.png', 0, '2024-03-20 22:37:43', '2024-03-20 22:37:43'),
+(4, 'Eclipse Consulting LTD', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p><p><br></p><p>New Solar Installation</p><p>Battery &amp; Pannels</p><p>Wind Customize</p>', '323215406.png', 0, '2024-03-20 22:38:14', '2024-03-20 22:38:14'),
+(5, 'Eclipse Intellitech Ltd.', '<p>It is a long-established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p><p><br></p><p>New Solar Installation</p><p>Battery &amp; Pannels</p><p>Wind Customize</p>', '1009158096.png', 0, '2024-03-20 22:40:03', '2024-03-20 22:40:03');
 
 -- --------------------------------------------------------
 
@@ -773,6 +800,12 @@ ALTER TABLE `services_details`
   ADD KEY `services_details_services_id_foreign` (`services_id`);
 
 --
+-- Indexes for table `sister_concerns`
+--
+ALTER TABLE `sister_concerns`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `social_icons`
 --
 ALTER TABLE `social_icons`
@@ -836,7 +869,7 @@ ALTER TABLE `about_settings`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -878,7 +911,7 @@ ALTER TABLE `managing_teams`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -933,6 +966,12 @@ ALTER TABLE `project_details`
 --
 ALTER TABLE `services_details`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `sister_concerns`
+--
+ALTER TABLE `sister_concerns`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `social_icons`

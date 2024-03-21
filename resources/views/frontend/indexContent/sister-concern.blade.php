@@ -23,10 +23,10 @@
                              <h3 class="title">{{ $sister->name }}</h3>
                              <div class="desc">
                                  <p>
-                                     {{-- @php
+                                     @php
                                          $limitText = Str::limit(strip_tags($sister->description), 250, ' ....');
-                                     @endphp --}}
-                                     {!! $sister->description !!}
+                                     @endphp
+                                     {!! $limitText !!}
                                  </p>
                              </div>
                              {{-- <div class="check-list">
