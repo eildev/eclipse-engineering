@@ -55,7 +55,7 @@
                                 <nav>
                                     <ul>
                                         <li class="has-dropdown current-menu-item">
-                                            <a href="index.html">Home</a>
+                                            <a href="{{ route('/') }}">Home</a>
                                             <ul class="sub-menu">
                                                 <li class="current-menu-item">
                                                     <a href="{{ route('/') }}">Home One</a>
@@ -138,7 +138,7 @@
                                 <nav id="mobile-menu">
                                     <ul>
                                         <li class="has-dropdown current-menu-item">
-                                            <a href="index.html">Home</a>
+                                            <a href="{{ route('/') }}">Home</a>
                                             <ul class="sub-menu">
                                                 <li class="current-menu-item">
                                                     <a href="{{ route('/') }}">Home One</a>

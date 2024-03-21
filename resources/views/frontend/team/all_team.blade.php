@@ -2,7 +2,7 @@
 @section('content')
     <!--=========== Breadcrumb Start =========-->
     <section class="breadcrumb-wrapper"
-        data-bg-image="{{ asset('frontend') }}/assets/images/banner/breadcrumb-background.jpg">
+        data-bg-image="{{ asset('frontend') }}/assets/images/banner/team-banner.webp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -27,8 +27,8 @@
         </div>
     </section>
     <!--=========== Breadcrumb End =========-->
-    @php
-        $teams = App\Models\ManagingTeams::latest()->get();
-    @endphp
-    @include('frontend.team.team')
+    @include('frontend.indexContent.team')
+    <!-- Start Solar Panel  Choose Us  Section -->
+    @include('frontend.indexContent.gallery')
+    <!-- End Solar Panel  Choose Us  Section -->
 @endsection

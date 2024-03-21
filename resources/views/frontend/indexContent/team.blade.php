@@ -31,7 +31,7 @@
                             <div class="tj-team-item">
                                 <div class="team-image">
                                     <img src="{{ $team->image ? asset('uploads/managing_team/' . $team->image) : asset('frontend/assets/images/team/team-1.jpg') }}"
-                                        alt="Team Image" style="max-height: 420px; object-fit:cover;">
+                                        alt="Team Image" style="max-height: 420px; object-fit:contain;">
                                     {{-- <img src="{{ asset('frontend') }}/assets/images/team/team-1.jpg" alt="Image" /> --}}
                                 </div>
                                 <div class="team-content">
