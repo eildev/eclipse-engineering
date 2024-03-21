@@ -1,8 +1,7 @@
 @extends('frontend.frontend_master')
 @section('content')
     <!--=========== Breadcrumb Start =========-->
-    <section class="breadcrumb-wrapper"
-        data-bg-image="{{ asset('frontend') }}/assets/images/banner/breadcrumb-background.jpg">
+    <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend') }}/assets/images/banner/csr-activities.webp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
