@@ -26,40 +26,79 @@
         </div>
     </section>
     <!--=========== Breadcrumb End =========-->
+    @php
+        $csr = App\Models\CSRActivities::all();
+        // dd($csr)
+    @endphp
     <!--=========== Blog Grid Start =========-->
-    <section class="tj-blog-grid-section">
+    <section class="tj-blog-section-two">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="blog-content-area">
-                        <div class="tj-sec-heading-four">
+                    <div class="blog-top-content-area">
+                        <div class="tj-sec-heading-two">
                             <span class="sub-title">Our CSR Activities</span>
-                            <h2 class="sec-title">Latest Story <span>From Blog</span></h2>
+                            <h2 class="title">
+                                Latest Story
+                                <span>From EEL</span>
+                            </h2>
                         </div>
                         <div class="blog-desc">
                             <p>
-                                Lorem Ipsum has been the industry's standard text ever since the 1500s,
-                                unchanged.
+                                Corporate Social Responsibility (CSR) activities encompass initiatives undertaken by
+                                businesses to contribute positively to society and the environment, ranging from charitable
+                                donations and volunteer programs to sustainable business practices.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="tj-blog-item">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('frontend') }}/assets/images/blog/blog-1.jpg"
-                                    alt="Image" /></a>
+                @if ($csr->count() > 0)
+                    @foreach ($csr as $key => $data)
+                        <div class="col-xl-4 col-lg-6 col-md-6">
+                            <div class="tj-blog-item-two">
+                                <div class="blog-image">
+                                    <a href="{{ route('csr.activities.details', $data->id) }}">
+                                        <img src="{{ $data->image ? asset('uploads/csr/' . $data->image) : asset('frontend/assets/images//blog/blog-4.jpg') }}"
+                                            alt="Image" />
+                                    </a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><i class="flaticon-calendar"></i>{{ $data->created_at }}</li>
+                                            <li><i class="flaticon-user"></i> Admin</li>
+                                        </ul>
+                                    </div>
+                                    <h5 class="title">
+                                        <a
+                                            href="{{ route('csr.activities.details', $data->id) }}">{{ $data->title ?? '' }}</a>
+                                    </h5>
+                                    <div class="tj-blog-button d-flex">
+                                        <a class="tj-secondary-btn btn"
+                                            href="{{ route('csr.activities.details', $data->id) }}">Read More <i
+                                                class="flaticon-right-arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="blog-text-area">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li><i class="flaticon-calendar"></i> Dec 1, 2023</li>
-                                    <li><i class="flaticon-chat"></i> Comment (1)</li>
-                                </ul>
+                    @endforeach
+                @else
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="tj-blog-item-two">
+                            <div class="blog-image">
+                                <a href="blog-details.html"><img
+                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-4.jpg"
+                                        alt="Image" /></a>
                             </div>
                             <div class="blog-content">
+                                <div class="blog-meta">
+                                    <ul>
+                                        <li><i class="flaticon-calendar"></i> Jan 5, 2023</li>
+                                        <li><i class="flaticon-chat"></i> Comment (1)</li>
+                                    </ul>
+                                </div>
                                 <h5 class="title">
                                     <a href="blog-details.html">Winds of Change in the Tubine Service Industry</a>
                                 </h5>
@@ -70,72 +109,20 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tj-blog-item">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('frontend') }}/assets/images/blog/blog-2.jpg"
-                                    alt="Image" /></a>
-                        </div>
-                        <div class="blog-text-area">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li><i class="flaticon-calendar"></i> May 7, 2023</li>
-                                    <li><i class="flaticon-chat"></i> Comment (1)</li>
-                                </ul>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="tj-blog-item-two">
+                            <div class="blog-image">
+                                <a href="blog-details.html"><img
+                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-5.jpg"
+                                        alt="Image" /></a>
                             </div>
                             <div class="blog-content">
-                                <h5 class="title">
-                                    <a href="blog-details.html">Saw Scond Earth Do Grass Very Hot Wathers</a>
-                                </h5>
-                                <div class="tj-blog-button d-flex">
-                                    <a class="tj-secondary-btn btn" href="blog-details.html">Read More <i
-                                            class="flaticon-right-arrow"></i></a>
+                                <div class="blog-meta">
+                                    <ul>
+                                        <li><i class="flaticon-calendar"></i> Jan 5, 2023</li>
+                                        <li><i class="flaticon-chat"></i> Comment (1)</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tj-blog-item">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('frontend') }}/assets/images/blog/blog-3.jpg"
-                                    alt="Image" /></a>
-                        </div>
-                        <div class="blog-text-area">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li><i class="flaticon-calendar"></i> Jan 5, 2023</li>
-                                    <li><i class="flaticon-chat"></i> Comment (1)</li>
-                                </ul>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="title">
-                                    <a href="blog-details.html">Heaced Maece Nasera Tortor Convallis Dise Ann
-                                        Enget</a>
-                                </h5>
-                                <div class="tj-blog-button d-flex">
-                                    <a class="tj-secondary-btn btn" href="blog-details.html">Read More <i
-                                            class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tj-blog-item">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('frontend') }}/assets/images/blog/blog-13.jpg"
-                                    alt="Image" /></a>
-                        </div>
-                        <div class="blog-text-area">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li><i class="flaticon-calendar"></i> Aug 12, 2023</li>
-                                    <li><i class="flaticon-chat"></i> Comment (1)</li>
-                                </ul>
-                            </div>
-                            <div class="blog-content">
                                 <h5 class="title">
                                     <a href="blog-details.html">Winds of Change in the Tubine Service Industry</a>
                                 </h5>
@@ -146,23 +133,22 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tj-blog-item">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('frontend') }}/assets/images/blog/blog-14.jpg"
-                                    alt="Image" /></a>
-                        </div>
-                        <div class="blog-text-area">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li><i class="flaticon-calendar"></i> Nov 12, 2023</li>
-                                    <li><i class="flaticon-chat"></i> Comment (1)</li>
-                                </ul>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="tj-blog-item-two">
+                            <div class="blog-image">
+                                <a href="blog-details.html"><img
+                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-6.jpg"
+                                        alt="Image" /></a>
                             </div>
                             <div class="blog-content">
+                                <div class="blog-meta">
+                                    <ul>
+                                        <li><i class="flaticon-calendar"></i> Jan 5, 2023</li>
+                                        <li><i class="flaticon-chat"></i> Comment (1)</li>
+                                    </ul>
+                                </div>
                                 <h5 class="title">
-                                    <a href="blog-details.html">Saw Scond Earth Do Grass Very Hot Wathers</a>
+                                    <a href="blog-details.html">Winds of Change in the Tubine Service Industry</a>
                                 </h5>
                                 <div class="tj-blog-button d-flex">
                                     <a class="tj-secondary-btn btn" href="blog-details.html">Read More <i
@@ -171,33 +157,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tj-blog-item">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('frontend') }}/assets/images/blog/blog-15.jpg"
-                                    alt="Image" /></a>
-                        </div>
-                        <div class="blog-text-area">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li><i class="flaticon-calendar"></i> Feb 22, 2023</li>
-                                    <li><i class="flaticon-chat"></i> Comment (1)</li>
-                                </ul>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="title">
-                                    <a href="blog-details.html">Heaced Maece Nasera Tortor Convallis Dise Ann
-                                        Enget</a>
-                                </h5>
-                                <div class="tj-blog-button d-flex">
-                                    <a class="tj-secondary-btn btn" href="blog-details.html">Read More <i
-                                            class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>

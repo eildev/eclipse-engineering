@@ -27,7 +27,7 @@
             @if ($teams->count() > 0)
                 @foreach ($teams as $team)
                     <div class="col-lg-4 col-md-6 col-sm-6">
-                        <a href="">
+                        <a href="{{route('team.details', $team->id)}}">
                             <div class="tj-team-item">
                                 <div class="team-image">
                                     <img src="{{ $team->image ? asset('uploads/managing_team/' . $team->image) : asset('frontend/assets/images/team/team-1.jpg') }}"

@@ -47,7 +47,7 @@
                                      alt="Images" />
                              </div>
                              <div class="read-more-button">
-                                 <a class="read-more" href="service-details.html">Read More <i
+                                 <a class="read-more" href="{{route('sister.concern.details', $sister->id)}}">Read More <i
                                          class="flaticon-right-arrow"></i></a>
                              </div>
                          </div>

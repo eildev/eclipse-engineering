@@ -4,23 +4,20 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\HomeSlider;
 use App\Models\Subscribe;
 use App\Models\Contact;
+use App\Models\CSRActivities;
 use App\Models\ServicesDetails;
-use App\Models\SectionDetails;
-
 use App\Models\ManagingTeams;
-use App\Models\Section;
+use App\Models\News;
+use App\Models\ProjectDetails;
+use App\Models\SisterConcern;
 use Carbon\Carbon;
 use Validator;
 
 class IndexController extends Controller
 {
-  public function ContactUs()
-  {
-    return view('frontend.contact_us.contact');
-  } //
+
 
   public function Subscribe(Request $request)
   {
@@ -40,15 +37,6 @@ class IndexController extends Controller
       'status' => '500',
       'error' => $validator->messages()
     ]);
-    // Subscribe::insert([
-    //   'email' => $request->email,
-    //   'created_at' => Carbon::now(),
-    // ]);
-    // $notification = array(
-    //   'message' => 'Thank you for subscribing! Welcome to our community',
-    //   'alert-type' => 'info'
-    // );
-    // return redirect()->back()->with($notification);
   } //
   public function SubscribeList()
   {
@@ -64,6 +52,14 @@ class IndexController extends Controller
     );
     return redirect()->back()->with($notification);
   } //
+  public function ContactUs()
+  {
+    return view('frontend.contact_us.contact');
+  }
+  public function chooseUsDetails()
+  {
+    return view('frontend.choose-us.choose-us');
+  }
   public function ContactStore(Request $request)
   {
     Contact::insert([
@@ -95,26 +91,29 @@ class IndexController extends Controller
     );
     return redirect()->back()->with($notification);
   } //
-
-  // About
-  public function FrontendAbout()
-  {
-    return view('frontend.about.about');
-  } //
   ///All Service
-  public function AllService()
-  {
-    return view('frontend.service.service');
-  }
   public function ServiceDetails($id)
   {
-    $serviceDetails = ServicesDetails::findOrFail($id);
-    return view('frontend.service.single_service', compact('serviceDetails'));
+    $data = ServicesDetails::findOrFail($id);
+    return view('frontend.service.single_service', compact('data'));
+  } //
+  public function ProjectDetails($id)
+  {
+    $projectDetails = ProjectDetails::findOrFail($id);
+    return view('frontend.project.single_project', compact('projectDetails'));
   } //
   ///Team
   public function AllTeam()
   {
     return view('frontend.team.all_team');
+  }
+  public function FrontendAbout()
+  {
+    return view('frontend.about.about');
+  }
+  public function AllService()
+  {
+    return view('frontend.service.service');
   }
   public function TeamDetails($id)
   {
@@ -126,35 +125,39 @@ class IndexController extends Controller
   {
     return view('frontend.project.all_project');
   } //
-  public function ProjectDetails($id)
-  {
-    $projectDetails = SectionDetails::findOrFail($id);
-    return view('frontend.project.single_project', compact('projectDetails'));
-  } //
   //404 page
-  public function Error404()
-  {
-    return view('frontend.errors.404');
-  }
+  // public function Error404()
+  // {
+  //   return view('frontend.errors.404');
+  // }
   // blog page function 
   public function blog()
   {
     return view('frontend.blog.blog-page');
+  }
+  public function blogDetails($id)
+  {
+    $blog = News::findOrFail($id);
+    return view('frontend.blog.single-blog', compact('blog'));
   }
   // Sister Concern 
   public function sisterConcern()
   {
     return view('frontend.sister-concern.sister-concern');
   }
+  public function sisterConcernDetails($id)
+  {
+    $sister = SisterConcern::findOrFail($id);
+    return view('frontend.sister-concern.single_sister', compact('sister'));
+  }
   // CSR Activities
   public function csrActivities()
   {
     return view('frontend.csr-activities.csr');
   }
-  ///Achievments
-  public function AchievementsDetails($id)
+  public function csrActivitiesDetails($id)
   {
-    $achievements = SectionDetails::findorFail($id);
-    return view('frontend.achievments.achievments', compact('achievements'));
+    $csr = CSRActivities::findOrFail($id);
+    return view('frontend.csr-activities.single-csr', compact('csr'));
   }
 }

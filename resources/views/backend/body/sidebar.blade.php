@@ -115,6 +115,26 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
+                        <span>CSR Activities</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('csr') }}">Add CSR Activities</a></li>
+                        <li><a href="{{ route('view.csr') }}">Manage CSR Activities</a></li>
+                    </ul>
+                </li> 
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('faq') }}">Add FAQ</a></li>
+                        <li><a href="{{ route('view.faq') }}">Manage FAQ</a></li>
+                    </ul>
+                </li> 
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
                         <span>Projects Settings</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">

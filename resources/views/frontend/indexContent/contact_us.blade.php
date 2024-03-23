@@ -1,5 +1,5 @@
  <!--=========== Contact Section Start =========-->
- <div class="tj-contact-section">
+ <div class="tj-contact-section tj-contact-page mb-5 ">
      <div class="container">
          <div class="row align-items-end">
              <div class="col-lg-6">
@@ -18,49 +18,56 @@
                          </div>
                          <div class="contact-map">
                              <iframe
-                                 src="https://maps.google.com/maps?q=manhatan&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                                 style="border: 0" allowfullscreen=""></iframe>
+                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d228.2273120048374!2d90.43589712215075!3d23.760320991417355!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7f588575549%3A0xd3c9ea7a0d43894d!2s5%20Banasree%20Main%20Rd!5e0!3m2!1sen!2sus!4v1710387400191!5m2!1sen!2sus"
+                                 style="border:0;" allowfullscreen=""></iframe>
+                             {{-- <iframe
+                                src="https://maps.google.com/maps?q=manhatan&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                style="border: 0" allowfullscreen=""></iframe> --}}
                          </div>
                      </div>
                  </div>
              </div>
              <div class="col-lg-6">
                  <div class="tj-contact-form">
-                     <div class="row">
-                         <div class="col-lg-6">
-                             <div class="form-input">
-                                 <input type="text" id="name" name="name" placeholder="Your Name...."
-                                     required />
+                     <form action="{{ route('contact.store') }}" method="POST">
+                         @csrf
+                         <div class="row">
+                             <div class="col-lg-6">
+                                 <div class="form-input">
+                                     <input type="text" id="nameOne" name="name" placeholder="Your Name...."
+                                         required />
+                                 </div>
+                             </div>
+                             <div class="col-lg-6">
+                                 <div class="form-input">
+                                     <input type="text" id="phone" name="phone" placeholder="Phone..."
+                                         required />
+                                 </div>
+                             </div>
+                             <div class="col-lg-6">
+                                 <div class="form-input">
+                                     <input type="email" id="emailTwo" name="email" placeholder="Enter your Email"
+                                         required />
+                                 </div>
+                             </div>
+                             <div class="col-lg-6">
+                                 <div class="form-input">
+                                     <input type="text" id="site" name="company_name"
+                                         placeholder="Enter Company Name" required />
+                                 </div>
+                             </div>
+                             <div class="col-lg-12">
+                                 <div class="form-input">
+                                     <textarea id="message" name="message" placeholder="Write Here...."></textarea>
+                                 </div>
+                             </div>
+                             <div class="tj-contact-button">
+                                 <button class="tj-primary-btn2 btn" type="submit">
+                                     Contact Us <i class="flaticon-right-arrow"></i>
+                                 </button>
                              </div>
                          </div>
-                         <div class="col-lg-6">
-                             <div class="form-input">
-                                 <input type="text" id="phone" name="name" placeholder="Phone..." required />
-                             </div>
-                         </div>
-                         <div class="col-lg-6">
-                             <div class="form-input">
-                                 <input type="email" id="email" name="name" placeholder="Enter your Email"
-                                     required />
-                             </div>
-                         </div>
-                         <div class="col-lg-6">
-                             <div class="form-input">
-                                 <input type="text" id="site" name="name" placeholder="Enter your website"
-                                     required />
-                             </div>
-                         </div>
-                         <div class="col-lg-12">
-                             <div class="form-input">
-                                 <textarea id="message" name="message" placeholder="Write Here...."></textarea>
-                             </div>
-                         </div>
-                         <div class="tj-contact-button">
-                             <button class="tj-primary-btn2 btn" type="submit" value="submit">
-                                 Contact Us <i class="flaticon-right-arrow"></i>
-                             </button>
-                         </div>
-                     </div>
+                     </form>
                  </div>
              </div>
          </div>

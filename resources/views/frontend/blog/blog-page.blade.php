@@ -40,7 +40,7 @@
                             @foreach ($blogs as $blog)
                                 <div class="details-item">
                                     <div class="blog-thumb-image">
-                                        <a href="blog-details.html"><img
+                                        <a href="{{ route('blog.details', $blog->id) }}"><img
                                                 src="{{ $blog->image ? asset('uploads/news/' . $blog->image) : asset('frontend/assets/images/blog/blog-7.jpg') }}"
                                                 alt="Image" /></a>
                                     </div>
@@ -62,7 +62,7 @@
 
                                     </p>
                                     <div class="blog-button d-flex">
-                                        <a class="tj-primary-btn btn" href="blog-details.html">
+                                        <a class="tj-primary-btn btn" href="{{ route('blog.details', $blog->id) }}">
                                             Read More <i class="flaticon-right-arrow"></i>
                                         </a>
                                     </div>
@@ -259,7 +259,7 @@
                                                     </ul>
                                                 </div>
                                                 <h5 class="title-link">
-                                                    <a href="#">{{$blog->title ?? ''}}</a>
+                                                    <a href="#">{{ $blog->title ?? '' }}</a>
                                                 </h5>
                                             </div>
                                         </div>

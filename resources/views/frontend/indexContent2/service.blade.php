@@ -37,7 +37,7 @@
                                         <div class="service-content">
                                             <h5 class="title">
                                                 <a
-                                                    href="service-details.html">{{ $service->services_details_title ?? 'Hydropower Plants' }}</a>
+                                                    href="{{route('service.details', $service->id)}}">{{ $service->services_details_title ?? 'Hydropower Plants' }}</a>
                                             </h5>
                                             <div class="desc">
                                                 <p>
@@ -57,7 +57,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="read-btn" href="service-details.html">Read More <i
+                                                <a class="read-btn" href="{{route('service.details', $service->id)}}">Read More <i
                                                         class="flaticon-right-arrow"></i></a>
                                             </div>
                                         </div>
