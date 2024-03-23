@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2024 at 05:50 AM
+-- Generation Time: Mar 23, 2024 at 07:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -85,7 +85,34 @@ CREATE TABLE `contacts` (
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `number`, `service_name`, `company_name`, `message`, `created_at`, `updated_at`) VALUES
 (1, 'Diana Pollard', 'kenyhub@mailinator.com', '+1 (527) 793-3398', NULL, 'Bolton Willis Plc', 'Tenetur molestias ea', '2024-03-13 21:44:35', NULL),
-(2, 'Jhon Wick', 'sobrokom.store@gmail.com', '01723343865', NULL, 'wurozuguwo@mailinator.com', 'wadadas', '2024-03-20 22:42:44', NULL);
+(2, 'Jhon Wick', 'sobrokom.store@gmail.com', '01723343865', NULL, 'wurozuguwo@mailinator.com', 'wadadas', '2024-03-20 22:42:44', NULL),
+(3, 'Kishor Mahmud', 'sobrokom.store@gmail.com', '1723343865', NULL, 'saadad', 'adasd', '2024-03-23 03:41:44', NULL),
+(4, 'Lionel Messi', 'lota@pata.com', '1234567890893', NULL, 'saadad', 'ji', '2024-03-23 07:26:01', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `c_s_r_activities`
+--
+
+CREATE TABLE `c_s_r_activities` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `c_s_r_activities`
+--
+
+INSERT INTO `c_s_r_activities` (`id`, `title`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
+(2, 'Providing education to underprivileged children', '<p>Providing education to underprivileged children is an important and noble goal. Access to education can make a significant difference in the lives of children and their communities. Here are some steps that can be taken to provide education to underprivileged children:</p><p><br></p><p><b>Identify the target group:</b> The first step is to identify the children who are most in need of education. This can be done by reaching out to local communities, NGOs, and government organizations that work with underprivileged children.</p><p><b>Create a curriculum:</b> Once the target group has been identified, the next step is to create a curriculum that is tailored to their needs. The curriculum should be designed to provide a well-rounded education that includes reading, writing, math, science, social studies, and life skills.</p>', '1577507585.webp', 1, '2024-03-23 05:06:10', '2024-03-23 05:27:32'),
+(3, 'Distribution of food to poor people', '<p>Distribution of food to poor people is an important initiative to help alleviate hunger and malnutrition in the community. Here are some steps that can be taken to distribute food to the poor:</p><p><br></p><p><b>Identify the target group:</b> The first step is to identify the people who are most in need of food assistance. This can be done by reaching out to local communities, NGOs, and government organizations that work with the poor and homeless.</p><p><br></p><p><b>Find food sources:</b> The next step is to find food sources. This can be done by reaching out to local grocery stores, restaurants, and food banks that are willing to donate food. You can also consider growing your own food if you have the resources.</p>', '797390239.webp', 1, '2024-03-23 05:13:25', '2024-03-23 05:13:30'),
+(4, 'Iftar Sponsorship for Low-Income Families:', '<p>The company sponsors iftar meals for low-income families throughout the month of Ramadan. Working with local charities or mosques, the company arranges for nutritious meals to be provided to families in need at sunset. This initiative aims to ensure that everyone can enjoy a fulfilling iftar meal during the holy month, regardless of their financial situation, fostering a sense of community and solidarity.<br></p>', '1592829727.jpg', 1, '2024-03-23 05:17:31', '2024-03-23 05:17:45');
 
 -- --------------------------------------------------------
 
@@ -128,6 +155,35 @@ CREATE TABLE `footer_settings` (
 
 INSERT INTO `footer_settings` (`id`, `fullAddress`, `location`, `link`, `phone`, `email`, `website`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'House 41, 2nd Floor, Road 06, Block E, Banasree, Dhaka, Bangladesh', 'House 41, 2nd Floor, Road 06, Block E, Banasree, Dhaka, Bangladesh', 'http://127.0.0.1:8000/', '+88-01718319480', 'eclipseengineeringlimited@gmail.com', 'http://127.0.0.1:8000/', '0', '2024-03-19 08:50:06', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `f_a_q_s`
+--
+
+CREATE TABLE `f_a_q_s` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `question` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `f_a_q_s`
+--
+
+INSERT INTO `f_a_q_s` (`id`, `question`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(3, 'What is Included in your Services?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 06:56:05', '2024-03-23 06:58:21'),
+(4, 'What Warranties do I Have For Installation?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 06:57:17', '2024-03-23 06:58:24'),
+(5, 'How fast I get my Order?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 06:57:47', '2024-03-23 06:58:35'),
+(6, 'What are the advantages of solar energy?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 06:58:14', '2024-03-23 06:58:38'),
+(7, 'How Much do Energy Panels Cost?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 0, '2024-03-23 07:22:51', '2024-03-23 07:22:51'),
+(8, 'How Mech Energy Can a Solar Panel Generate?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 0, '2024-03-23 07:24:03', '2024-03-23 07:24:03'),
+(9, 'What are the advantages of solar energy?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 0, '2024-03-23 07:24:58', '2024-03-23 07:24:58'),
+(10, 'What is Included in your Services?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 0, '2024-03-23 07:25:21', '2024-03-23 07:25:21');
 
 -- --------------------------------------------------------
 
@@ -261,7 +317,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (30, '2024_03_05_103757_create_project_details_table', 3),
 (31, '2024_02_22_044314_create_galleries_table', 4),
 (32, '2024_03_19_195053_create_values_table', 5),
-(33, '2024_03_20_155703_create_sister_concerns_table', 6);
+(33, '2024_03_20_155703_create_sister_concerns_table', 6),
+(35, '2024_03_23_094355_create_c_s_r_activities_table', 7),
+(36, '2024_03_23_114721_create_f_a_q_s_table', 8);
 
 -- --------------------------------------------------------
 
@@ -284,9 +342,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'EEL Signs Contract With NNIL For 119.9KW Rooftop Solar Power Plant', '<p>Neel Nagar Industries Ltd.(NNIL), a prominent leading Polyester Staple Fiber (PSF) manufacturing companies in Bangladesh, has signed a contract with Eclipse Engineering Limited (EEL) to establish a 119.9KW rooftop solar power plant at its factory located at Mirzapur, Tegoria, South Keranigonj, Dhaka-1310, Bangladesh.</p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">The solar power plant will be ingeniously situated a top Neel Nagar Industries Ltd.’s factory premises located in . This initiative marks a significant stride towards curbing the company’s carbon footprint. By offsetting approximately 2,000 tons of CO2 emissions each year, the factory is poised to make a lasting impact on its sustainability journey.</span><br></p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Sadi Al Hossain, Director of EEL, reciprocated the enthusiasm. This venture not only signifies EEL’s foray into a pioneering project but also stands as the finest rooftop solar power plant endeavor in their portfolio. Sadi reaffirmed EEL’s dedication to furnishing NNIL’s with an impeccable solar solution that meets their energy requisites while substantiating their sustainability goals.</span><br></p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Aminul Haque, CEO of NNIL underscored the strategic significance of renewable energy, particularly in the context of Bangladesh’s energy landscape. The rooftop solar power plant initiative is positioned as a steadfast response to the prevailing energy vulnerabilities. Haque exuded confidence that this undertaking would bolster NNIL’ standing as an industry leader committed to responsible practices.</span><br></p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Kazi Rumiz Hossain, General Manager-Supply Chain at Neel Nagar Industries Ltd. (NNIL), alongside esteemed officials from Eclipse Engineering Limited (EEL) graced the signing ceremony with their presence. This collaborative stride towards a sustainable future resonates as a milestone not only for NNIL and EEL but also as a beacon illuminating the path towards a greener and more responsible industry landscape.</span><br></p>', '768375418.webp', 1, '2024-03-19 07:00:36', '2024-03-19 08:35:46'),
 (2, 'Why invest in renewable energy?', '<p>To answer your question, it is because renewable energy-based projects are green, clean, sustainable and natural. Today, renewable energy generates 26% of the world’s electricity. By 2024, it is expected to create 30%. This upper-lining trend is one that businesses should pay more attention to if they hope to remain competitive and successful, especially when it comes to investing in renewable energy-based supply chains. Now more than ever, it’s vital that countries put renewable energy and other low-carbon technologies at the fore to build back better after COVID-19, creating new jobs and rebooting their economies. The fossil fuel industry is among the hardest hit by the coronavirus crisis, with leading oil, gas and petrochemical companies losing an average of 45% of their total market value. Since the start of the year, we have seen the sharpest drop in oil demand in a quarter of a century. Green energy stocks were also less volatile across the board than traditional fossil fuels, with such portfolios holding up well during the turmoil caused by the pandemic, while oil and gas collapsed.&nbsp;</p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">The global movement of divestment from fossil fuels is gathering pace in Europe, with significant support from high-profile individuals, governments and businesses.&nbsp; It creates a positive environment for sustainable investment to thrive.&nbsp; Investing in renewable energy infrastructure has clear benefits: it can generate attractive returns for investors, whilst having a positive effect in the ongoing battle against the climate crisis. We want to see both sustainable energy production and secure energy supply at the heart of our communities, the energy sector and Government policy. Much more needs to be done by the international community, especially to drive investment in lower-income economies, where the private sector has been reluctant to venture.</span><br></p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Renewables are the force to a climate-safe world. Far from having to select between mitigating the foreseen climate crisis and economic upscale, it is visible than ever that a scope lives to ramp up investment in low-carbon technologies and shift the global development paradigm from one of scarcity, inequality and competition to one of shared prosperity – in our lifetimes. If we take clearer decisions now, a sustainable energy future is within our foremost reach.</span><br></p>', '817923553.webp', 1, '2024-03-19 08:35:37', '2024-03-19 08:35:49'),
-(3, 'Why does Bangladesh need wind power plants?', '<p>Bangladesh is encountering difficulties in supplying energy to maintain its economic growth. The Government of Bangladesh is looking for renewable energy sources to meet up the total power demand in this country. After the severe Covid-19 pandemic and due to ongoing war in Europe, the country is suffering from the unavailability of fossil fuels such as oil, LNG and coal to run the already commissioned traditional power plants.</p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Bangladesh must involve itself in the massive development of wind power stations in coastal areas such as Patuakhali, Khulna, Barishal, Bhola, Cox’s Bazar, Chittagong, Swandip, Saint Martin Island, and other areas nearby the sea. NREL has conducted a study and found that for wind speeds of 5.75-7.75 m/s, there are more than 20,000 square kilometers of land with a gross wind potential of more than 30,000MW and published the report entitled “Assessing the Wind Energy Potential in Bangladesh”. Wind will relax the dependency on fossil fuel overseas, it will create more jobs for the local people, wind turbines are not expensive these days and wind projects will be economically viable for the country. As Bangladesh Government and international investment companies are concentrating more on renewable energy-based projects in Bangladesh, sincere support must be addressed from the higher-ups to push the wind investment projects to be developed on fast track basis all over the country by following the policies of unsolicited IPP basis. The development of wind power will not only enrich our economy but also help to keep this planet clean and protect our future generations from pollution.</span><br></p>', '1124030296.webp', 0, '2024-03-19 08:45:12', '2024-03-19 08:45:12');
+(3, 'Why does Bangladesh need wind power plants?', '<p>Bangladesh is encountering difficulties in supplying energy to maintain its economic growth. The Government of Bangladesh is looking for renewable energy sources to meet up the total power demand in this country. After the severe Covid-19 pandemic and due to ongoing war in Europe, the country is suffering from the unavailability of fossil fuels such as oil, LNG and coal to run the already commissioned traditional power plants.</p><p><span style=\"font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Bangladesh must involve itself in the massive development of wind power stations in coastal areas such as Patuakhali, Khulna, Barishal, Bhola, Cox’s Bazar, Chittagong, Swandip, Saint Martin Island, and other areas nearby the sea. NREL has conducted a study and found that for wind speeds of 5.75-7.75 m/s, there are more than 20,000 square kilometers of land with a gross wind potential of more than 30,000MW and published the report entitled “Assessing the Wind Energy Potential in Bangladesh”. Wind will relax the dependency on fossil fuel overseas, it will create more jobs for the local people, wind turbines are not expensive these days and wind projects will be economically viable for the country. As Bangladesh Government and international investment companies are concentrating more on renewable energy-based projects in Bangladesh, sincere support must be addressed from the higher-ups to push the wind investment projects to be developed on fast track basis all over the country by following the policies of unsolicited IPP basis. The development of wind power will not only enrich our economy but also help to keep this planet clean and protect our future generations from pollution.</span><br></p>', '1124030296.webp', 1, '2024-03-19 08:45:12', '2024-03-23 09:28:22');
 
 -- --------------------------------------------------------
 
@@ -692,6 +749,12 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `c_s_r_activities`
+--
+ALTER TABLE `c_s_r_activities`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -702,6 +765,12 @@ ALTER TABLE `failed_jobs`
 -- Indexes for table `footer_settings`
 --
 ALTER TABLE `footer_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `f_a_q_s`
+--
+ALTER TABLE `f_a_q_s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -869,7 +938,13 @@ ALTER TABLE `about_settings`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `c_s_r_activities`
+--
+ALTER TABLE `c_s_r_activities`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -882,6 +957,12 @@ ALTER TABLE `failed_jobs`
 --
 ALTER TABLE `footer_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `f_a_q_s`
+--
+ALTER TABLE `f_a_q_s`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `galleries`
@@ -911,7 +992,7 @@ ALTER TABLE `managing_teams`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `news`
