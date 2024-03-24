@@ -17,6 +17,7 @@ use App\Http\Controllers\Backend\OurPartnerController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\WhyChooseUsController;
 use App\Http\Controllers\Backend\AboutIntroduction;
+use App\Http\Controllers\Backend\CarrierController;
 use App\Http\Controllers\Backend\CSRController;
 use App\Http\Controllers\Backend\FAQController;
 use App\Http\Controllers\Backend\ProjectDetailsController;
@@ -286,6 +287,16 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/faq/delete/{id}', 'delete')->name('delete.faq');
         Route::post('/faq/{id}', 'status')->name('faq.status');
     });
+    // Carrier related routes
+    Route::controller(CarrierController::class)->group(function () {
+        Route::get('/carrier/add', 'index')->name('carrier.add');
+        Route::post('/carrier/store', 'store')->name('store.carrier');
+        Route::get('/carrier/view', 'view')->name('view.carrier');
+        Route::get('/carrier/edit/{id}', 'edit')->name('edit.carrier');
+        Route::post('/carrier/update/{id}', 'update')->name('update.carrier');
+        Route::get('/carrier/delete/{id}', 'delete')->name('delete.carrier');
+        Route::post('/carrier/status/{id}', 'status')->name('carrier.status');
+    });
     // Log::warning("message");
 });
 
@@ -331,9 +342,9 @@ Route::controller(IndexController::class)->group(function () {
     // choose us
     Route::get('/choose-us/details', 'chooseUsDetails')->name('choose-us.details');
 
-    //Team 
-    // Route::get('/all-team', 'AllTeam')->name('all.team');
-    Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
+    //Carrier
+    Route::get('/carrier', 'carrier')->name('carrier');
+    Route::get('/carrier/details/{id}', 'carrierDetails')->name('carrier.details');
 
     //404 page
     Route::fallback(function () {

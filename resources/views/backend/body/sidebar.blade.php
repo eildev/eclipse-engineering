@@ -91,7 +91,7 @@
                         <li><a href="{{ route('news') }}">Add News</a></li>
                         <li><a href="{{ route('manage.news') }}">Manage News</a></li>
                     </ul>
-                </li> 
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -101,7 +101,7 @@
                         <li><a href="{{ route('value') }}">Add Value</a></li>
                         <li><a href="{{ route('view.value') }}">Manage Value</a></li>
                     </ul>
-                </li> 
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -111,7 +111,7 @@
                         <li><a href="{{ route('sister') }}">Add Sister Company</a></li>
                         <li><a href="{{ route('view.sister') }}">Manage Sister Company</a></li>
                     </ul>
-                </li> 
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -121,7 +121,7 @@
                         <li><a href="{{ route('csr') }}">Add CSR Activities</a></li>
                         <li><a href="{{ route('view.csr') }}">Manage CSR Activities</a></li>
                     </ul>
-                </li> 
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -131,7 +131,7 @@
                         <li><a href="{{ route('faq') }}">Add FAQ</a></li>
                         <li><a href="{{ route('view.faq') }}">Manage FAQ</a></li>
                     </ul>
-                </li> 
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -202,16 +202,16 @@
                         <li><a href="{{ route('manage.overview') }}">Manage Overview</a></li>
                     </ul>
                 </li>
-                <!-- <li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>News</span>
+                        <span>Carrier</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('news') }}">Add News</a></li>
-                        <li><a href="{{ route('manage.news') }}">Manage News</a></li>
+                        <li><a href="{{ route('carrier.add') }}">Add Carrier</a></li>
+                        <li><a href="{{ route('view.carrier') }}">Manage Carrier</a></li>
                     </ul>
-                </li> -->
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>

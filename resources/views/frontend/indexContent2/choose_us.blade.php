@@ -20,7 +20,7 @@
                         <p>
                             {{ $whyChooseUs->description ??
                                 'Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,
-                                                                                                                when an unknown printer took a galley of type unchanged.' }}
+                                                                                                                                                                                                    when an unknown printer took a galley of type unchanged.' }}
                         </p>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                     </div>
                 </div>
             @endif
-            <div class="tj-about-button d-flex w-25 m-auto">
+            <div class="tj-about-button d-flex">
                 <a class="tj-primary-btn btn" href="{{ route('choose-us.details') }}">
                     Read More <i class="flaticon-right-arrow"></i>
                 </a>

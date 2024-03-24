@@ -37,12 +37,12 @@
 </head>
 
 <body>
-    {{-- <!-- Preloader start -->
+    <!-- Preloader start -->
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner">
                 <div class="loader-icon">
-                    <img src="{{ asset('frontend') }}/assets/images/fav.svg"
+                    <img src="{{ asset('frontend') }}/assets/images/logos/eel-white-logo.png"
                         alt="Solar & Renewable Energy HTML Template" />
                 </div>
             </div>
@@ -70,7 +70,7 @@
         </div>
         <button class="tj-header-btn btn">Cancel Preloader</button>
     </div>
-    <!-- Preloader end --> --}}
+    <!-- Preloader end -->
 
     <!-- start: Offcanvas Area -->
     <div id="tj-overlay-bg" class="tj-overlay-canvas"></div>

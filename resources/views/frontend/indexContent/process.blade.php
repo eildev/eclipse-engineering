@@ -21,7 +21,7 @@
             @if ($projects->count() > 0)
                 @foreach ($projects as $project)
                     <div class="col-lg-4 col-md-6">
-                        <a href="{{route('project.details', $project->id)}}">
+                        <a href="{{ route('project.details', $project->id) }}">
                             <div class="tj-process-item">
                                 <img src="{{ $project->image ? asset('uploads/projects/multi_img/' . $project->image) : asset('frontend/assets/images/project/process-1.jpg') }}"
                                     alt="Project Image" style="max-height: 240px; object-fit:cover;">
@@ -79,11 +79,6 @@
                 </div>
             @endif
 
-        </div>
-        <div class="tj-about-button d-flex w-25 m-auto">
-            <a class="tj-primary-btn btn" href="{{ route('all.project') }}">
-                More <i class="flaticon-right-arrow"></i>
-            </a>
         </div>
     </div>
 </section>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Carrier;
 use Illuminate\Http\Request;
 use App\Models\Subscribe;
 use App\Models\Contact;
@@ -159,5 +160,14 @@ class IndexController extends Controller
   {
     $csr = CSRActivities::findOrFail($id);
     return view('frontend.csr-activities.single-csr', compact('csr'));
+  }
+  public function carrier()
+  {
+    return view('frontend.carrier.carrier');
+  }
+  public function carrierDetails($id)
+  {
+    $csr = Carrier::findOrFail($id);
+    return view('frontend.carrier.single_carrier', compact('csr'));
   }
 }

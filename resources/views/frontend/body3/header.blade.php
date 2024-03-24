@@ -36,6 +36,9 @@
                                 <a href="{{ route('csr.activities') }}">CSR Activities</a>
                             </li>
                             <li>
+                                <a href="{{ route('carrier') }}">Carrier</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('contact.us') }}">Contact Us</a>
                             </li>
                         </ul>
