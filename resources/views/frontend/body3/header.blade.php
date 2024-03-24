@@ -2,87 +2,91 @@
 <header class="tj-header-area header-sticky header-2">
     <div class="tj-top-content-area">
         <div class="logo-area">
-            <a href="index.html"><img src="{{ asset('frontend') }}/assets/images/logos/main-logo.png" alt="Logo" /></a>
+            <a href="{{ route('/') }}"><img src="{{ asset('frontend') }}/assets/images/logos/eel-white-logo.png"
+                    alt="Logo" /></a>
         </div>
         <div class="tj-menu-area d-lg-block d-none" id="main-menu">
             <nav id="mobile-menu">
                 <ul>
-                    <li class="has-dropdown current-menu-item">
-                        <a href="index.html">Home</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="{{ route('/') }}">Home One</a>
-                            </li>
-                            <li><a href="{{ route('home2') }}">Home Two</a></li>
-                            <li class="current-menu-item"><a href="{{ route('home3') }}">Home Three</a></li>
-                        </ul>
+                    <li id="li-1" class="">
+                        <a href="{{ route('/') }}">Home</a>
                     </li>
-                    <li>
-                        <a href="about-us.html">About Us</a>
+                    <li id="li-2">
+                        <a href="{{ route('frontend.about') }}">About Us</a>
                     </li>
-                    <li class="has-dropdown">
-                        <a href="services.html">Services</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="services.html">Services</a>
-                            </li>
-                            <li>
-                                <a href="service-details.html">Service Details</a>
-                            </li>
-                        </ul>
+                    <li id="li-3">
+                        <a href="{{ route('all.service') }}">Services</a>
                     </li>
-                    <li class="has-dropdown">
+                    <li id="li-4">
+                        <a href="{{ route('all.project') }}">Projects</a>
+                    </li>
+                    <li id="li-5" class="has-dropdown">
                         <a href="javascript:void(0)">Pages</a>
                         <ul class="sub-menu">
-                            <li class="has-dropdown">
-                                <a href="project.html">Projects</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="project.html">Projects</a>
-                                    </li>
-                                    <li>
-                                        <a href="project-details.html">Project Details</a>
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="{{ route('all.team') }}">Team</a>
                             </li>
                             <li>
-                                <a href="team.html">Team</a>
+                                <a href="{{ route('blog') }}">Blog</a>
                             </li>
                             <li>
-                                <a href="faq.html">Faq</a>
+                                <a href="{{ route('sister.concern') }}">Sister Concern</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('csr.activities') }}">CSR Activities</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('contact.us') }}">Contact Us</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="has-dropdown">
-                        <a href="blog.html">Blog</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="blog-grid.html">Blog Grid</a>
-                            </li>
-                            <li>
-                                <a href="blog.html">Blog Standard</a>
-                            </li>
-                            <li>
-                                <a href="blog-details.html">Blog Details</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="info-right-item">
-            <div class="info-icon">
-                <img src="{{ asset('frontend') }}/assets/images/icon/call.svg" alt="Icon" />
-            </div>
-            <div class="info-text">
-                <span class="sub-title">Call Anytime</span>
-                <a href="tel:12345667800">123-456-67800</a>
-            </div>
+        <div class="info-item d-none d-lg-block">
+            <a class="tj-header-btn btn" href="{{ route('contact.us') }}">Contact Us <i
+                    class="flaticon-right-arrow"></i></a>
         </div>
         <div class="hamburger_menu d-lg-none">
             <a class="canva_expander nav-menu-link menu-button" href="#"><i class="flaticon-menu"></i></a>
         </div>
     </div>
 </header>
+
+<script>
+    $(document).ready(function() {
+        const first_lis = document.querySelectorAll('#mobile-menu ul li');
+        first_lis.forEach((el) => {
+            el.classList.remove('current-menu-item');
+        });
+        item.classList.add('current-menu-item');
+        localStorage.setItem(storageKey, item.id);
+    });
+
+    function handleLiClick(items, storageKey) {
+        items.forEach((item) => {
+            item.addEventListener('click', function(e) {
+                items.forEach((el) => {
+                    el.classList.remove('current-menu-item');
+                });
+                item.classList.add('current-menu-item');
+                localStorage.setItem(storageKey, item.id);
+            })
+        });
+    }
+
+    handleLiClick(first_lis, 'current');
+
+    function restoreActiveState(items, storageKey) {
+        const activeLiId = localStorage.getItem(storageKey);
+        if (activeLiId) {
+            const activeLi = document.getElementById(activeLiId);
+            if (activeLi) {
+                activeLi.classList.add('current-menu-item');
+            }
+        }
+    }
+    restoreActiveState(first_lis, 'current');
+</script>
+
 <!-- end: Header Area -->

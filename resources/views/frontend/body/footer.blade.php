@@ -29,7 +29,7 @@
                                         @if ($social->count() > 0)
                                             @foreach ($social as $data)
                                                 <a href="{{ $data->link }}"><i
-                                                        class="fa-brands fa-x-{{ $data->name }}"></i></a>
+                                                        class="fa-brands {{ $data->icon }}"></i></a>
                                             @endforeach
                                         @else
                                             <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
@@ -71,7 +71,7 @@
                                     <i class="flaticon-location"></i>
                                     {{ $footer->fullAddress ??
                                         "2972 Westheimer Rd. Santa Ana, Illinois
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            937949" }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    937949" }}
                                 </li>
                                 <li>
                                     <i class="flaticon-open"></i>
@@ -79,7 +79,8 @@
                                         {{ $footer->email ?? 'Solarplus@gmail.com' }}</a>
                                 </li>
                                 <li>
-                                    <i class="flaticon-phone"></i><a href="tel:{{ $footer->phone ?? '(1234)-567-8900' }}">
+                                    <i class="flaticon-phone"></i><a
+                                        href="tel:{{ $footer->phone ?? '(1234)-567-8900' }}">
                                         {{ $footer->phone ?? '(1234)-567-8900' }}
                                     </a>
                                 </li>
@@ -95,7 +96,8 @@
                         <div class="footer-newsletter">
                             <div class="desc">
                                 <p>
-                                Quantum computing, the cutting-edge field that promises unprecedented computational power, has taken a significant leap forward.
+                                    Quantum computing, the cutting-edge field that promises unprecedented computational
+                                    power, has taken a significant leap forward.
                                 </p>
                             </div>
                             <form class="footer-form">

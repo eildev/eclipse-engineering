@@ -188,7 +188,7 @@
     <!-- end: Search Popup -->
 
     <!-- start: Header Area -->
-    @include('frontend.body.header')
+    @include('frontend.body3.header')
     <!-- end: Header Area -->
 
     <main class="site-main">

@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="tj-main-sidebar">
-                        <div class="tj-blog-widget">
+                        {{-- <div class="tj-blog-widget">
                             <div class="sidebar-search">
                                 <form action="#">
                                     <input type="text" name="search" id="searchTwo" placeholder="Search Here" />
@@ -68,7 +68,7 @@
                                     </button>
                                 </form>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="tj-blog-widget">
                             <h3 class="side-title">Recent Post</h3>
                             <div class="sidebar-recent-post">
@@ -76,7 +76,7 @@
                                     @foreach ($sideBlog as $blog)
                                         <div class="single-post d-flex align-items-center">
                                             <div class="post-image">
-                                                <a href="blog-details.html">
+                                                <a href="{{ route('blog.details', $blog->id) }}">
                                                     <img src="{{ $blog->image ? asset('uploads/news/' . $blog->image) : asset('frontend/assets/images/blog/blog-7.jpg') }}"
                                                         alt="Blog" /></a>
                                             </div>
@@ -88,7 +88,8 @@
                                                     </ul>
                                                 </div>
                                                 <h5 class="title-link">
-                                                    <a href="#">{{ $blog->title ?? '' }}</a>
+                                                    <a
+                                                        href="{{ route('blog.details', $blog->id) }}">{{ $blog->title ?? '' }}</a>
                                                 </h5>
                                             </div>
                                         </div>
