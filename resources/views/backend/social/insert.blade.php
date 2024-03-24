@@ -29,8 +29,15 @@
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">Name</label>
                                 <div class="col-sm-10">
-                                    <input class="form-control" type="text" placeholder="Enter Social Icon Name"
+                                    <input class="form-control" type="text" placeholder="Enter Social Site Name"
                                         id="example-text-input" name="name">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="example-text-input" class="col-sm-2 col-form-label">Icon Name</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="text" placeholder="Enter Social Icon Name"
+                                        id="example-text-input" name="Icon">
                                 </div>
                             </div>
                             <!-- end row -->

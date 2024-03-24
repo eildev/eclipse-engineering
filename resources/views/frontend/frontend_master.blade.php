@@ -77,20 +77,15 @@
     <div class="tj-offcanvas-area">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="index.html"><img src="{{ asset('frontend') }}/assets/images/logos/main-logo.png"
-                        alt="Logo" /></a>
+                <a href="index.html">
+                    <img src="{{ asset('frontend') }}/assets/images/logos/eel-white-logo.png" alt="Logo" />
+                </a>
             </div>
             <div class="offcanvas-icon">
                 <a id="canva_close" href="#">
                     <i class="fa-light fa-xmark"></i>
                 </a>
             </div>
-        </div>
-        <div class="tj-search-box">
-            <form action="#">
-                <input type="text" class="form-control-1" name="search" id="search" placeholder="Search" />
-                <a href="#"> <i class="fal fa-search"></i></a>
-            </form>
         </div>
         <!-- Canvas Mobile Menu start -->
         <nav class="right_menu_togle mobile-navbar-menu d-lg-none" id="mobile-navbar-menu"></nav>
