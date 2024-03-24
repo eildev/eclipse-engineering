@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2024 at 07:06 PM
+-- Generation Time: Mar 24, 2024 at 10:51 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -64,6 +64,30 @@ INSERT INTO `about_settings` (`id`, `title`, `sub_title`, `description`, `image`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `carriers`
+--
+
+CREATE TABLE `carriers` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `description` text NOT NULL,
+  `image` varchar(250) DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `carriers`
+--
+
+INSERT INTO `carriers` (`id`, `title`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
+(3, 'Manager (Design & Optimization)', '<p class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\nline-height:normal\"><span style=\"font-family:Roboto;mso-fareast-font-family:\r\n&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;\">Area of\r\nresponsibility: <o:p></o:p></span></p><ul type=\"disc\">\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Deliver industry leading solar\r\n     energy design, system optimization and production calculations for\r\n     customers, working alongside customer’s technical engineering teams<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Responsible for leading electrical\r\n     and mechanical design solutions for renewable energy projects which\r\n     include Solar, and Energy storage technologies<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Responsible for the detailed\r\n     solution design of standard projects and support their clients on the\r\n     design of larger, more complex projects<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Responsible for the production of\r\n     design work and documentation necessary for the construction of Solar and\r\n     Energy storage projects on customer’s sites – layout drawings, Single Line\r\n     Diagrams, cable calculations, cable routes, equipment layouts, etc.<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Work alongside the relevant\r\n     technology specialists and engineers to produce comprehensive 2D and 3D\r\n     design solutions and relevant bill of materials<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Ensure all engineering and design\r\n     work complies with all regulatory requirements for projects worldwide<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Train the team/subordinates under\r\n     this position on the same line of work<o:p></o:p></span></li>\r\n</ul><p class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\nline-height:normal\"><span style=\"font-family:Roboto;mso-fareast-font-family:\r\n&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;\">The Required Skills\r\nand Background: <o:p></o:p></span></p><ul type=\"disc\">\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l0 level1 lfo2;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Preferred education in Electrical\r\n     / Power / Renewable Engineering<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l0 level1 lfo2;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Knowledge of specialized software\r\n     (AutoCAD, PVSyst, PVCase, PVSol, other)<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l0 level1 lfo2;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">English – minimum B2 level <o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l0 level1 lfo2;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Strong leadership skills &amp;\r\n     teamwork<o:p></o:p></span></li>\r\n</ul><p class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\nline-height:normal\"><span style=\"font-family:Roboto;mso-fareast-font-family:\r\n&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;\">The Company offers: <o:p></o:p></span></p><ul type=\"disc\">\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l1 level1 lfo3;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Work schedule: 9:00 – 18:00 <o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l1 level1 lfo3;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Friday and Saturday are weekend<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l1 level1 lfo3;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Competitive salary level based on\r\n     the results of the probationary period<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l1 level1 lfo3;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Active role within the rapidly\r\n     growing renewables sector<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l1 level1 lfo3;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Strong inter-team collaboration,\r\n     comfortable working in a fast-changing environment<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l1 level1 lfo3;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Ability to get involved in the\r\n     internal company growth and development processes<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l1 level1 lfo3;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Required IT equipment<o:p></o:p></span></li>\r\n</ul><p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</p><p class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\nline-height:normal\"><span style=\"font-family:Roboto;mso-fareast-font-family:\r\n&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;\">If you’re looking to\r\nwork with a company that has a genuine commitment to helping create clean\r\nrenewable energy and improving sustainability send your CV to\r\neclipseengineeringlimited@gmail.com with title <b>Manager (Design &amp; Optimization)<o:p></o:p></b></span></p>', '999011592.jpg', 1, '2024-03-24 03:00:26', '2024-03-24 03:41:12'),
+(4, 'Deputy Manager (Customs & Compliance)', '<p class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\nline-height:normal\"><span style=\"font-family:Roboto;mso-fareast-font-family:\r\n&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;\">Area of\r\nresponsibility: <o:p></o:p></span></p><p class=\"MsoListParagraphCxSpFirst\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">Manage and\r\ncontrol customs &amp; revenue activities related to company;<o:p></o:p></span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">Should have\r\nadequate knowledge on HS code, Customs Act, Bond formalities; Responsible for\r\nBond Licensing, <o:p></o:p></span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">Capable Customs\r\nAudit and related issues with Customs Bond;<o:p></o:p></span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">Maintain\r\neffective communication with Customs, Bond &amp; VAT Officials; and other\r\norganizations;<o:p></o:p></span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">Maintain Excel\r\nsoft copy of Bond register Issue VAT Challan 6.1, 6.2, 6.3 and submit monthly\r\nVAT return (9.1);<o:p></o:p></span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">Must have\r\nability to manage any task through excellent coordination between government\r\nand private authorities and organizations in Bangladesh;<o:p></o:p></span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">Must have\r\nexperience in obtaining all types of Licenses renewal for the company<o:p></o:p></span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">Maintaining\r\neffective liaison with NBR, Customs Bond, Customs, Excise and VAT, Customs SRO,\r\nHS Code, Customs Act, Import Export Policy, Manage regulatory communications\r\nduring crises and coordinate with internal management and staff<o:p></o:p></span></p><p class=\"MsoListParagraphCxSpLast\" style=\"text-indent:-.25in;mso-list:l1 level1 lfo3\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:\r\nSymbol\">·<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style=\"font-family:Roboto\">To work in\r\ncoordination with all applicable laws and regulations related to the import and\r\nexport process<o:p></o:p></span></p><p class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\nline-height:normal\"><span style=\"font-family:Roboto;mso-fareast-font-family:\r\n&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;\">The Required Skills\r\nand Background: <o:p></o:p></span></p><ul type=\"disc\">\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l0 level1 lfo2;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Good knowledge in Banking\r\n     activities, customs rules &amp; regulations related to import and export.<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l0 level1 lfo2;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Should have comprehensive\r\n     knowledge on Shipping documents related to import and export.<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l0 level1 lfo2;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Vast knowledge on import\r\n     procedure, Vat &amp; Tax, Supply Chain Management.<o:p></o:p></span></li>\r\n</ul><p class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\nline-height:normal\"><span style=\"font-family:Roboto;mso-fareast-font-family:\r\n&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;\">The Company offers: <o:p></o:p></span></p><ul type=\"disc\">\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Work schedule: 9:00 – 18:00 <o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Friday and Saturday are weekend<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Competitive salary level based on\r\n     the results of the probationary period<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Strong inter-team collaboration,\r\n     comfortable working in a fast-changing environment<o:p></o:p></span></li>\r\n <li class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;\r\n     line-height:normal;mso-list:l2 level1 lfo1;tab-stops:list .5in\"><span style=\"font-family:Roboto;mso-fareast-font-family:&quot;Times New Roman&quot;;\r\n     mso-bidi-font-family:&quot;Times New Roman&quot;\">Ability to get involved in the\r\n     internal company growth and development processes<o:p></o:p></span></li>\r\n</ul><p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<span style=\"font-size:11.0pt;line-height:107%;font-family:Roboto;mso-fareast-font-family:\r\n&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:\r\nEN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA\">Required IT equipment</span><br></p>', '1310352028.jpg', 1, '2024-03-24 03:00:55', '2024-03-24 03:41:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `contacts`
 --
 
@@ -87,7 +111,8 @@ INSERT INTO `contacts` (`id`, `name`, `email`, `number`, `service_name`, `compan
 (1, 'Diana Pollard', 'kenyhub@mailinator.com', '+1 (527) 793-3398', NULL, 'Bolton Willis Plc', 'Tenetur molestias ea', '2024-03-13 21:44:35', NULL),
 (2, 'Jhon Wick', 'sobrokom.store@gmail.com', '01723343865', NULL, 'wurozuguwo@mailinator.com', 'wadadas', '2024-03-20 22:42:44', NULL),
 (3, 'Kishor Mahmud', 'sobrokom.store@gmail.com', '1723343865', NULL, 'saadad', 'adasd', '2024-03-23 03:41:44', NULL),
-(4, 'Lionel Messi', 'lota@pata.com', '1234567890893', NULL, 'saadad', 'ji', '2024-03-23 07:26:01', NULL);
+(4, 'Lionel Messi', 'lota@pata.com', '1234567890893', NULL, 'saadad', 'ji', '2024-03-23 07:26:01', NULL),
+(5, 'Jhon Wick', 'sobrokom.store@gmail.com', '01723343865', NULL, 'wurozuguwo@mailinator.com', 'sadfsadfasdfasfda', '2024-03-24 01:05:21', NULL);
 
 -- --------------------------------------------------------
 
@@ -180,10 +205,10 @@ INSERT INTO `f_a_q_s` (`id`, `question`, `description`, `status`, `created_at`, 
 (4, 'What Warranties do I Have For Installation?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 06:57:17', '2024-03-23 06:58:24'),
 (5, 'How fast I get my Order?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 06:57:47', '2024-03-23 06:58:35'),
 (6, 'What are the advantages of solar energy?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 06:58:14', '2024-03-23 06:58:38'),
-(7, 'How Much do Energy Panels Cost?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 0, '2024-03-23 07:22:51', '2024-03-23 07:22:51'),
-(8, 'How Mech Energy Can a Solar Panel Generate?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 0, '2024-03-23 07:24:03', '2024-03-23 07:24:03'),
-(9, 'What are the advantages of solar energy?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 0, '2024-03-23 07:24:58', '2024-03-23 07:24:58'),
-(10, 'What is Included in your Services?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 0, '2024-03-23 07:25:21', '2024-03-23 07:25:21');
+(7, 'How Much do Energy Panels Cost?', '<p><span style=\"margin: 0px; padding: 0px; font-size: 18px; color: var(--tj-color-text-body); line-height: 2.1; font-family: Poppins, sans-serif; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 07:22:51', '2024-03-24 02:51:32'),
+(8, 'How Mech Energy Can a Solar Panel Generate?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 07:24:03', '2024-03-24 02:51:35'),
+(9, 'What are the advantages of solar energy?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 07:24:58', '2024-03-24 02:51:37'),
+(10, 'What is Included in your Services?', '<p><span style=\"color: rgb(113, 113, 113); font-family: Poppins, sans-serif; font-size: 18px; background-color: rgb(250, 250, 252);\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</span><br></p>', 1, '2024-03-23 07:25:21', '2024-03-24 02:51:40');
 
 -- --------------------------------------------------------
 
@@ -199,6 +224,17 @@ CREATE TABLE `galleries` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `title`, `gallery_image`, `status`, `created_at`, `updated_at`) VALUES
+(4, 'Solar Energy', '423167804.webp', '0', '2024-03-23 22:44:48', '2024-03-23 22:44:48'),
+(5, 'Roof-Top Solar Products', '1047176303.webp', '0', '2024-03-23 22:45:59', '2024-03-23 22:45:59'),
+(6, 'Genset Generator', '1316159413.webp', '0', '2024-03-23 22:48:59', '2024-03-23 22:48:59'),
+(7, 'Elevator And Lift Supply', '1735085864.webp', '0', '2024-03-23 22:49:30', '2024-03-23 22:49:30'),
+(8, 'Working Projects', '1067944407.webp', '0', '2024-03-23 22:50:06', '2024-03-23 22:50:06');
 
 -- --------------------------------------------------------
 
@@ -319,7 +355,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (32, '2024_03_19_195053_create_values_table', 5),
 (33, '2024_03_20_155703_create_sister_concerns_table', 6),
 (35, '2024_03_23_094355_create_c_s_r_activities_table', 7),
-(36, '2024_03_23_114721_create_f_a_q_s_table', 8);
+(36, '2024_03_23_114721_create_f_a_q_s_table', 8),
+(37, '2024_03_24_070932_create_carriers_table', 9);
 
 -- --------------------------------------------------------
 
@@ -577,10 +614,19 @@ CREATE TABLE `social_icons` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `link` varchar(255) DEFAULT NULL,
+  `icon` varchar(100) DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `social_icons`
+--
+
+INSERT INTO `social_icons` (`id`, `name`, `link`, `icon`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Facebook', 'https://www.facebook.com/eclipseengineeringltdofficial?mibextid=ZbWKwL', 'fa-facebook-f', 1, '2024-03-23 21:47:20', '2024-03-23 21:52:29'),
+(2, 'Linkedin', 'https://www.linkedin.com/company/eclipseengineeringlimited/', 'fa-linkedin-in', 1, '2024-03-23 21:48:29', '2024-03-23 21:53:22');
 
 -- --------------------------------------------------------
 
@@ -648,7 +694,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `phone`, `photo`, `address`, `email_verified_at`, `password`, `role`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, '$2y$12$24sBZud2Bg3hmCVZlNBNNOjmrL5GH8hsFEt7vxPscVVABcd1KR5Re', 'admin', 'active', 'bgjeOAPUrs4lVXgJxz5G8LjOtfFzfuOBFDAR62yMBN7gyo09mFFwAKiOdwHM', NULL, NULL),
+(1, 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, '$2y$12$24sBZud2Bg3hmCVZlNBNNOjmrL5GH8hsFEt7vxPscVVABcd1KR5Re', 'admin', 'active', '2vzO58WeZd4ZIQN9SMdPjEyms0oFRFIDT93G4uyIPQ5H7ObbJEpgkwEZOxyy', NULL, NULL),
 (2, 'user', 'user', 'user@gmail.com', NULL, NULL, NULL, NULL, '$2y$12$U5wD1Uo1AiWBEAXuNgJRQOWUfjW1Aci8bDGf21DbwjPppR1k/6DaG', 'user', 'active', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -740,6 +786,12 @@ ALTER TABLE `about_inroductions`
 -- Indexes for table `about_settings`
 --
 ALTER TABLE `about_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `carriers`
+--
+ALTER TABLE `carriers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -935,10 +987,16 @@ ALTER TABLE `about_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `carriers`
+--
+ALTER TABLE `carriers`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `c_s_r_activities`
@@ -962,13 +1020,13 @@ ALTER TABLE `footer_settings`
 -- AUTO_INCREMENT for table `f_a_q_s`
 --
 ALTER TABLE `f_a_q_s`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `home_settings`
@@ -992,7 +1050,7 @@ ALTER TABLE `managing_teams`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -1058,7 +1116,7 @@ ALTER TABLE `sister_concerns`
 -- AUTO_INCREMENT for table `social_icons`
 --
 ALTER TABLE `social_icons`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `subscribes`
