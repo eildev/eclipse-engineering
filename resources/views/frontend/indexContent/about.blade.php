@@ -78,7 +78,6 @@
                     <div class="about-lg-image">
                         <img src="{{ $about->image ? asset('uploads/about/' . $about->image) : asset('frontend/assets/images/about/about-1.jpg') }}"
                             alt="">
-                        {{-- <img src="{{ asset('frontend') }}/assets/images/about/about-1.jpg" alt="Image" /> --}}
                         <div class="about-circle">
                             <div class="video-play">
                                 <a class="venobox popup-videos-button" data-autoplay="true" data-vbtype="video"

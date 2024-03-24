@@ -1,7 +1,7 @@
 <!--=========== Process Section Start =========-->
 @php
     $ourProjects = App\Models\Projects::latest()->first();
-    $projects = App\Models\ProjectDetails::latest()->take(4)->get();
+    $projects = App\Models\ProjectDetails::latest()->take(3)->get();
 @endphp
 <section class="tj-process-section mt-5">
     <div class="container">
@@ -21,7 +21,7 @@
             @if ($projects->count() > 0)
                 @foreach ($projects as $project)
                     <div class="col-lg-4 col-md-6">
-                        <a href="">
+                        <a href="{{route('project.details', $project->id)}}">
                             <div class="tj-process-item">
                                 <img src="{{ $project->image ? asset('uploads/projects/multi_img/' . $project->image) : asset('frontend/assets/images/project/process-1.jpg') }}"
                                     alt="Project Image" style="max-height: 240px; object-fit:cover;">
@@ -79,6 +79,11 @@
                 </div>
             @endif
 
+        </div>
+        <div class="tj-about-button d-flex w-25 m-auto">
+            <a class="tj-primary-btn btn" href="{{ route('all.project') }}">
+                More <i class="flaticon-right-arrow"></i>
+            </a>
         </div>
     </div>
 </section>

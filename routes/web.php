@@ -17,6 +17,8 @@ use App\Http\Controllers\Backend\OurPartnerController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\WhyChooseUsController;
 use App\Http\Controllers\Backend\AboutIntroduction;
+use App\Http\Controllers\Backend\CSRController;
+use App\Http\Controllers\Backend\FAQController;
 use App\Http\Controllers\Backend\ProjectDetailsController;
 use App\Http\Controllers\Backend\ProjectsController;
 use App\Http\Controllers\Backend\SisterConcernController;
@@ -264,6 +266,26 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::post('/sister/update/{id}', 'update')->name('update.sister');
         Route::get('/sister/delete/{id}', 'delete')->name('delete.sister');
     });
+    // CRS  related routes
+    Route::controller(CSRController::class)->group(function () {
+        Route::get('/crs-activities', 'index')->name('csr');
+        Route::post('/csr/store', 'store')->name('store.csr');
+        Route::get('/crs-activities/view', 'view')->name('view.csr');
+        Route::get('/crs-activities/edit/{id}', 'edit')->name('edit.csr');
+        Route::post('/csr/update/{id}', 'update')->name('update.csr');
+        Route::get('/csr/delete/{id}', 'delete')->name('delete.csr');
+        Route::post('/csr/{id}', 'status')->name('crs.status');
+    });
+    // FAQ  related routes
+    Route::controller(FAQController::class)->group(function () {
+        Route::get('/faq', 'index')->name('faq');
+        Route::post('/faq/store', 'store')->name('store.faq');
+        Route::get('/faq/view', 'view')->name('view.faq');
+        Route::get('/faq/edit/{id}', 'edit')->name('edit.faq');
+        Route::post('/faq/update/{id}', 'update')->name('update.faq');
+        Route::get('/faq/delete/{id}', 'delete')->name('delete.faq');
+        Route::post('/faq/{id}', 'status')->name('faq.status');
+    });
     // Log::warning("message");
 });
 
@@ -286,13 +308,16 @@ Route::controller(IndexController::class)->group(function () {
     Route::get('/project-details/{id}', 'ProjectDetails')->name('project.details');
     //Team 
     Route::get('/all-team', 'AllTeam')->name('all.team');
-    // Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
+    Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
     // Blog 
     Route::get('/blog', 'blog')->name('blog');
+    Route::get('/blog/details/{id}', 'blogDetails')->name('blog.details');
     // sister concern 
     Route::get('/sister-concern', 'sisterConcern')->name('sister.concern');
+    Route::get('/sister-concern/details/{id}', 'sisterConcernDetails')->name('sister.concern.details');
     // CSR Activities 
     Route::get('/csr-activities', 'csrActivities')->name('csr.activities');
+    Route::get('/csr-activities/details/{id}', 'csrActivitiesDetails')->name('csr.activities.details');
 
     Route::get('/contuct-us', 'ContactUs')->name('contact.us');
     //Subscribe
@@ -303,14 +328,17 @@ Route::controller(IndexController::class)->group(function () {
     Route::post('/contact/store', 'ContactStore')->name('contact.store');
     Route::get('/contact/list', 'ContactList')->name('contact.list');
     Route::get('/contact/delete/{id}', 'ContactDelete')->name('contact.delete');
-
+    // choose us
+    Route::get('/choose-us/details', 'chooseUsDetails')->name('choose-us.details');
 
     //Team 
-    Route::get('/all-team', 'AllTeam')->name('all.team');
-    // Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
+    // Route::get('/all-team', 'AllTeam')->name('all.team');
+    Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
 
     //404 page
-    Route::get('/404-page', 'Error404')->name('404.error');
+    Route::fallback(function () {
+        return view('frontend.errors.404');
+    });
     //achievements Details
     Route::get('/achievements-details/{id}', 'AchievementsDetails')->name('achiements.details');
 });

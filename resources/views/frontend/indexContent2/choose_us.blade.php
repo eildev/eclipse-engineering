@@ -1,5 +1,5 @@
 @php
-    $chooseUs = App\Models\WhyChooseUsDetails::latest()->limit(4)->get();
+    $chooseUs = App\Models\WhyChooseUsDetails::latest()->limit(3)->get();
     $whyChooseUs = App\Models\WhyChooseUs::latest()->first();
 @endphp
 
@@ -29,7 +29,7 @@
         <div class="row">
             @if ($chooseUs->count() > 0)
                 @foreach ($chooseUs as $key => $data)
-                    <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="tj-choose-us-item">
                             <div class="choose-us-top-content">
                                 <div class="choose-us-icon">
@@ -47,16 +47,13 @@
                                 <p>
                                     @if ($data->description)
                                         @php
-                                            $limitText = Str::limit(strip_tags($data->description), 150, ' ....');
+                                            $limitText = Str::limit(strip_tags($data->description), 250, ' ....');
                                         @endphp
                                         {!! $limitText !!}
                                     @else
                                         It was popularised in the 1960s with the release of Letraset sheets containing.
                                     @endIf
                                 </p>
-                            </div>
-                            <div class="read-more">
-                                <a class="read-btn" href="#">Read More <i class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -156,7 +153,11 @@
                     </div>
                 </div>
             @endif
-
+            <div class="tj-about-button d-flex w-25 m-auto">
+                <a class="tj-primary-btn btn" href="{{ route('choose-us.details') }}">
+                    Read More <i class="flaticon-right-arrow"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>

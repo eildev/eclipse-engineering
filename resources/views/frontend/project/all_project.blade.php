@@ -50,7 +50,7 @@
                 @if ($projects->count() > 0)
                     @foreach ($projects as $project)
                         <div class="col-lg-4 col-md-6">
-                            <a href="">
+                            <a href="{{route('project.details', $project->id)}}">
                                 <div class="tj-process-item">
                                     <img src="{{ $project->image ? asset('uploads/projects/multi_img/' . $project->image) : asset('frontend/assets/images/project/process-1.jpg') }}"
                                         alt="Project Image" style="max-height: 240px; object-fit:cover;">

@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\CSRActivities;
+use App\Models\SisterConcern;
 use Illuminate\Http\Request;
-use App\Models\News;
 
-class NewsController extends Controller
+class CSRController extends Controller
 {
     public function index()
     {
-        return view('backend.news.insert');
+        return view('backend.csr.insert');
     }
     public function store(Request $request)
     {
@@ -21,56 +22,61 @@ class NewsController extends Controller
         ]);
         if ($request->image) {
             $imageName = rand() . '.' . $request->image->extension();
-            $request->image->move(public_path('uploads/news/'), $imageName);
-            $news = new News;
+            $request->image->move(public_path('uploads/csr/'), $imageName);
+            $news = new CSRActivities;
             $news->title = $request->title;
             $news->description = $request->description;
             $news->image = $imageName;
             $news->save();
-            return back()->with('message', 'News Successfully Saved');
+            return back()->with('message', 'CSR Successfully Saved');
         }
     }
     public function view()
     {
-        $allData = News::all();
-        return view('backend.news.view', compact('allData'));
+        $allData = CSRActivities::all();
+        return view('backend.csr.view', compact('allData'));
     }
     public function edit($id)
     {
-        $data = News::findOrFail($id);
-        return view('backend.news.edit', compact('data'));
+        $data = CSRActivities::findOrFail($id);
+        return view('backend.csr.edit', compact('data'));
     }
     public function update(Request $request, $id)
     {
         if ($request->image) {
             $imageName = rand() . '.' . $request->image->extension();
-            $request->image->move(public_path('uploads/news/'), $imageName);
-            $news = News::findOrFail($id);
-            unlink(public_path('uploads/news/') . $news->image);
+            $request->image->move(public_path('uploads/csr/'), $imageName);
+            $news = CSRActivities::findOrFail($id);
+            $path = public_path('uploads/csr/') . $news->image;
+            if (file_exists($path)) {
+                @unlink($path);
+            }
             $news->title = $request->title;
             $news->description = $request->description;
             $news->image = $imageName;
             $news->update();
-            return redirect()->route('manage.news')->with('message', 'News Successfully updated');
+            return redirect()->route('view.csr')->with('message', 'CSR Successfully updated');
         } else {
-            $news = News::findOrFail($id);
+            $news = CSRActivities::findOrFail($id);
             $news->title = $request->title;
             $news->description = $request->description;
             $news->update();
-            return redirect()->route('manage.news')->with('message', 'News Successfully updated');
+            return redirect()->route('view.csr')->with('message', 'CSR Successfully updated');
         }
     }
-
     public function delete($id)
     {
-        $news = News::findOrFail($id);
-        unlink(public_path('uploads/news/') . $news->image);
+        $news = CSRActivities::findOrFail($id);
+        $path = public_path('uploads/csr/') . $news->image;
+        if (file_exists($path)) {
+            @unlink($path);
+        }
         $news->delete();
-        return back()->with('message', 'News Successfully Deleted');
+        return back()->with('message', 'CRS Successfully Deleted');
     }
     public function status($id)
     {
-        $news = News::findOrFail($id);
+        $news = CSRActivities::findOrFail($id);
         if ($news->status == 0) {
             $newStatus = 1;
         } else {

@@ -11,7 +11,7 @@
                     <div class="header-content-area">
                         <div class="header-info">
                             <ul>
-                                <li><i class="flaticon-back-in-time"></i>Mon - Sat - 9PM</li>
+                                <li><i class="flaticon-back-in-time"></i>Sun - Thu - (9AM - 6PM)</li>
                                 <li>
                                     <i class="flaticon-phone"></i><a
                                         href="{{ $footer->phone ?? '(1234)-567-8900' }}">{{ $footer->phone ?? '(1234)-567-8900' }}</a>
