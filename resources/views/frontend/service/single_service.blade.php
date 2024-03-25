@@ -52,13 +52,13 @@
                 <div class="col-lg-4">
                     <div class="tj-main-sidebar">
                         <div class="tj-service-widget">
-                            <h3 class="side-title">Service Lists</h3>
+                            <h3 class="side-title">All Service</h3>
                             <div class="sidebar-catagory">
                                 <ul>
                                     @if ($services->count() > 0)
                                         @foreach ($services as $service)
                                             <li>
-                                                <a href="{{route('service.details', $service->id)}}">{{$service->services_details_title}}
+                                                <a href="{{ route('service.details', $service->id) }}">{{ $service->services_details_title }}
                                                     <span> <i class="fa-light fa-angle-right"></i></span>
                                                 </a>
                                             </li>
@@ -116,10 +116,13 @@
                                         <h3 class="title">Need Help?</h3>
                                     </div>
                                 </div>
-                                <a href="tel:(00)1234566789">(+88) 01718319480 </a>
+                                <a href="tel:(+88)01718319480">(+88) 01718319480 </a>
                                 <p>
-                                    At vero eos et accusamus et iusto odio quos dignissimos ducimus qui
-                                    blanditiis quos praesentium voluptatum deleniti atque corrupti quos dolores.
+                                    We believe communication preferences should be made by the customer, not by the
+                                    merchant. For this reason, we’re accessible by any of your preferred methods; phone,
+                                    email, text, instant messenger, and even in-person meets. Our publicly listed number is
+                                    an office line that may go to voicemail or answering service afterhours, but when you’re
+                                    a client of ours, you’ll have the CEO’s cell phone number.
                                 </p>
                             </div>
                         </div>

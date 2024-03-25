@@ -19,8 +19,8 @@
                             </div>
                             <div class="desc">
                                 <p>
-                                    Leading the charge towards sustainable energy solutions worldwide. Join us in
-                                    shaping a greener future!
+                                    Eclipse Engineering Ltd. (EEL) is an independent Trading, engineering & consulting
+                                    company operating across Bangladesh since 2017 with headquarters in Dhaka
                                 </p>
                             </div>
                             <div class="footer-share">
@@ -71,7 +71,7 @@
                                     <i class="flaticon-location"></i>
                                     {{ $footer->fullAddress ??
                                         "2972 Westheimer Rd. Santa Ana, Illinois
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    937949" }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            937949" }}
                                 </li>
                                 <li>
                                     <i class="flaticon-open"></i>

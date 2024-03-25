@@ -8,10 +8,10 @@
              <div class="col-lg-12">
                  <div class="tj-sec-heading-three text-center">
                      <span class="sub-title">Our Sister Concern</span>
-                     <h2 class="title">
+                     {{-- <h2 class="title">
                          Top-Tier Solar Panel
                          <span>Service Providers</span>
-                     </h2>
+                     </h2> --}}
                  </div>
              </div>
          </div>
@@ -47,8 +47,8 @@
                                      alt="Images" />
                              </div>
                              <div class="read-more-button">
-                                 <a class="read-more" href="{{route('sister.concern.details', $sister->id)}}">Read More <i
-                                         class="flaticon-right-arrow"></i></a>
+                                 <a class="read-more" href="{{ route('sister.concern.details', $sister->id) }}">Read
+                                     More <i class="flaticon-right-arrow"></i></a>
                              </div>
                          </div>
                      </div>
