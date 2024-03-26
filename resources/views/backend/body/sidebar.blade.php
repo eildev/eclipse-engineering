@@ -19,7 +19,7 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
-                <li class="menu-title">Menu</li>
+                <li class="menu-title">Main</li>
                 @php
                     $message = App\Models\Contact::all();
                 @endphp
@@ -30,17 +30,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-
-                <!-- <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Home Settings</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('home.settings') }}">Add Home Settings</a></li>
-                        <li><a href="{{ route('manage.home.settings') }}">Manage Home Settings</a></li>
-                    </ul>
-                </li> -->
+                <li class="menu-title">Home</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -59,107 +49,6 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('about.add') }}">Add About Settings</a></li>
                         <li><a href="{{ route('about.view') }}">Manage About Settings</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>About Introduction</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('about.intro.add') }}">Add About Intro</a></li>
-                        <li><a href="{{ route('about.intro.view') }}">Manage About Intro</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Social Settings</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('social.icon') }}">Add Social Settings</a></li>
-                        <li><a href="{{ route('manage.social.icon') }}">Manage Social Settings</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>News</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('news') }}">Add News</a></li>
-                        <li><a href="{{ route('manage.news') }}">Manage News</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Value</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('value') }}">Add Value</a></li>
-                        <li><a href="{{ route('view.value') }}">Manage Value</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Sister Concern</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('sister') }}">Add Sister Company</a></li>
-                        <li><a href="{{ route('view.sister') }}">Manage Sister Company</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>CSR Activities</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('csr') }}">Add CSR Activities</a></li>
-                        <li><a href="{{ route('view.csr') }}">Manage CSR Activities</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>FAQ</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('faq') }}">Add FAQ</a></li>
-                        <li><a href="{{ route('view.faq') }}">Manage FAQ</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Projects Settings</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('add.projects') }}">Add Projects</a></li>
-                        <li><a href="{{ route('view.projects') }}">Manage Projects </a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Project Details</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('add.project.details') }}">Add Project Details</a></li>
-                        <li><a href="{{ route('view.project.details') }}">Manage Project Details</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Gallery Settings</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('gallery.add') }}">Add Gallery</a></li>
-                        <li><a href="{{ route('gallery.view') }}">Manage Gallery</a></li>
                     </ul>
                 </li>
                 <li>
@@ -185,47 +74,6 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Managing Team</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('managing.team.add') }}">Add Managing Team</a></li>
-                        <li><a href="{{ route('managing.team.view') }}">Manage Managing team</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Overview</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('overview') }}">Add Overview</a></li>
-                        <li><a href="{{ route('manage.overview') }}">Manage Overview</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Carrier</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('carrier.add') }}">Add Carrier</a></li>
-                        <li><a href="{{ route('view.carrier') }}">Manage Carrier</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Testimonial</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('testimonial') }}">Add Testimonial</a></li>
-                        <li><a href="{{ route('manage.testimonial') }}">Manage Testimonial</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
                         <span>Why Choose Us</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -247,14 +95,152 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
+                        <span>Overview</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('overview') }}">Add Overview</a></li>
+                        <li><a href="{{ route('manage.overview') }}">Manage Overview</a></li>
+                    </ul>
+                </li>
+                <li class="menu-title">Projects</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Projects Settings</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('add.projects') }}">Add Projects</a></li>
+                        <li><a href="{{ route('view.projects') }}">Manage Projects </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Project Details</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('add.project.details') }}">Add Project Details</a></li>
+                        <li><a href="{{ route('view.project.details') }}">Manage Project Details</a></li>
+                    </ul>
+                </li>
+                <li class="menu-title">Team</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Managing Team</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('managing.team.add') }}">Add Managing Team</a></li>
+                        <li><a href="{{ route('managing.team.view') }}">Manage Managing team</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Sister Concern</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('sister') }}">Add Sister Company</a></li>
+                        <li><a href="{{ route('view.sister') }}">Manage Sister Company</a></li>
+                    </ul>
+                </li>
+                <li class="menu-title">Blog</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>News</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('news') }}">Add News</a></li>
+                        <li><a href="{{ route('manage.news') }}">Manage News</a></li>
+                    </ul>
+                </li>
+                <li class="menu-title">Social</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Social Settings</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('social.icon') }}">Add Social Settings</a></li>
+                        <li><a href="{{ route('manage.social.icon') }}">Manage Social Settings</a></li>
+                    </ul>
+                </li>
+                <li class="menu-title">Other</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Value</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('value') }}">Add Value</a></li>
+                        <li><a href="{{ route('view.value') }}">Manage Value</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>CSR Activities</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('csr') }}">Add CSR Activities</a></li>
+                        <li><a href="{{ route('view.csr') }}">Manage CSR Activities</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('faq') }}">Add FAQ</a></li>
+                        <li><a href="{{ route('view.faq') }}">Manage FAQ</a></li>
+                    </ul>
+                </li>
+
+               
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Gallery Settings</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('gallery.add') }}">Add Gallery</a></li>
+                        <li><a href="{{ route('gallery.view') }}">Manage Gallery</a></li>
+                    </ul>
+                </li>
+               
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Career</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('carrier.add') }}">Add Career</a></li>
+                        <li><a href="{{ route('view.carrier') }}">Manage Career</a></li>
+                    </ul>
+                </li>
+                {{-- <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Testimonial</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('testimonial') }}">Add Testimonial</a></li>
+                        <li><a href="{{ route('manage.testimonial') }}">Manage Testimonial</a></li>
+                    </ul>
+                </li> --}}
+                {{-- <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
                         <span>Our Partner</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('our-partner') }}">Add Our Partner</a></li>
                         <li><a href="{{ route('manage.our-partner') }}">Manage Our Partner</a></li>
                     </ul>
-                </li>
-
+                </li> --}}
+                <li class="menu-title">View Subscriber</li>
                 <li>
                     <a href="{{ route('subscribe.list') }}" class="has-arrow waves-effect">
                         <i class="ri-layout-3-line"></i>
@@ -267,7 +253,6 @@
                         <i class="ri-layout-3-line"></i>
                         <span>All Contact Message</span>
                     </a>
-
                 </li>
                 <li class="menu-title">Footer</li>
                 <li>

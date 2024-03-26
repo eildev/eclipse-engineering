@@ -5,12 +5,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Update Carrier</h4>
+                    <h4 class="mb-sm-0">Update Career</h4>
 
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Carrier</a></li>
-                            <li class="breadcrumb-item active">Update Carrier</li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Career</a></li>
+                            <li class="breadcrumb-item active">Update Career</li>
                         </ol>
                     </div>
 

@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 @section('admin')
     <div class="row">
-        <div class="col-12">
+        <div class="col-12">         
             <div class="card">
                 <div class="card-body">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -9,8 +9,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item active">
-                                    <a href="{{ route('slider.view') }}" class=" btn btn-sm btn-primary text-light fs-4">
-                                        +</a>
+                                    <a href="{{ route('slider.view') }}" class=" btn btn-sm btn-primary text-light fs-4"></a>
                                 </li>
                             </ol>
                         </div>

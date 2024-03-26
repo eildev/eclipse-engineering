@@ -48,8 +48,14 @@ Route::get('/home3', function () {
     return view('frontend.frontend3_dashboard');
 })->name('home3');
 
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
 //Admin Dashboard
 Route::middleware(['auth', 'role:admin'])->group(function () {
+
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
     Route::get('/admin/logout', [AdminController::class, 'AdminDestroy'])->name('admin.logout');
     Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
@@ -57,9 +63,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::post('/admin/store/profile', [AdminController::class, 'AdminStoreProfile'])->name('store.profile');
     Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('change.password');
     Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('update.password');
-});
 
-Route::middleware(['auth', 'role:admin'])->group(function () {
 
     Route::fallback(function () {
         return view('backend.errors.404');
@@ -297,67 +301,13 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/carrier/delete/{id}', 'delete')->name('delete.carrier');
         Route::post('/carrier/status/{id}', 'status')->name('carrier.status');
     });
-    // Log::warning("message");
 });
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-
-// Start Frontend Code //////////////////////////////////
-Route::controller(IndexController::class)->group(function () {
-    ///About US pages
-    Route::get('/about-us', 'FrontendAbout')->name('frontend.about');
-    ///Service
-    Route::get('/all-service', 'AllService')->name('all.service');
-    Route::get('/service-details/{id}', 'ServiceDetails')->name('service.details');
-    // All Project /Section
-    Route::get('/all-project', 'AllProject')->name('all.project');
-    Route::get('/project-details/{id}', 'ProjectDetails')->name('project.details');
-    //Team 
-    Route::get('/all-team', 'AllTeam')->name('all.team');
-    Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
-    // Blog 
-    Route::get('/blog', 'blog')->name('blog');
-    Route::get('/blog/details/{id}', 'blogDetails')->name('blog.details');
-    // sister concern 
-    Route::get('/sister-concern', 'sisterConcern')->name('sister.concern');
-    Route::get('/sister-concern/details/{id}', 'sisterConcernDetails')->name('sister.concern.details');
-    // CSR Activities 
-    Route::get('/csr-activities', 'csrActivities')->name('csr.activities');
-    Route::get('/csr-activities/details/{id}', 'csrActivitiesDetails')->name('csr.activities.details');
-
-    Route::get('/contuct-us', 'ContactUs')->name('contact.us');
-    //Subscribe
-    Route::post('/subscribe', 'Subscribe')->name('store.subscribe');
-    Route::get('/subscribe/list', 'SubscribeList')->name('subscribe.list');
-    Route::get('/subscribe/delete/{id}', 'SubscribeDelete')->name('subscribe.delete');
-    //Contct Us 
-    Route::post('/contact/store', 'ContactStore')->name('contact.store');
-    Route::get('/contact/list', 'ContactList')->name('contact.list');
-    Route::get('/contact/delete/{id}', 'ContactDelete')->name('contact.delete');
-    // choose us
-    Route::get('/choose-us/details', 'chooseUsDetails')->name('choose-us.details');
-
-    //Carrier
-    Route::get('/carrier', 'carrier')->name('carrier');
-    Route::get('/carrier/details/{id}', 'carrierDetails')->name('carrier.details');
-
-    //404 page
-    Route::fallback(function () {
-        return view('frontend.errors.404');
-    });
-    //achievements Details
-    Route::get('/achievements-details/{id}', 'AchievementsDetails')->name('achiements.details');
-});
-// End Frontend Code 
-
-//Admin login forgot Pw Route
+// Admin login forgot Pw Route
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login')->middleware(
     RedirectIfAuthenticated::class
 );
 Route::get('/admin/forgot/password', [AdminController::class, 'AdminForgotPassword'])->name('admin.forgot.password');
+
 require __DIR__ . '/auth.php';
+require __DIR__ . '/frontend.php';
