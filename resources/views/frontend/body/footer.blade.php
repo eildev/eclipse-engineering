@@ -9,7 +9,7 @@
     <div class="footer-top-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="footer-widget footer1-col-1">
                         <div class="footer-info">
                             <div class="footer-logo">
@@ -19,8 +19,7 @@
                             </div>
                             <div class="desc">
                                 <p>
-                                    Eclipse Engineering Ltd. (EEL) is an independent Trading, engineering & consulting
-                                    company operating across Bangladesh since 2017 with headquarters in Dhaka
+                                    {{ $footer->description ?? '' }}
                                 </p>
                             </div>
                             <div class="footer-share">
@@ -43,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                {{-- <div class="col-lg-2 col-md-6">
                     <div class="footer-widget footer1-col-2 widget_nav_menu">
                         <div class="footer-title">
                             <h5 class="title">Links</h5>
@@ -59,8 +58,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
+                </div> --}}
+                <div class="col-lg-4 col-md-6">
                     <div class="footer-widget footer1-col-3">
                         <div class="footer-title">
                             <h5 class="title">Contact Us</h5>
@@ -71,7 +70,7 @@
                                     <i class="flaticon-location"></i>
                                     {{ $footer->fullAddress ??
                                         "2972 Westheimer Rd. Santa Ana, Illinois
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            937949" }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                937949" }}
                                 </li>
                                 <li>
                                     <i class="flaticon-open"></i>
@@ -94,12 +93,12 @@
                             <h5 class="title">Newsletter</h5>
                         </div>
                         <div class="footer-newsletter">
-                            <div class="desc">
+                            {{-- <div class="desc">
                                 <p>
                                     Quantum computing, the cutting-edge field that promises unprecedented computational
                                     power, has taken a significant leap forward.
                                 </p>
-                            </div>
+                            </div> --}}
                             <form class="footer-form">
                                 @csrf
                                 <input type="email" id="mail" name="email" placeholder="Enter your mail...." />

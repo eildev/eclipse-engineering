@@ -57,8 +57,8 @@
                         <span>Our Services</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('service.add') }}">Add Services</a></li>
-                        <li><a href="{{ route('service.view') }}">Manage Services</a></li>
+                        <li><a href="{{ route('service.add') }}">Add Services Title</a></li>
+                        <li><a href="{{ route('service.view') }}">Manage Services Title</a></li>
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="ri-mail-send-line"></i>
@@ -127,21 +127,21 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Managing Team</span>
+                        <span>Managment Team</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('managing.team.add') }}">Add Managing Team</a></li>
-                        <li><a href="{{ route('managing.team.view') }}">Manage Managing team</a></li>
+                        <li><a href="{{ route('managing.team.add') }}">Add Managment Team</a></li>
+                        <li><a href="{{ route('managing.team.view') }}">Manage Managment team</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Sister Concern</span>
+                        <span>Sister Concerns</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('sister') }}">Add Sister Company</a></li>
-                        <li><a href="{{ route('view.sister') }}">Manage Sister Company</a></li>
+                        <li><a href="{{ route('sister') }}">Add Sister Concerns</a></li>
+                        <li><a href="{{ route('view.sister') }}">Manage Sister Concerns</a></li>
                     </ul>
                 </li>
                 <li class="menu-title">Blog</li>
@@ -198,7 +198,7 @@
                     </ul>
                 </li>
 
-               
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -209,7 +209,7 @@
                         <li><a href="{{ route('gallery.view') }}">Manage Gallery</a></li>
                     </ul>
                 </li>
-               
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>

@@ -38,7 +38,7 @@
 
 <body>
     <!-- Preloader start -->
-    <div id="preloader" class="preloader">
+    {{-- <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner">
                 <div class="loader-icon">
@@ -69,7 +69,7 @@
             </div>
         </div>
         <button class="tj-header-btn btn">Cancel Preloader</button>
-    </div>
+    </div> --}}
     <!-- Preloader end -->
 
     <!-- start: Offcanvas Area -->

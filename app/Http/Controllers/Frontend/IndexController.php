@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\Mail\ContactMail;
 use App\Models\Carrier;
 use Illuminate\Http\Request;
 use App\Models\Subscribe;
@@ -14,6 +15,7 @@ use App\Models\News;
 use App\Models\ProjectDetails;
 use App\Models\SisterConcern;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 use Validator;
 
 class IndexController extends Controller
@@ -72,6 +74,16 @@ class IndexController extends Controller
       'message' => request('message'),
       'created_at' => Carbon::now(),
     ]);
+    $content = [
+      'name' => request('name'),
+      'email' => request('email'),
+      'number' => request('phone'),
+      'service_name' => request('service_name'),
+      'company_name' => request('company_name'),
+      'message' => request('message'),
+    ];
+
+    Mail::to('mahmudkishor9@gmail.com')->send(new ContactMail($content));
     $notification = array(
       'message' => 'Thank you, ' . request('name') . '! Your message has been successfully received. We appreciate your communication.',
       'alert-type' => 'success'

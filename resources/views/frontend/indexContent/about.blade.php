@@ -27,7 +27,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="fun-fact-area">
+                    {{-- <div class="fun-fact-area">
                         @if ($overview->count() > 0)
                             @foreach ($overview as $data)
                                 <div class="counter-item">
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                         @endif
-                    </div>
+                    </div> --}}
                     <div class="tj-about-button d-flex">
                         <a class="tj-primary-btn btn" href="{{ route('frontend.about') }}">
                             Read More <i class="flaticon-right-arrow"></i>

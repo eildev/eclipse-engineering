@@ -44,8 +44,8 @@
                     </div>
                     <div class="container">
                         <div class="slider-content">
-                            <h1 class="slider-title">Harnessing The Wind</h1>
-                            <h2 class="slider-sub-title">And Sun <span>For Future</span></h2>
+                            <h1 class="slider-title">Empowering Tomorrow with</h1>
+                            <h2 class="slider-sub-title">Eclipse Engineering</h2>
                             <div class="slider-text">
                                 <div class="desc">
                                     <p>
@@ -111,14 +111,13 @@
                     </div>
                 </div>
             @endif
-
         </div>
         <div class="swiper-pagination"></div>
     </div>
     <div class="slider-sec-shape">
         <img src="{{ asset('frontend') }}/assets/images/shape/hero-shape.svg" alt="Shape" />
     </div>
-    <div class="tj-service-item">
+    {{-- <div class="tj-service-item">
         <ul class="dot-style">
             @if ($overview->count() > 0)
                 @foreach ($overview as $data)
@@ -184,6 +183,6 @@
             @endif
 
         </ul>
-    </div>
+    </div> --}}
 </section>
 <!--=========== Slider Section End =========-->

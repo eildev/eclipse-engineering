@@ -17,11 +17,12 @@ class FooterController extends Controller
     {
         FooterSetting::insert([
             'fullAddress' => $request->fullAddress,
-            'location' => $request->location,
-            'link' => $request->link,
+            // 'location' => $request->location,
+            // 'link' => $request->link,
             'phone' => $request->phone,
             'email' => $request->email,
-            'website' => $request->website,
+            // 'website' => $request->website,
+            'description' => $request->description,
             'created_at' => Carbon::now(),
         ]);
         $notification = array(
@@ -45,11 +46,12 @@ class FooterController extends Controller
     {
         FooterSetting::findOrFail($id)->update([
             'fullAddress' => $request->fullAddress,
-            'location' => $request->location,
-            'link' => $request->link,
+            // 'location' => $request->location,
+            // 'link' => $request->link,
             'phone' => $request->phone,
             'email' => $request->email,
-            'website' => $request->website,
+            // 'website' => $request->website,
+            'description' => $request->description,
             'updated_at' => Carbon::now(),
         ]);
         $notification = array(

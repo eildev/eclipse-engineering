@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('footer_settings', function (Blueprint $table) {
             $table->id();
             $table->text('fullAddress')->nullable();
-            $table->string('location')->nullable();
+            $table->string('description	')->nullable();
             $table->string('link')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
