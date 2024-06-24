@@ -93,7 +93,7 @@
                                         </defs>
                                         <text font-size="16">
                                             <textPath xlink:href="#circle" class="shape-1">
-                                                Eclipse Engineering . Eclipse Engineering .
+                                                Eclipse Engineering Limited .
                                             </textPath>
                                         </text>
                                     </svg>

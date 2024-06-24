@@ -22,15 +22,17 @@
                 @foreach ($projects as $project)
                     <div class="col-lg-4 col-md-6">
                         <a href="{{ route('project.details', $project->id) }}">
-                            <div class="tj-process-item">
-                                <img src="{{ $project->image ? asset('uploads/projects/multi_img/' . $project->image) : asset('frontend/assets/images/project/process-1.jpg') }}"
-                                    alt="Project Image" style="max-height: 240px; object-fit:cover;">
+                            <div class="tj-process-item-two">
+                                <div class="process-images">
+                                    <img src="{{ $project->image ? asset('uploads/projects/multi_img/' . $project->image) : asset('frontend/assets/images/project/process-1.jpg') }}"
+                                        style="max-height: 240px; width: 100%; object-fit:cover;" />
+                                </div>
                                 <div class="process-content">
                                     <div class="process-icon">
                                         <i class="flaticon-{{ $project->icon_name ?? 'renewable-energy' }}"></i>
                                     </div>
                                     <div class="process-title">
-                                        <h5 class="title">{{ $project->title ?? 'Carbon Offsetting' }}</h5>
+                                        <h6 class="title">{{ $project->title ?? 'Carbon Offsetting' }}</h6>
                                     </div>
                                 </div>
                             </div>

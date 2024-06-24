@@ -9,16 +9,16 @@
                 <div class="team-content-area">
                     <div class="tj-sec-heading">
                         <span class="sub-title">Our Team</span>
-                        <h2 class="sec-title">
+                        {{-- <h2 class="sec-title">
                             Inspiring Interiors Exceptional <br />
                             <span>Of Experiences</span>
-                        </h2>
+                        </h2> --}}
                     </div>
                     <div class="right-content">
-                        <p>
+                        {{-- <p>
                             A Cohesive Force of Innovation, Passion, and Expertise, Pioneering Solutions for Tomorrow's
                             Challenges.
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
             @if ($teams->count() > 0)
                 @foreach ($teams as $team)
                     <div class="col-lg-4 col-md-6 col-sm-6">
-                        <a href="{{route('team.details', $team->id)}}">
+                        <a href="{{ route('team.details', $team->id) }}">
                             <div class="tj-team-item">
                                 <div class="team-image">
                                     <img src="{{ $team->image ? asset('uploads/managing_team/' . $team->image) : asset('frontend/assets/images/team/team-1.jpg') }}"
