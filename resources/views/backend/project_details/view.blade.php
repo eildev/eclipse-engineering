@@ -25,11 +25,10 @@
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Section Name</th>
                             <th>Title</th>
-                            <th>Icon Name</th>
+                            <th>Category Name</th>
                             <th>Description</th>
-                            <th>All Image</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -38,11 +37,11 @@
                         @foreach ($projects as $key => $item)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td></td>
-                                {{-- <td>{{ $item->projects->title }}</td> --}}
                                 <td>{{ $item->title }}</td>
-                                <td>{{ $item->icon_name }}</td>
-                                <td>{!! $item->description !!}</td>
+                                <td>{{ $item->projectCategory->name }}</td>
+                                {{-- <td>{!! $item->description !!}</td> --}}
+                                <td>{!! \Illuminate\Support\Str::limit($item->description, 50, '...') !!}</td>
+
                                 <td>
                                     @foreach (explode(',', $item->image) as $image)
                                         <img style="height: 60px; width:60px; margin-right: 5px;"

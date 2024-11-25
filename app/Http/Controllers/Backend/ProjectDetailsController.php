@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\ProjectCategory;
 use App\Models\ProjectDetails;
 use App\Models\Projects;
 use Illuminate\Http\Request;
@@ -12,7 +13,8 @@ class ProjectDetailsController extends Controller
     public function index()
     {
         $projects = Projects::latest()->get();
-        return view('backend.project_details.insert', compact('projects'));
+        $projectsCategory = ProjectCategory::where('status', 1)->get();
+        return view('backend.project_details.insert', compact('projects', 'projectsCategory'));
     } //
     public function store(Request $request)
     {
@@ -28,7 +30,7 @@ class ProjectDetailsController extends Controller
             $imageName = rand() . '.' . $request->multi_image->extension();
             $request->multi_image->move(public_path('uploads/projects/multi_img/'), $imageName);
             $project = new ProjectDetails;
-            $project->projects_id = $request->projects_id;
+            $project->category_id = $request->category_id;
             $project->title = $request->title;
             $project->icon_name = $request->icon_name;
             $project->description = $request->description;
@@ -50,7 +52,8 @@ class ProjectDetailsController extends Controller
     {
         $projects = Projects::latest()->get();
         $projectDetails = ProjectDetails::findOrFail($id);
-        return view('backend.project_details.edit', compact('projects', 'projectDetails'));
+        $projectsCategory = ProjectCategory::where('status', 1)->get();
+        return view('backend.project_details.edit', compact('projects', 'projectDetails', 'projectsCategory'));
     } //
     //Update Section Details
     public function update(Request $request, $id)
@@ -72,7 +75,7 @@ class ProjectDetailsController extends Controller
             }
             $project->image = $imageName;
         }
-        $project->projects_id = $request->projects_id;
+        $project->category_id = $request->category_id;
         $project->title = $request->title;
         $project->icon_name = $request->icon_name;
         $project->description = $request->description;

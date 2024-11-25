@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4>Edit Projects</h4><br>
+                        <h4>Edit Projects Heading</h4><br>
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item active">
@@ -22,43 +22,20 @@
                         @csrf
                         <!-- end row -->
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Projects Title</label>
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Projects Heading</label>
                             <div class="col-sm-10 form-group">
                                 <input class="form-control" name="title" value="{{ $project->title ?? '' }}"
                                     type="text" placeholder="Enter Projects Title" id="example-email-input">
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Projects Sub Title</label>
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Projects Sub Heading</label>
                             <div class="col-sm-10 form-group">
                                 <input class="form-control" name="sub_title" value="{{ $project->title ?? '' }}"
                                     type="text" placeholder="Enter Project Sub Title" id="example-email-input">
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Projects Description</label>
-                            <div class="col-sm-10 form-group">
-                                <textarea name="description" class="form-control" id="summernote">{{ $project->description ?? '' }}</textarea>
-                            </div>
 
-                        </div>
-                        <!-- end row -->
-                        <div class="row mb-3">
-                            <label for="example-input" class="col-sm-2 col-form-label">Projects Image</label>
-                            <div class="col-sm-10 form-group">
-                                <input name="image" class="form-control" type="file" id="image">
-                            </div>
-                        </div>
-                        <!-- end row -->
-                        <div class="row mb-3">
-                            <label for="example-url-input" class="col-sm-2 col-form-label"></label>
-                            <div class="col-sm-10">
-                                <img id="showImage" class="rounded avatar-lg "
-                                    src="{{ $project->image ? asset('uploads/projects/' . $project->image) : asset('dummy-img/no-img.jpg') }}"
-                                    alt="projects Image">
-                            </div>
-
-                        </div>
 
                         <div class="row mb-3">
                             <label for="example-number-input" class="col-sm-2 col-form-label"></label>

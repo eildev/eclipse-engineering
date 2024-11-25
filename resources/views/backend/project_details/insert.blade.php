@@ -20,34 +20,32 @@
                     <form action="{{ route('store.project.details') }}" method="post" id="myForm"
                         enctype="multipart/form-data">
                         @csrf
-                        <!-- end row -->
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Add Project Name</label>
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Category</label>
                             <div class="col-sm-10 form-group">
-                                <select class="form-select" name="projects_id" aria-label="Default select example">
-                                    <option selected="" value=""> Select Projects Name</option>
-                                    @foreach ($projects as $project)
-                                        <option value="{{ $project->id }}">{{ $project->title }}</option>
+                                <select class="form-select" name="category_id" aria-label="Default select example">
+                                    <option selected="" value="">Select Projects Category</option>
+                                    @foreach ($projectsCategory as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                                 </select>
-                                {{-- @error('projects_id')
+                                @error('category_id')
                                     <span class="text-danger">{{ $message }}</span>
-                                @enderror --}}
+                                @enderror
                             </div>
-
                         </div>
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Details Title</label>
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Title</label>
                             <div class="col-sm-10 form-group">
-                                <input class="form-control " name="title" type="text"
-                                    placeholder="Enter Project Details Title" id="example-email-input">
+                                <input class="form-control " name="title" type="text" placeholder="Enter Project Title"
+                                    id="example-email-input">
                                 {{-- @error('title')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror --}}
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Details
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Project
                                 Description</label>
                             <div class="col-sm-10 form-group">
                                 <textarea name="description" class="form-control" id="summernote"></textarea>
@@ -57,14 +55,17 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Details Icon
-                                Name</label>
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Icon</label>
                             <div class="col-sm-10 form-group">
-                                <input class="form-control" name="icon_name" type="text"
-                                    placeholder="Enter Project Icon Name" id="example-email-input">
-                                {{-- @error('icon_name')
+                                <select class="form-select" name="icon_name" aria-label="Default select example">
+                                    <option selected="" value="">Select Projects Icon</option>
+                                    <option value="wind-turbine">Wind Turbine</option>
+                                    <option value="energy">Energy</option>
+                                    <option value="solar-panel-1">Solar Panel 1</option>
+                                </select>
+                                @error('icon_name')
                                     <span class="text-danger">{{ $message }}</span>
-                                @enderror --}}
+                                @enderror
                             </div>
                         </div>
                         <!-- end row -->

@@ -69,10 +69,10 @@ START: Theme Default CSS
   /**
      @Font-Size Declaration
    */
-  --tj-fs-body: 14px;
-  --tj-fs-p: 16px;
-  --tj-fs-h1: 100px;
-  --tj-fs-h2: 50px;
+  --tj-fs-body: 12px;
+  --tj-fs-p: 14px;
+  --tj-fs-h1: 80px;
+  --tj-fs-h2: 40px;
   --tj-fs-h3: 30px;
   --tj-fs-h4: 27px;
   --tj-fs-h5: 22px;
@@ -846,7 +846,7 @@ img {
   font-size: 17px;
   font-weight: var(--tj-fw-medium);
   color: var(--tj-color-theme-primary);
-  padding: 13px 22px 13px 30px;
+  padding: 10px 20px 10px 25px;
 }
 
 .tj-transparent-btn::before {
@@ -3912,7 +3912,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
 .tj-slider-item .slider-content .slider-title {
   color: var(--tj-color-common-white);
   margin-bottom: 10px;
-  font-size: 110px;
+  /* font-size: 110px; */
+  font-size: 50px;
   line-height: 1.1;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -3928,28 +3929,28 @@ only screen and (min-width: 576px) and (max-width: 767px),
 @media only screen and (min-width: 1200px) and (max-width: 1399px),
 only screen and (min-width: 992px) and (max-width: 1199px) {
   .tj-slider-item .slider-content .slider-title {
-    font-size: 70px;
+    font-size: 45px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tj-slider-item .slider-content .slider-title {
-    font-size: 55px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 10px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .tj-slider-item .slider-content .slider-title {
-    font-size: 45px;
-    margin-bottom: 20px;
+    font-size: 35px;
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 575px) {
   .tj-slider-item .slider-content .slider-title {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 10px;
   }
 }
 
@@ -3960,7 +3961,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   position: relative;
   z-index: 1;
   padding-left: 110px;
-  font-size: 90px;
+  font-size: 60px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition-delay: 1000ms;
@@ -3974,13 +3975,13 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 @media only screen and (min-width: 1200px) and (max-width: 1399px),
 only screen and (min-width: 992px) and (max-width: 1199px) {
   .tj-slider-item .slider-content .slider-sub-title {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tj-slider-item .slider-content .slider-sub-title {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
@@ -4053,7 +4054,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 .tj-slider-item .slider-content .desc p {
   margin-bottom: 0;
   color: var(--tj-color-common-white);
-  font-size: 20px;
+  font-size: 18px;
   line-height: 2.1;
 }
 
@@ -4061,7 +4062,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 only screen and (min-width: 576px) and (max-width: 767px),
 (max-width: 575px) {
   .tj-slider-item .slider-content .desc p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -4073,7 +4074,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 }
 
 .tj-slider-item .slider-content .slider-button {
-  margin-top: 40px;
+  margin-top: 30px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition-delay: 700ms;
@@ -4088,7 +4089,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 only screen and (min-width: 576px) and (max-width: 767px),
 (max-width: 575px) {
   .tj-slider-item .slider-content .slider-button {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 

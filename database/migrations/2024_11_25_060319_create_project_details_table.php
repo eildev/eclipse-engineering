@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('project_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('projects_id');
-            $table->foreign('projects_id')->references('id')->on('projects')->onDelete('cascade');
+            $table->foreignId('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('project_categories')->onDelete('cascade');
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->text('image')->nullable();

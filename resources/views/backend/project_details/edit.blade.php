@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4>Edit Section Details</h4><br>
+                        <h4>Edit Project </h4><br>
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item active">
@@ -21,26 +21,26 @@
                         enctype="multipart/form-data">
                         @csrf
                         <!-- end row -->
-                        <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Name</label>
-                            <div class="col-sm-10 form-group">
 
-                                <select class="form-select @error('projects_id') is-invalid  @enderror" name="projects_id"
+                        <div class="row mb-3">
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Category</label>
+                            <div class="col-sm-10 form-group">
+                                <select class="form-select @error('category_id') is-invalid  @enderror" name="category_id"
                                     aria-label="Default select example">
-                                    <option selected="" value=""> Select Projects Name</option>
-                                    @foreach ($projects as $sec)
-                                        <option
-                                            value="{{ $sec->id }}"{{ $sec->id == $projectDetails->projects_id ? 'selected' : '' }}>
-                                            {{ $sec->title }}</option>
+                                    <option selected="" value="">Select Projects Category</option>
+                                    @foreach ($projectsCategory as $category)
+                                        <option value="{{ $category->id }}"
+                                            {{ $category->id == $projectDetails->category_id ? 'selected' : '' }}>
+                                            {{ $category->name }}</option>
                                     @endforeach
                                 </select>
-                                @error('projects_id')
+                                @error('category_id')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Details Title</label>
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Title</label>
                             <div class="col-sm-10 form-group">
                                 <input class="form-control @error('title') is-invalid  @enderror"
                                     value="{{ $projectDetails->title }}" name="title" type="text"
@@ -52,7 +52,7 @@
 
                         </div>
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Details
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Project
                                 Description</label>
                             <div class="col-sm-10 form-group">
                                 <textarea name="description" class="form-control @error('description') is-invalid  @enderror" id="summernote">{!! $projectDetails->description !!}</textarea>
@@ -62,12 +62,14 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Details Icon
-                                Name</label>
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Project Icon</label>
                             <div class="col-sm-10 form-group">
-                                <input class="form-control @error('icon_name') is-invalid  @enderror" name="icon_name"
-                                    type="text" placeholder="Enter Project Icon Name" id="example-email-input"
-                                    value="{{ $projectDetails->icon_name }}">
+                                <select class="form-select" name="icon_name" aria-label="Default select example">
+                                    <option selected="" value="">Select Projects Icon</option>
+                                    <option value="wind-turbine">Wind Turbine</option>
+                                    <option value="energy">Energy</option>
+                                    <option value="solar-panel-1">Solar Panel 1</option>
+                                </select>
                                 @error('icon_name')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror

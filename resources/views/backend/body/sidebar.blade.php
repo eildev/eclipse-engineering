@@ -106,21 +106,13 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Projects Settings</span>
+                        <span>Project Managment</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('add.projects') }}">Add Projects</a></li>
-                        <li><a href="{{ route('view.projects') }}">Manage Projects </a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Project Details</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('add.project.details') }}">Add Project Details</a></li>
-                        <li><a href="{{ route('view.project.details') }}">Manage Project Details</a></li>
+                        <li><a href="{{ route('project.category') }}">Project Category Manage</a></li>
+                        <li><a href="{{ route('add.project.details') }}">Add Project</a></li>
+                        <li><a href="{{ route('view.project.details') }}">Manage Project</a></li>
+                        <li><a href="{{ route('view.projects') }}">Manage Projects Heading </a></li>
                     </ul>
                 </li>
                 <li class="menu-title">Team</li>

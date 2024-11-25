@@ -26,7 +26,9 @@ use App\Http\Controllers\Backend\SisterConcernController;
 use App\Http\Controllers\Backend\SlideController;
 use App\Http\Controllers\Backend\ValueController;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\ProjectCategoryController;
 use App\Http\Middleware\RedirectIfAuthenticated;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -243,6 +245,16 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/projects/edit/{id}', 'edit')->name('edit.projects');
         Route::post('/projects/update/{id}', 'update')->name('update.projects');
         Route::get('/projects/delete/{id}', 'delete')->name('delete.projects');
+    });
+    // Project Details Category related Route
+    Route::controller(ProjectCategoryController::class)->group(function () {
+        Route::get('/project/category/add', 'index')->name('project.category');
+        Route::post('/project/category/store', 'store');
+        Route::get('/project/category/view', 'view');
+        Route::get('/project/category/edit/{id}', 'edit');
+        Route::post('/project/category/update/{id}', 'update');
+        Route::post('/project/category/update/status/{id}', 'updateStatus');
+        Route::get('/project/category/delete/{id}', 'delete');
     });
     // Project Details related routes
     Route::controller(ProjectDetailsController::class)->group(function () {
