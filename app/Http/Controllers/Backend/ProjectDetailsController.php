@@ -58,16 +58,18 @@ class ProjectDetailsController extends Controller
     //Update Section Details
     public function update(Request $request, $id)
     {
+        // @dd($request->all());
         // $request->validate([
         //     'title' => 'required',
         //     'description' => 'required',
         //     'multi_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         //     'icon_name' => 'required',
         // ]);
+
         $project = ProjectDetails::findOrFail($id);
-        if ($request->hasFile('image') && $request->file('image')->isValid()) {
-            $imageName = rand() . '.' . $request->image->extension();
-            $request->image->move(public_path('uploads/projects/multi_img/'), $imageName);
+        if ($request->hasFile('multi_image')) {
+            $imageName = rand() . '.' . $request->multi_image->extension();
+            $request->multi_image->move(public_path('uploads/projects/multi_img/'), $imageName);
 
             $path = public_path('uploads/projects/multi_img/') . $project->image;
             if (file_exists($path)) {
@@ -79,7 +81,6 @@ class ProjectDetailsController extends Controller
         $project->title = $request->title;
         $project->icon_name = $request->icon_name;
         $project->description = $request->description;
-
         $project->save();
 
         $notification = [

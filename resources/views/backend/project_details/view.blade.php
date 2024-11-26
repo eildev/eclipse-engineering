@@ -33,7 +33,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         @forelse ($projects as $key => $item)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
@@ -41,11 +40,9 @@
                                 <td>{{ $item->projectCategory->name ?? '' }}</td>
                                 <td>{!! \Illuminate\Support\Str::limit($item->description ?? '', 50, '...') !!}</td>
                                 <td>
-                                    @foreach (explode(',', $item->image) as $image)
-                                        {{-- @dd($image) --}}
-                                        <img style="height: 60px; width:60px; margin-right: 5px;"
-                                            src="{{ asset('uploads/projects/multi_img/' . $image) }}" alt="Image">
-                                    @endforeach
+                                    <img style="height: 60px; width:60px; margin-right: 5px;"
+                                        src="{{ $item->image ? asset('uploads/projects/multi_img/' . $item->image) : asset('dummy-img/no-img.jpg') }}"
+                                        alt="Image">
                                 </td>
                                 <td>
                                     <a class="btn btn-sm btn-warning"

@@ -65,42 +65,67 @@
                             <label for="example-email-input" class="col-sm-2 col-form-label">Project Icon</label>
                             <div class="col-sm-10 form-group">
                                 <select class="form-select" name="icon_name" aria-label="Default select example">
-                                    <option selected="" value="">Select Projects Icon</option>
-                                    <option value="wind-turbine">Wind Turbine</option>
-                                    <option value="energy">Energy</option>
-                                    <option value="solar-panel-1">Solar Panel 1</option>
-                                    <option value="solar-panel">Solar Panel</option>
-                                    <option value="environmental">Environmental</option>
-                                    <option value="save-energy">Save Energy</option>
-                                    <option value="wind-energy">Wind Energy</option>
-                                    <option value="green-power">Green Power</option>
-                                    <option value="solar-energy">Solar Energy</option>
-                                    <option value="solar-energy-1">Solar Energy 1</option>
-                                    <option value="battery">Battery</option>
-                                    <option value="solar-cell">Solar Cell</option>
-                                    <option value="hydropower">Hydropower</option>
-                                    <option value="green-energy">Green Energy</option>
-                                    <option value="co-light">Eco Light</option>
-                                    <option value="solar-energy-2">Solar Energy 2</option>
-                                    <option value="renewable-energy">Renewable Energy</option>
-                                    <option value="solar-energy-3">Solar Energy 3</option>
-                                    <option value="technician">Technician</option>
-                                    <option value="energy">Energy</option>
-                                    <option value="flaticon-smog-factory-building-contamination">Factory</option>
-                                    {{-- <option value="quality">Quality</option> --}}
-                                    {{-- <option value="experience">Experience</option> --}}
-                                    {{-- <option value="completed-task">Completed Task</option> --}}
-                                    {{-- <option value="back-in-time">Back In Time</option> --}}
-                                    {{-- <option value="spray">Spray</option> --}}
-                                    {{-- <option value="experience-1">Experience 1</option> --}}
-                                    {{-- <option value="budget">Budget</option> --}}
-                                    {{-- <option value="continuous-improvement">Continuous Improvement</option> --}}
-                                    {{-- <option value="product-lauch">Product Lauch</option> --}}
-                                    {{-- <option value="targeting">Targeting</option> --}}
-                                    {{-- <option value="leadership">Leadership</option> --}}
-                                    {{-- <option value="mission">Mission</option> --}}
-                                    {{-- <option value="customize">Customize</option> --}}
+                                    <option value="" {{ $projectDetails->icon_name == '' ? 'selected' : '' }}>Select
+                                        Projects Icon</option>
+                                    <option value="wind-turbine"
+                                        {{ $projectDetails->icon_name == 'wind-turbine' ? 'selected' : '' }}>Wind Turbine
+                                    </option>
+                                    <option value="energy" {{ $projectDetails->icon_name == 'energy' ? 'selected' : '' }}>
+                                        Energy</option>
+                                    <option value="solar-panel-1"
+                                        {{ $projectDetails->icon_name == 'solar-panel-1' ? 'selected' : '' }}>Solar Panel 1
+                                    </option>
+                                    <option value="solar-panel"
+                                        {{ $projectDetails->icon_name == 'solar-panel' ? 'selected' : '' }}>Solar Panel
+                                    </option>
+                                    <option value="environmental"
+                                        {{ $projectDetails->icon_name == 'environmental' ? 'selected' : '' }}>Environmental
+                                    </option>
+                                    <option value="save-energy"
+                                        {{ $projectDetails->icon_name == 'save-energy' ? 'selected' : '' }}>Save Energy
+                                    </option>
+                                    <option value="wind-energy"
+                                        {{ $projectDetails->icon_name == 'wind-energy' ? 'selected' : '' }}>Wind Energy
+                                    </option>
+                                    <option value="green-power"
+                                        {{ $projectDetails->icon_name == 'green-power' ? 'selected' : '' }}>Green Power
+                                    </option>
+                                    <option value="solar-energy"
+                                        {{ $projectDetails->icon_name == 'solar-energy' ? 'selected' : '' }}>Solar Energy
+                                    </option>
+                                    <option value="solar-energy-1"
+                                        {{ $projectDetails->icon_name == 'solar-energy-1' ? 'selected' : '' }}>Solar Energy
+                                        1</option>
+                                    <option value="battery"
+                                        {{ $projectDetails->icon_name == 'battery' ? 'selected' : '' }}>Battery</option>
+                                    <option value="solar-cell"
+                                        {{ $projectDetails->icon_name == 'solar-cell' ? 'selected' : '' }}>Solar Cell
+                                    </option>
+                                    <option value="hydropower"
+                                        {{ $projectDetails->icon_name == 'hydropower' ? 'selected' : '' }}>Hydropower
+                                    </option>
+                                    <option value="green-energy"
+                                        {{ $projectDetails->icon_name == 'green-energy' ? 'selected' : '' }}>Green Energy
+                                    </option>
+                                    <option value="co-light"
+                                        {{ $projectDetails->icon_name == 'co-light' ? 'selected' : '' }}>Eco Light</option>
+                                    <option value="solar-energy-2"
+                                        {{ $projectDetails->icon_name == 'solar-energy-2' ? 'selected' : '' }}>Solar Energy
+                                        2</option>
+                                    <option value="renewable-energy"
+                                        {{ $projectDetails->icon_name == 'renewable-energy' ? 'selected' : '' }}>Renewable
+                                        Energy</option>
+                                    <option value="solar-energy-3"
+                                        {{ $projectDetails->icon_name == 'solar-energy-3' ? 'selected' : '' }}>Solar Energy
+                                        3</option>
+                                    <option value="technician"
+                                        {{ $projectDetails->icon_name == 'technician' ? 'selected' : '' }}>Technician
+                                    </option>
+                                    <option value="flaticon-smog-factory-building-contamination"
+                                        {{ $projectDetails->icon_name == 'flaticon-smog-factory-building-contamination' ? 'selected' : '' }}>
+                                        Factory</option>
                                 </select>
+
                                 @error('icon_name')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -122,13 +147,10 @@
                             <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
                                 <div class="row" id="preview_img">
-                                    {{-- <img id="showImage" class="rounded avatar-lg row"
-                                        src="{{ asset('uploads/projects/multi_img/' . $projectDetails->multi_image) }}"
-                                        alt="Image"> --}}
-                                    @foreach (explode(',', $projectDetails->multi_image) as $image)
-                                        <img style="height: 60px; width:60px; margin-right: 5px;"
-                                            src="{{ asset('uploads/projects/multi_img/' . $image) }}" alt="Image">
-                                    @endforeach
+                                    <img id="showImage"
+                                        style="height: 60px; width:100px; margin-right: 5px; object-fit: cover;"
+                                        src="{{ $projectDetails->image ? asset('uploads/projects/multi_img/' . $projectDetails->image) : asset('dummy-img/no-img.jpg') }}"
+                                        alt="Image">
                                 </div>
                             </div>
                         </div>
