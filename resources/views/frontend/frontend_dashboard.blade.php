@@ -12,7 +12,7 @@
     @include('frontend.indexContent2.service')
     <!-- End Solar Panel  Service Section -->
 
-     <!-- Start Why chose Us Section -->
+    <!-- Start Why chose Us Section -->
     @include('frontend.indexContent2.choose_us')
     <!-- End Why chose Us Section -->
 

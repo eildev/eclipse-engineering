@@ -34,16 +34,15 @@
                     </thead>
                     <tbody>
 
-                        @foreach ($projects as $key => $item)
+                        @forelse ($projects as $key => $item)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td>{{ $item->title }}</td>
-                                <td>{{ $item->projectCategory->name }}</td>
-                                {{-- <td>{!! $item->description !!}</td> --}}
-                                <td>{!! \Illuminate\Support\Str::limit($item->description, 50, '...') !!}</td>
-
+                                <td>{{ $item->title ?? '' }}</td>
+                                <td>{{ $item->projectCategory->name ?? '' }}</td>
+                                <td>{!! \Illuminate\Support\Str::limit($item->description ?? '', 50, '...') !!}</td>
                                 <td>
                                     @foreach (explode(',', $item->image) as $image)
+                                        {{-- @dd($image) --}}
                                         <img style="height: 60px; width:60px; margin-right: 5px;"
                                             src="{{ asset('uploads/projects/multi_img/' . $image) }}" alt="Image">
                                     @endforeach
@@ -51,12 +50,15 @@
                                 <td>
                                     <a class="btn btn-sm btn-warning"
                                         href="{{ route('edit.project.details', $item->id) }}">Edit</a>
-
                                     <a href="{{ route('delete.project.details', $item->id) }}" id="delete"
                                         class="btn btn-sm btn-danger">Delete</a>
                                 </td>
                             </tr>
-                        @endforeach
+                        @empty
+                            <tr>
+                                <td colspan="6" align="center">No Data Found</td>
+                            </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>

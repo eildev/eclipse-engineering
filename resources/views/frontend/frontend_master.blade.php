@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
     {{-- main css  --}}
     <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/main.css" />
+
+
 </head>
 
 <body>

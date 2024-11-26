@@ -69,6 +69,37 @@
                                     <option value="wind-turbine">Wind Turbine</option>
                                     <option value="energy">Energy</option>
                                     <option value="solar-panel-1">Solar Panel 1</option>
+                                    <option value="solar-panel">Solar Panel</option>
+                                    <option value="environmental">Environmental</option>
+                                    <option value="save-energy">Save Energy</option>
+                                    <option value="wind-energy">Wind Energy</option>
+                                    <option value="green-power">Green Power</option>
+                                    <option value="solar-energy">Solar Energy</option>
+                                    <option value="solar-energy-1">Solar Energy 1</option>
+                                    <option value="battery">Battery</option>
+                                    <option value="solar-cell">Solar Cell</option>
+                                    <option value="hydropower">Hydropower</option>
+                                    <option value="green-energy">Green Energy</option>
+                                    <option value="co-light">Eco Light</option>
+                                    <option value="solar-energy-2">Solar Energy 2</option>
+                                    <option value="renewable-energy">Renewable Energy</option>
+                                    <option value="solar-energy-3">Solar Energy 3</option>
+                                    <option value="technician">Technician</option>
+                                    <option value="energy">Energy</option>
+                                    <option value="flaticon-smog-factory-building-contamination">Factory</option>
+                                    {{-- <option value="quality">Quality</option> --}}
+                                    {{-- <option value="experience">Experience</option> --}}
+                                    {{-- <option value="completed-task">Completed Task</option> --}}
+                                    {{-- <option value="back-in-time">Back In Time</option> --}}
+                                    {{-- <option value="spray">Spray</option> --}}
+                                    {{-- <option value="experience-1">Experience 1</option> --}}
+                                    {{-- <option value="budget">Budget</option> --}}
+                                    {{-- <option value="continuous-improvement">Continuous Improvement</option> --}}
+                                    {{-- <option value="product-lauch">Product Lauch</option> --}}
+                                    {{-- <option value="targeting">Targeting</option> --}}
+                                    {{-- <option value="leadership">Leadership</option> --}}
+                                    {{-- <option value="mission">Mission</option> --}}
+                                    {{-- <option value="customize">Customize</option> --}}
                                 </select>
                                 @error('icon_name')
                                     <span class="text-danger">{{ $message }}</span>
