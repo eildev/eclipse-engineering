@@ -76,7 +76,9 @@
             <div class="col-xl-5 col-lg-12">
                 <div class="about-image-group">
                     <div class="about-lg-image">
-                        <img src="{{ $about->image ? asset('uploads/about/' . $about->image) : asset('frontend/assets/images/about/about-1.jpg') }}"
+                        <img src="{{ file_exists(public_path('uploads/about/' . $about->image))
+                            ? asset('uploads/about/' . $about->image)
+                            : asset('frontend/assets/images/about/about-1.jpg') }}"
                             alt="">
                         <div class="about-circle">
                             <div class="video-play">
