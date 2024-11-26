@@ -27,7 +27,7 @@
                                  <i class="flaticon-experience"></i>
                              </div>
                              <div class="counter-number">
-                                 <div class="tj-count"><span class="odometer" data-count="48">0</span>+</div>
+                                 <div class="tj-count"><span class="odometer" data-count="13">0</span>+</div>
                                  <span class="sub-title">Years Experience</span>
                              </div>
                          </div>
@@ -36,7 +36,7 @@
                                  <i class="flaticon-completed-task"></i>
                              </div>
                              <div class="counter-number">
-                                 <div class="tj-count"><span class="odometer" data-count="239">0</span>+</div>
+                                 <div class="tj-count"><span class="odometer" data-count="70">0</span>+</div>
                                  <span class="sub-title">Projects Completed</span>
                              </div>
                          </div>
@@ -45,7 +45,7 @@
                                  <i class="flaticon-customer-service"></i>
                              </div>
                              <div class="counter-number">
-                                 <div class="tj-count"><span class="odometer" data-count="230">0</span>+</div>
+                                 <div class="tj-count"><span class="odometer" data-count="50">0</span>+</div>
                                  <span class="sub-title">Happy Customers</span>
                              </div>
                          </div>
@@ -54,8 +54,8 @@
                                  <i class="flaticon-timeline"></i>
                              </div>
                              <div class="counter-number">
-                                 <div class="tj-count"><span class="odometer" data-count="380">0</span>+</div>
-                                 <span class="sub-title">Awards Milestones</span>
+                                 <div class="tj-count"><span class="odometer" data-count="15">0</span>+</div>
+                                 <span class="sub-title">Active Projects</span>
                              </div>
                          </div>
                      @endif

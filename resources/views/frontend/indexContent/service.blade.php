@@ -13,9 +13,9 @@
                 <div class="tj-sec-heading text-center">
                     <span class="sub-title">Our Services</span>
                     <h2 class="sec-title">
-                        {{ $ourService->services_title ?? 'Solar Renewable Services for' }}
+                        {{ $ourService->services_title ?? 'Comprehensive suite of services designed to meet the diverse needs' }}
                         <br />
-                        <span>{{ $ourService->services_sub_title ?? 'A Greener World' }}</span>
+                        <span>{{ $ourService->services_sub_title ?? 'of our customers' }}</span>
                     </h2>
                 </div>
             </div>

@@ -27,14 +27,19 @@
                                     <li>
                                         @if ($social->count() > 0)
                                             @foreach ($social as $data)
-                                                <a href="{{ $data->link }}"><i
+                                                <a target="_blank" href="{{ $data->link }}"><i
                                                         class="fa-brands {{ $data->icon }}"></i></a>
                                             @endforeach
                                         @else
-                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a target="_blank"
+                                                href="https://www.facebook.com/eclipseengineeringltdofficial?mibextid=ZbWKwL"><i
+                                                    class="fa-brands fa-facebook-f"></i></a>
+                                            <a target="_blank"
+                                                href="https://www.linkedin.com/company/eclipseengineeringlimited/"><i
+                                                    class="fa-brands fa-linkedin"></i></a>
                                             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
                                         @endif
                                     </li>
                                 </ul>
@@ -69,18 +74,18 @@
                                 <li>
                                     <i class="flaticon-location"></i>
                                     {{ $footer->fullAddress ??
-                                        "2972 Westheimer Rd. Santa Ana, Illinois
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                937949" }}
+                                        "House 41, 2nd Floor, Road 06, Block E, Banasree, Dhaka, Bangladesh
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                937949" }}
                                 </li>
                                 <li>
                                     <i class="flaticon-open"></i>
-                                    <a href="{{ $footer->email ?? 'Solarplus@gmail.com' }}">
-                                        {{ $footer->email ?? 'Solarplus@gmail.com' }}</a>
+                                    <a href="{{ $footer->email ?? 'eclipseengineeringlimited@gmail.com' }}">
+                                        {{ $footer->email ?? 'eclipseengineeringlimited@gmail.com' }}</a>
                                 </li>
                                 <li>
                                     <i class="flaticon-phone"></i><a
-                                        href="tel:{{ $footer->phone ?? '(1234)-567-8900' }}">
-                                        {{ $footer->phone ?? '(1234)-567-8900' }}
+                                        href="tel:{{ $footer->phone ?? '+88-01718319480' }}">
+                                        {{ $footer->phone ?? '+88-01718319480' }}
                                     </a>
                                 </li>
                             </ul>

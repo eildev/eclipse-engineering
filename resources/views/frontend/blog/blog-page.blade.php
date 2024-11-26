@@ -72,7 +72,7 @@
                             <div class="details-item">
                                 <div class="blog-thumb-image">
                                     <a href="blog-details.html"><img
-                                            src="{{ asset('frontend') }}/assets/images/blog/blog-7.jpg"
+                                            src="{{ asset('frontend') }}/assets/images/blog/blog-1.webp"
                                             alt="Image" /></a>
                                 </div>
                                 <div class="blog-meta-two">
@@ -100,7 +100,7 @@
                             </div>
                             <div class="details-item">
                                 <div class="blog-thumb-image">
-                                    <img src="{{ asset('frontend') }}/assets/images/blog/blog-8.jpg" alt="Image" />
+                                    <img src="{{ asset('frontend') }}/assets/images/blog/blog-2.webp" alt="Image" />
                                     <div class="tj-video-area">
                                         <div class="video-box">
                                             <div class="circle pulse video-icon">
@@ -140,21 +140,21 @@
                                         <div class="swiper-slide">
                                             <div class="blog-thumb-image">
                                                 <a href="blog-details.html"><img
-                                                        src="{{ asset('frontend') }}/assets/images/blog/blog-9.jpg"
+                                                        src="{{ asset('frontend') }}/assets/images/blog/blog-3.webp" 
                                                         alt="Image" /></a>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="blog-thumb-image">
                                                 <a href="blog-details.html"><img
-                                                        src="{{ asset('frontend') }}/assets/images/blog/blog-7.jpg"
+                                                        src="{{ asset('frontend') }}/assets/images/blog/blog-1.webp"
                                                         alt="Image" /></a>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="blog-thumb-image">
                                                 <a href="blog-details.html"><img
-                                                        src="{{ asset('frontend') }}/assets/images/blog/blog-8.jpg"
+                                                        src="{{ asset('frontend') }}/assets/images/blog/blog-2.webp"
                                                         alt="Image" /></a>
                                             </div>
                                         </div>

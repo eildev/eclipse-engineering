@@ -61,10 +61,12 @@
                         <button class="btn tj-transparent-btn filter-button me-2"
                             data-filter="{{ $category->slug ?? '' }}">{{ $category->name ?? '' }}</button>
                     @empty
-                        <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
-                        <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
-                        <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
-                        <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+                        <button class="btn tj-transparent-btn filter-button me-2" data-filter="renewable">Renewable
+                            Energy</button>
+                        <button class="btn tj-transparent-btn filter-button me-2" data-filter="design">Design &
+                            Engineering</button>
+                        <button class="btn tj-transparent-btn filter-button me-2" data-filter="substation">Substation
+                            Solutions</button>  
                     @endforelse
                 </div>
                 <br>
@@ -90,52 +92,84 @@
                             </a>
                         </div>
                     @empty
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        <div class="col-lg-4 col-md-6 filter renewable">
+                            <a href="#">
+                                <div class="tj-process-item-two">
+                                    <div class="process-images">
+                                        <img src="{{ asset('frontend') }}/assets/images/project/process-1.webp"
+                                            style="max-height: 240px; width: 100%; object-fit:cover;" />
+                                    </div>
+                                    <div class="process-content">
+                                        <div class="process-icon">
+                                            <i class="flaticon-environmental"></i>
+                                        </div>
+                                        <div class="process-title">
+                                            <h6 class="title">Supply, Installation, Testing & Commissioning of 11 kW
+                                                On-Grid Rooftop Solar System at Savar, Dhaka.</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        <div class="col-lg-4 col-md-6 filter design">
+                            <a href="#">
+                                <div class="tj-process-item-two">
+                                    <div class="process-images">
+                                        <img src="{{ asset('frontend') }}/assets/images/project/process-2.webp"
+                                            style="max-height: 240px; width: 100%; object-fit:cover;" />
+                                    </div>
+                                    <div class="process-content">
+                                        <div class="process-icon">
+                                            <i class="flaticon-renewable-energy"></i>
+                                        </div>
+                                        <div class="process-title">
+                                            <h6 class="title">Supply, Installation, Testing & Commissioning of 119.9 kW
+                                                On-Grid Rooftop Solar System at Neel Nagar Industries Ltd., at Mirzapur,
+                                                South Keraniganj, Dhaka.</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        <div class="col-lg-4 col-md-6 filter substation">
+                            <a href="#">
+                                <div class="tj-process-item-two">
+                                    <div class="process-images">
+                                        <img src="{{ asset('frontend') }}/assets/images/project/process-3.webp"
+                                            style="max-height: 240px; width: 100%; object-fit:cover;" />
+                                    </div>
+                                    <div class="process-content">
+                                        <div class="process-icon">
+                                            <i class="flaticon-save-energy"></i>
+                                        </div>
+                                        <div class="process-title">
+                                            <h6 class="title">Supply, Installation, Testing & Commissioning of 40.1 kW
+                                                On-Grid Rooftop Solar System, Bangladesh JW Animal Protein Co., LTD.,
+                                                Taksur, Savar, Dhaka, Bangladesh.</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        <div class="col-lg-4 col-md-6 filter substation">
+                            <a href="#">
+                                <div class="tj-process-item-two">
+                                    <div class="process-images">
+                                        <img src="{{ asset('frontend') }}/assets/images/project/process-4-1.jpg"
+                                            style="max-height: 240px; width: 100%; object-fit:cover;" />
+                                    </div>
+                                    <div class="process-content">
+                                        <div class="process-icon">
+                                            <i class="flaticon-green-power"></i>
+                                        </div>
+                                        <div class="process-title">
+                                            <h6 class="title">Supply, Installation, Testing & Commissioning of 10 kW
+                                                Off-Grid Hybrid Rooftop Solar System at Shahabuddin Memorial School and
+                                                College, Beltia, Jamalpur Sadar, Jamalpur</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     @endforelse
                 </div>

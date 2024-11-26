@@ -25,9 +25,9 @@
                      @else
                          <div class="swiper-slide">
                              <a class="tj-gallery-item"
-                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-6.jpg">
+                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-1.webp">
                                  <div class="image-box"
-                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-1.jpg">
+                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-1.webp">
                                      <div class="gallery-icon">
                                          <i class="fa-regular fa-plus"></i>
                                      </div>
@@ -36,9 +36,9 @@
                          </div>
                          <div class="swiper-slide">
                              <a class="tj-gallery-item"
-                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-7.jpg">
+                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-2.webp">
                                  <div class="image-box"
-                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-2.jpg">
+                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-2.webp">
                                      <div class="gallery-icon">
                                          <i class="fa-regular fa-plus"></i>
                                      </div>
@@ -47,9 +47,9 @@
                          </div>
                          <div class="swiper-slide">
                              <a class="tj-gallery-item"
-                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-8.jpg">
+                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-3.webp">
                                  <div class="image-box"
-                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-3.jpg">
+                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-3.webp">
                                      <div class="gallery-icon">
                                          <i class="fa-regular fa-plus"></i>
                                      </div>
@@ -58,9 +58,9 @@
                          </div>
                          <div class="swiper-slide">
                              <a class="tj-gallery-item"
-                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-9.jpg">
+                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-4.webp">
                                  <div class="image-box"
-                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-4.jpg">
+                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-4.webp">
                                      <div class="gallery-icon">
                                          <i class="fa-regular fa-plus"></i>
                                      </div>
@@ -69,9 +69,9 @@
                          </div>
                          <div class="swiper-slide">
                              <a class="tj-gallery-item"
-                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-10.jpg">
+                                 href="{{ asset('frontend') }}/assets/images/gallery/gallery-5.webp">
                                  <div class="image-box"
-                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-5.jpg">
+                                     data-bg-image="{{ asset('frontend') }}/assets/images/gallery/gallery-5.webp">
                                      <div class="gallery-icon">
                                          <i class="fa-regular fa-plus"></i>
                                      </div>

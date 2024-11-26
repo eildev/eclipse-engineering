@@ -47,7 +47,8 @@
                                              href="{{ route('blog.details', $blog->id) }}">{{ $blog->title ? (strlen($blog->title) > 50 ? substr($blog->title, 0, 50) . '...' : $blog->title) : 'Winds of Change in the Turbine Service Industry' }}</a>
                                      </h5>
                                      <div class="tj-blog-button d-flex">
-                                         <a class="tj-secondary-btn btn" href="{{ route('blog.details', $blog->id) }}">Read More <i
+                                         <a class="tj-secondary-btn btn"
+                                             href="{{ route('blog.details', $blog->id) }}">Read More <i
                                                  class="flaticon-right-arrow"></i></a>
                                      </div>
                                  </div>
@@ -60,7 +61,7 @@
                      <div class="tj-blog-item">
                          <div class="blog-image">
                              <a href="blog-details.html"><img
-                                     src="{{ asset('frontend') }}/assets/images/blog/blog-1.jpg" alt="Image" /></a>
+                                     src="{{ asset('frontend') }}/assets/images/blog/blog-1.webp" style="height: 250px; object-fit:cover" alt="Image" /></a>
                          </div>
                          <div class="blog-text-area">
                              <div class="blog-meta">
@@ -85,7 +86,7 @@
                      <div class="tj-blog-item">
                          <div class="blog-image">
                              <a href="blog-details.html"><img
-                                     src="{{ asset('frontend') }}/assets/images/blog/blog-2.jpg" alt="Image" /></a>
+                                     src="{{ asset('frontend') }}/assets/images/blog/blog-2.webp" style="height: 250px; object-fit:cover" alt="Image" /></a>
                          </div>
                          <div class="blog-text-area">
                              <div class="blog-meta">
@@ -110,7 +111,7 @@
                      <div class="tj-blog-item">
                          <div class="blog-image">
                              <a href="blog-details.html"><img
-                                     src="{{ asset('frontend') }}/assets/images/blog/blog-3.jpg" alt="Image" /></a>
+                                     src="{{ asset('frontend') }}/assets/images/blog/blog-34.jpg" style="height: 250px; object-fit:cover" alt="Image" /></a>
                          </div>
                          <div class="blog-meta">
                              <ul class="d-flex justify-content-between  align-items-center">
