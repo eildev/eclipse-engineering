@@ -26,6 +26,7 @@
                                     <th>Sub Title</th>
                                     <th>Description</th>
                                     <th>Image</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -36,22 +37,44 @@
                                     {{-- @dd($item->image); --}}
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
-                                        <td>{{ $item->title }}</td>
-                                        <td>{{ $item->sub_title }}</td>
+                                        <td>{{ $item->title ?? '' }}</td>
+                                        <td>{{ $item->sub_title ?? '' }}</td>
                                         <td>
-                                            {!! $item->description
+                                            {{-- {!! $item->description
                                                 ? (strlen($item->description) > 20
                                                     ? substr($item->description, 0, 20) . '...'
                                                     : $item->description)
-                                                : '' !!}
-                                        </td>
-                                        <td>
-                                            <img style="height: 60px; width:60px; object-fit:contain;"
-                                                src="{{ asset('uploads/about/' . $item->image) }}" alt="" />
-                                        </td>
+                                                : '' !!} --}}
 
+                                            {!! $item->description ? Str::limit(strip_tags($item->description), 20, '...') : 'No Description' !!}
+                                        </td>
                                         <td>
-                                            <a class="btn btn-sm btn-warning" href="{{ route('edit.about', $item->id) }}"><i
+                                            <img style="height: 60px; width: 60px; object-fit:cover;"
+                                                src="{{ file_exists(public_path('uploads/about/' . $item->image)) && !is_null($item->image) ? asset('uploads/about/' . $item->image) : asset('dummy-img/no-img.jpg') }}"
+                                                alt="About Image">
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn btn-sm {{ $item->status == 1 ? 'btn-success' : 'btn-danger' }} dropdown-toggle"
+                                                    type="button" id="dropdownMenuButton{{ $item->id }}"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    {{ $item->status == 1 ? 'Active' : 'Inactive' }}
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton${item.id}">
+                                                    <li>
+                                                        <a class="dropdown-item status_change" href="#"
+                                                            data-id="{{ $item->id }}"
+                                                            data-status="{{ $item->status == 1 ? 0 : 1 }}">
+                                                            Change to {{ $item->status == 1 ? 'Active' : 'Inactive' }}
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-sm btn-warning"
+                                                href="{{ route('edit.about', $item->id) }}"><i
                                                     class="fas fa-pencil-alt"></i></a>
 
                                             <a href="{{ route('delete.about', $item->id) }}" id="delete"
@@ -67,4 +90,33 @@
             </div><!-- end col-->
         </div>
     </div>
+
+
+    <script>
+        $(document).on('click', '.status_change', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            let newStatus = $(this).data('status');
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: `/about/status-update/${id}`,
+                type: 'GET',
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'), // Include CSRF token
+                },
+                success: function(res) {
+                    if (res.status == 200) {
+                        toastr.success(res.message);
+                        window.location.reload();
+                    } else {
+                        toastr.error("Failed to update status");
+                    }
+                }
+            });
+        });
+    </script>
 @endsection

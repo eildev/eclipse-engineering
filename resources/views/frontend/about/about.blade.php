@@ -2,7 +2,7 @@
 @section('content')
     @php
         // $aboutIntro = App\Models\AboutInroduction::all()->first();
-        $about = App\Models\AboutSettings::latest()->first();
+        $about = App\Models\AboutSettings::where('status', 1)->latest()->first();
         $overview = App\Models\Overview::all()->take(2);
         $overview2 = App\Models\Overview::all()->skip(2)->take(1)->first();
         // dd($about);

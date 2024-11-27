@@ -38,14 +38,19 @@
                         @foreach ($sliders as $key => $item)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td>{{ $item->short_title }}</td>
-                                <td>{{ $item->sub_title }}</td>
-                                <td>{!! $item->long_title !!}</td>
-                                <td>{{ $item->slider_links }}</td>
-                                <td><img style="height: 60px; width:60px"
-                                        src="{{ asset('uploads/slider_image/' . $item->slider_image) }}" alt="Slider Image">
+                                <td>{{ $item->short_title ?? '' }}</td>
+                                <td>{{ $item->sub_title ?? '' }}</td>
+                                <td>
+                                    {!! $item->long_title ? Str::limit(strip_tags($item->long_title), 50, '...') : 'No Description' !!}
                                 </td>
 
+                                <td>{{ $item->slider_links ?? '' }}</td>
+                                <td>
+                                    <img style="height: 60px; width: 60px"
+                                        src="{{ file_exists(public_path('uploads/slider_image/' . $item->slider_image)) && !is_null($item->slider_image) ? asset('uploads/slider_image/' . $item->slider_image) : asset('dummy-img/no-img.jpg') }}"
+                                        alt="Slider Image">
+
+                                </td>
                                 <td>
                                     <a class="btn btn-sm btn-warning" href="{{ route('edit.slider', $item->id) }}">Edit</a>
 

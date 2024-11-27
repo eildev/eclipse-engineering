@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="example--input" class="col-sm-2 col-form-label">Long Title</label>
+                            <label for="example--input" class="col-sm-2 col-form-label">Long Description</label>
                             <div class="col-sm-10 form-group">
                                 <textarea class="form-control" id="summernote" type="text" placeholder="Enter Long Caption" name="long_title"
                                     cols="30" rows="5" required>{!! $sliders->long_title !!}</textarea>

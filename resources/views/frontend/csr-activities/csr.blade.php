@@ -88,8 +88,8 @@
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="tj-blog-item-two">
                             <div class="blog-image">
-                                <a href="blog-details.html"><img
-                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-4.jpg"
+                                <a href="#"><img
+                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-4.webp"
                                         alt="Image" /></a>
                             </div>
                             <div class="blog-content">
@@ -100,10 +100,10 @@
                                     </ul>
                                 </div>
                                 <h5 class="title">
-                                    <a href="blog-details.html">Winds of Change in the Tubine Service Industry</a>
+                                    <a href="#">Winds of Change in the Tubine Service Industry</a>
                                 </h5>
                                 <div class="tj-blog-button d-flex">
-                                    <a class="tj-secondary-btn btn" href="blog-details.html">Read More <i
+                                    <a class="tj-secondary-btn btn" href="#">Read More <i
                                             class="flaticon-right-arrow"></i></a>
                                 </div>
                             </div>
@@ -112,8 +112,8 @@
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="tj-blog-item-two">
                             <div class="blog-image">
-                                <a href="blog-details.html"><img
-                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-5.jpg"
+                                <a href="#"><img
+                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-55.jpg"
                                         alt="Image" /></a>
                             </div>
                             <div class="blog-content">
@@ -124,10 +124,10 @@
                                     </ul>
                                 </div>
                                 <h5 class="title">
-                                    <a href="blog-details.html">Winds of Change in the Tubine Service Industry</a>
+                                    <a href="#">Winds of Change in the Tubine Service Industry</a>
                                 </h5>
                                 <div class="tj-blog-button d-flex">
-                                    <a class="tj-secondary-btn btn" href="blog-details.html">Read More <i
+                                    <a class="tj-secondary-btn btn" href="#">Read More <i
                                             class="flaticon-right-arrow"></i></a>
                                 </div>
                             </div>
@@ -136,8 +136,8 @@
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="tj-blog-item-two">
                             <div class="blog-image">
-                                <a href="blog-details.html"><img
-                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-6.jpg"
+                                <a href="#"><img
+                                        src="http://127.0.0.1:8000/frontend/assets/images/blog/blog-6.webp"
                                         alt="Image" /></a>
                             </div>
                             <div class="blog-content">
@@ -148,10 +148,10 @@
                                     </ul>
                                 </div>
                                 <h5 class="title">
-                                    <a href="blog-details.html">Winds of Change in the Tubine Service Industry</a>
+                                    <a href="#">Winds of Change in the Tubine Service Industry</a>
                                 </h5>
                                 <div class="tj-blog-button d-flex">
-                                    <a class="tj-secondary-btn btn" href="blog-details.html">Read More <i
+                                    <a class="tj-secondary-btn btn" href="#">Read More <i
                                             class="flaticon-right-arrow"></i></a>
                                 </div>
                             </div>

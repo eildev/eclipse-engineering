@@ -10,7 +10,8 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item active">
-                                    <a href="{{ route('about.view') }}" class=" btn btn-sm btn-primary text-light fs-4"> +</a>
+                                    <a href="{{ route('about.view') }}" class=" btn btn-sm btn-primary text-light fs-4"> <i
+                                            class=" fas fa-eye"></i></a>
                                 </li>
                             </ol>
                         </div>
@@ -65,7 +66,7 @@
                             <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
                                 <img id="showImage" class="rounded avatar-lg "
-                                    src="{{ asset('uploads/about/no_images.jpg') }}" alt="About Image">
+                                    src="{{ asset('dummy-img/no-img.jpg') }}" alt="About Image">
                                 @error('about_image')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror

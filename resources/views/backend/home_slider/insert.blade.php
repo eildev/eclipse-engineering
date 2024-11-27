@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 @section('admin')
     <div class="row">
-        <div class="col-12">         
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -9,7 +9,8 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item active">
-                                    <a href="{{ route('slider.view') }}" class=" btn btn-sm btn-primary text-light fs-4"></a>
+                                    <a href="{{ route('slider.view') }}" class=" btn btn-sm btn-primary text-light fs-4"><i
+                                            class=" fas fa-eye"></i></a>
                                 </li>
                             </ol>
                         </div>
@@ -33,7 +34,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="example--input" class="col-sm-2 col-form-label">Long Title</label>
+                            <label for="example--input" class="col-sm-2 col-form-label">Long Description</label>
                             <div class="col-sm-10 form-group">
                                 <textarea class="form-control" id="summernote" type="text" placeholder="Enter Long Title" name="long_title"
                                     cols="30" rows="5" required></textarea>
@@ -61,12 +62,10 @@
                             <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
                                 <img id="showImage" class="rounded avatar-lg"
-                                    src="{{ asset('admin_image/profile/no_images.png') }}" height="100px" width="100px"
+                                    src="{{ asset('dummy-img/no-img.jpg') }}" height="100px" width="100px"
                                     alt="Slide Image">
                             </div>
-
                         </div>
-
                         <div class="row mb-3">
                             <label for="example-number-input" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
