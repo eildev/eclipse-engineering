@@ -88,6 +88,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/edit-home-setting/{id}', 'edit')->name('edit.home.settings');
         Route::post('/update-home-setting/{id}', 'update')->name('update.home.settings');
         Route::get('/delete-home-setting/{id}', 'delete')->name('delete.home.settings');
+       
     });
 
     // About related routes
@@ -98,6 +99,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/about/edit/{id}', 'EditAbout')->name('edit.about');
         Route::post('/about/update/{id}', 'UpdateAbout')->name('update.about');
         Route::get('/about/delete/{id}', 'DeleteAbout')->name('delete.about');
+        Route::get('/about/status-update/{id}', 'statusUpdate');
     });
 
     // social Icon related routes

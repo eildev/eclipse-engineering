@@ -73,7 +73,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="tj-team-item">
                         <div class="team-image">
-                            <img src="{{ asset('frontend') }}/assets/images/team/team-1.jpg" alt="Image" />
+                            <img src="{{ asset('frontend') }}/assets/images/team/team-8.jpg" alt="Image" />
                         </div>
                         <div class="team-content">
                             <div class="team-auother">
@@ -107,7 +107,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="tj-team-item">
                         <div class="team-image">
-                            <img src="{{ asset('frontend') }}/assets/images/team/team-2.jpg" alt="Image" />
+                            <img src="{{ asset('frontend') }}/assets/images/team/team-9.jpg" alt="Image" />
                         </div>
                         <div class="team-content">
                             <div class="team-auother">

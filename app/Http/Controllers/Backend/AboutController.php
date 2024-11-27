@@ -105,4 +105,14 @@ class AboutController extends Controller
         );
         return redirect()->route('about.view')->with($notification);
     }
+    public function statusUpdate($id)
+    {
+        $about = AboutSettings::findOrFail($id);
+        $about->status = $about->status ? 0 : 1;
+        $about->save();
+        return response()->json([
+            'status' => 200,
+            'message' => 'About Status Update Successfully',
+        ]);
+    }
 }

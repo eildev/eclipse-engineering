@@ -12,15 +12,12 @@
                 <div class="tj-sec-heading-two">
                     <span class="sub-title">Why Choose Us</span>
                     <h2 class="title">
-                        {{ $whyChooseUs->title ?? 'Benefits to Save' }}
-
-                        <span>{{ $whyChooseUs->sub_title ?? 'Energy' }}</span>
+                        {{ $whyChooseUs->title ?? 'Productivity Boosts from' }}
+                        <span>{{ $whyChooseUs->sub_title ?? 'Efficiency' }}</span>
                     </h2>
                     <div class="desc">
                         <p>
-                            {{ $whyChooseUs->description ??
-                                'Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,
-                                                                                                                                                                                                    when an unknown printer took a galley of type unchanged.' }}
+                            {{ $whyChooseUs->description ?? 'Choose us for expertise, innovation, sustainability, client focus, and proven results. Your success is our priority.' }}
                         </p>
                     </div>
                 </div>
@@ -59,7 +56,7 @@
                     </div>
                 @endforeach
             @else
-                <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="tj-choose-us-item">
                         <div class="choose-us-top-content">
                             <div class="choose-us-icon">
@@ -70,12 +67,13 @@
                             </div>
                         </div>
                         <h5 class="title">
-                            Quality And <br />
-                            Reliability
+                            Professional door to door logistics management
                         </h5>
                         <div class="desc">
                             <p>
-                                It was popularised in the 1960s with the release of Letraset sheets containing.
+                                We provide door-to-door delivery services for clients who wish to streamline logistics
+                                administration, cut expenses, and decrease the risk of product loss or damage while
+                                concentrating on their main business.
                             </p>
                         </div>
                         <div class="read-more">
@@ -83,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="tj-choose-us-item">
                         <div class="choose-us-top-content">
                             <div class="choose-us-icon">
@@ -93,10 +91,12 @@
                                 <span>02</span>
                             </div>
                         </div>
-                        <h5 class="title">Expertise in Renewable Solutions</h5>
+                        <h5 class="title">Dedicated to quality & authenticity, optional inspections ensure customer
+                            satisfaction</h5>
                         <div class="desc">
                             <p>
-                                It was popularised in the 1960s with the release of Letraset sheets containing.
+                                We are experienced in various projects like transportation, water, power & energy as a
+                                solution provider over 7 years.
                             </p>
                         </div>
                         <div class="read-more">
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="tj-choose-us-item">
                         <div class="choose-us-top-content">
                             <div class="choose-us-icon">
@@ -115,36 +115,12 @@
                             </div>
                         </div>
                         <h5 class="title">
-                            Customized <br />
-                            Solution
+                            Guarantees quality and authenticity, with optional inspection services
                         </h5>
                         <div class="desc">
                             <p>
-                                It was popularised in the 1960s with the release of Letraset sheets containing.
-                            </p>
-                        </div>
-                        <div class="read-more">
-                            <a class="read-btn" href="#">Read More <i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6">
-                    <div class="tj-choose-us-item">
-                        <div class="choose-us-top-content">
-                            <div class="choose-us-icon">
-                                <i class="flaticon-green-power"></i>
-                            </div>
-                            <div class="choose-us-text">
-                                <span>04</span>
-                            </div>
-                        </div>
-                        <h5 class="title">
-                            Environmental <br />
-                            Impact
-                        </h5>
-                        <div class="desc">
-                            <p>
-                                It was popularised in the 1960s with the release of Letraset sheets containing.
+                                We are dedicated to provide quality & authenticity with optional inspection services
+                                for our customers satisfaction
                             </p>
                         </div>
                         <div class="read-more">

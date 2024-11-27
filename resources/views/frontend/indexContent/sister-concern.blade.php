@@ -2,6 +2,11 @@
  @php
      $sisterConcern = \App\Models\SisterConcern::latest()->take(3)->get();
  @endphp
+ <style>
+     .my_bg_secondary {
+         background: #dfeff8 !important;
+     }
+ </style>
  <section class="tj-service-section-three">
      <div class="container">
          <div class="row">
@@ -56,30 +61,28 @@
              @else
                  <div class="col-lg-4 col-md-6">
                      <div class="service-item-four">
-                         <h3 class="title">Panels <span>Settings</span></h3>
+                         <h3 class="title">Eclipse Intellitech Ltd.</h3>
                          <div class="desc">
                              <p>
-                                 It is a long established fact that a reader will be distracted by the readable content
-                                 of a
-                                 page when looking at its
-                                 layout.
+                                 Eclipse Intellitech Limited is a leading full-service digital agency based in
+                                 Bangladesh, illuminating the digital landscape since 2019. As a  ...
                              </p>
                          </div>
                          <div class="check-list">
                              <ul class="dot-style">
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>New Solar Installation
+                                     <span><i class="fa-light fa-check"></i></span>Web Development
                                  </li>
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>Battery & Pannels
+                                     <span><i class="fa-light fa-check"></i></span>Software Development
                                  </li>
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>Wind Customize
+                                     <span><i class="fa-light fa-check"></i></span>Digital Marketing
                                  </li>
                              </ul>
                          </div>
-                         <div class="service-image">
-                             <img src="{{ asset('frontend') }}/assets/images/service/service-5.jpg" alt="Images" />
+                         <div class="service-image my_bg_secondary rounded-3">
+                             <img src="{{ asset('frontend') }}/assets/images/service/service-1.png" alt="Images" />
                          </div>
                          <div class="read-more-button">
                              <a class="read-more" href="service-details.html">Read More <i
@@ -89,30 +92,28 @@
                  </div>
                  <div class="col-lg-4 col-md-6">
                      <div class="service-item-four">
-                         <h3 class="title">Solar <span>Installations</span></h3>
+                         <h3 class="title">Eclipse Consulting Limited</h3>
                          <div class="desc">
                              <p>
-                                 It is a long established fact that a reader will be distracted by the readable content
-                                 of a
-                                 page when looking at its
-                                 layout.
+                                 Eclipse Consulting Limited brings together a team of accomplished Chartered Acountants,
+                                 Lawyers and Consultants. ...
                              </p>
                          </div>
                          <div class="check-list">
                              <ul class="dot-style">
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>New Solar Installation
+                                     <span><i class="fa-light fa-check"></i></span>Web Development
                                  </li>
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>Battery & Pannels
+                                     <span><i class="fa-light fa-check"></i></span>Software Development
                                  </li>
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>Wind Customize
+                                     <span><i class="fa-light fa-check"></i></span>Digital Marketing
                                  </li>
                              </ul>
                          </div>
-                         <div class="service-image">
-                             <img src="{{ asset('frontend') }}/assets/images/service/service-6.jpg" alt="Images" />
+                         <div class="service-image my_bg_secondary rounded-3">
+                             <img src="{{ asset('frontend') }}/assets/images/service/service-2.png" alt="Images" />
                          </div>
                          <div class="read-more-button">
                              <a class="read-more" href="service-details.html">Read More <i
@@ -122,30 +123,27 @@
                  </div>
                  <div class="col-lg-4 col-md-6">
                      <div class="service-item-four">
-                         <h3 class="title">Solar <span>Maintaince</span></h3>
+                         <h3 class="title">Eclipse Blend & Blossom Limited</h3>
                          <div class="desc">
                              <p>
-                                 It is a long established fact that a reader will be distracted by the readable content
-                                 of a
-                                 page when looking at its
-                                 layout.
+                                Eclipse - Blend & Blossom is a vibrant cafe offering a delightful array of beverages including tea, coffee, juice, smoothies, milkshakes ...
                              </p>
                          </div>
                          <div class="check-list">
                              <ul class="dot-style">
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>New Solar Installation
+                                     <span><i class="fa-light fa-check"></i></span>Web Development
                                  </li>
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>Battery & Pannels
+                                     <span><i class="fa-light fa-check"></i></span>Software Development
                                  </li>
                                  <li>
-                                     <span><i class="fa-light fa-check"></i></span>Wind Customize
+                                     <span><i class="fa-light fa-check"></i></span>Digital Marketing
                                  </li>
                              </ul>
                          </div>
-                         <div class="service-image">
-                             <img src="{{ asset('frontend') }}/assets/images/service/service-7.jpg" alt="Images" />
+                         <div class="service-image my_bg_secondary rounded-3">
+                             <img src="{{ asset('frontend') }}/assets/images/service/service-3.png" alt="Images" />
                          </div>
                          <div class="read-more-button">
                              <a class="read-more" href="service-details.html">Read More <i
