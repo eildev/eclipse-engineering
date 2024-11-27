@@ -44,9 +44,12 @@
                                                 <td>{{ Illuminate\Support\Str::limit($data->title, 15) }}</td>
                                                 <td>{{ Illuminate\Support\Str::limit($data->description, 15) }}</td>
                                                 <td>
-                                                    {{-- @dd($data->image); --}}
+                                                    {{-- @dd($data->image);
                                                     <img style="height: 50px; object-fit: contain;"
                                                         src="{{ asset('/uploads/carrier/' . $data->image) }}"
+                                                        alt="image"> --}}
+                                                    <img style="height: 70px; object-fit: cover;"
+                                                        src="{{ file_exists(public_path('uploads/carrier/' . $data->image)) && !is_null($data->image) ? asset('uploads/carrier/' . $data->image) : asset('dummy-img/no-img.jpg') }}"
                                                         alt="image">
                                                 </td>
                                                 <td>

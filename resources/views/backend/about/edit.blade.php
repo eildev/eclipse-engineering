@@ -66,7 +66,8 @@
                             <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
                                 <img id="showImage" class="rounded avatar-lg"
-                                    src="{{ asset('uploads/about/' . $about->image) }}" alt="About Image">
+                                    src="{{ file_exists(public_path('uploads/about/' . $about->image)) && !is_null($about->image) ? asset('uploads/about/' . $about->image) : asset('dummy-img/no-img.jpg') }}"
+                                    alt="About Image">
                             </div>
                         </div>
 

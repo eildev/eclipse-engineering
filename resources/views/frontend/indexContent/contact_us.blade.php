@@ -21,9 +21,6 @@
                                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14606.55363484149!2d90.4360368!3d23.7602705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c78babc63f07%3A0xcfbed920325b2edb!2sEclipse%20Engineering%20Ltd.!5e0!3m2!1sen!2sbd!4v1732650412526!5m2!1sen!2sbd"
                                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                             {{-- <iframe
-                                src="https://maps.google.com/maps?q=manhatan&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                                style="border: 0" allowfullscreen=""></iframe> --}}
                          </div>
                      </div>
                  </div>

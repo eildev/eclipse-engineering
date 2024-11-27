@@ -37,7 +37,8 @@
                             <div class="row mb-3">
                                 <label for="example-search-input" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" rows="5" maxlength="250" placeholder="Description" id="summernote" name="description">{{ $data->description }}</textarea>
+                                    <textarea class="form-control" rows="5" maxlength="250" placeholder="Description" id="summernote"
+                                        name="description">{{ $data->description }}</textarea>
                                 </div>
                             </div>
                             <!-- end row -->
@@ -52,8 +53,9 @@
                             <div class="row mb-3">
                                 <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <img id="showImage" class="rounded avatar-lg " src="{{ asset('/uploads/csr/'.$data->image) }}"
-                                        alt="About Image">
+                                    <img id="showImage" class="rounded avatar-lg "
+                                        src="{{ file_exists(public_path('uploads/csr/' . $data->image)) && !is_null($data->image) ? asset('uploads/csr/' . $data->image) : asset('dummy-img/no-img.jpg') }}"
+                                        alt="image">
                                 </div>
                             </div>
                             <div class="row mb-3">
